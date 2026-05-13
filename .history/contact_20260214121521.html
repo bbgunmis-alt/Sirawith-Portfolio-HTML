@@ -61,8 +61,8 @@
 
     <header class="solutions-hero">
         <div class="solutions-hero-content">
-            <h1 class="text-gradient" data-lang="page_contact_title">Strategic Inquiry</h1>
-            <p class="hero-subtitle" data-lang="contact_subtitle">Consultation for Revenue Architecture & Scale</p>
+            <h1 class="text-gradient" data-lang="page_contact_title">Contact</h1>
+            <p class="hero-subtitle" data-lang="contact_subtitle">Ready to upgrade your business?</p>
         </div>
     </header>
 
@@ -98,18 +98,9 @@
                         <span class="error-msg" data-lang="form_error_email">Please enter a valid email</span>
                     </div>
                     <div class="form-group">
-                        <label data-lang="form_tier">Engagement Tier</label>
-                        <select name="tier" id="tier" required class="select-premium">
-                            <option value="" disabled selected data-en="Select a tier..." data-th="เลือกระดับการจ้างงาน...">Select a tier...</option>
-                            <option value="tier1" data-lang="tier1_title">Tier I: Architecture Audit</option>
-                            <option value="tier2" data-lang="tier2_title">Tier II: System Implementation</option>
-                            <option value="tier3" data-lang="tier3_title">Tier III: Strategic Partnership</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label data-lang="form_message">Engagement Details</label>
+                        <label data-lang="form_message">Message</label>
                         <textarea name="message" id="message" rows="4" required
-                            data-en-placeholder="Tell me about your system requirements..." data-th-placeholder="รายละเอียดความต้องการระบบ..."></textarea>
+                            data-en-placeholder="Tell me about your project..." data-th-placeholder="รายละเอียดโครงการ..."></textarea>
                         <span class="error-msg" data-lang="form_error_message">Please enter at least 10 characters</span>
                     </div>
                     <button type="submit" class="btn-submit" id="submitBtn">
@@ -230,11 +221,13 @@
                     
                     const formData = new FormData(form);
                     
-                    fetch("/", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                        body: new URLSearchParams(formData).toString()
-                    })
+                    // Handle Localhost (Live Server) vs Production (Netlify)
+                    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+                    const submitPromise = isLocalhost 
+                        ? new Promise(resolve => setTimeout(resolve, 1000)) // Simulate success on localhost
+                        : fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(formData).toString() });
+
+                    submitPromise
                     .then(() => {
                         btn.classList.remove('loading');
                         

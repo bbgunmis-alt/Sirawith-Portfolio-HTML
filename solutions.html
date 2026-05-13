@@ -100,7 +100,9 @@
                     </div>
                 </div>
                 <div class="bento-item bento-purple">
-                    <div class="bento-icon">🚗</div>
+                    <div class="bento-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle></svg>
+                    </div>
                     <div class="bento-badge-small">Automotive Dealer</div>
                     <h3 data-lang="sol_automotive_title">AI Sales Concierge</h3>
                     <p data-lang="sol_automotive_desc">Hybrid AI + Human handoff for luxury standard service</p>
@@ -108,9 +110,12 @@
                         <span data-th="ตอบกลับ <1 นาที" data-en="<1min Response"><1min Response</span>
                         <span data-th="ลดลีดรั่วไหล 20%" data-en="-20% Leakage">-20% Leakage</span>
                     </div>
+                    <p class="case-tech-note" data-lang="sol_tech_auto"></p>
                 </div>
                 <div class="bento-item bento-amber">
-                    <div class="bento-icon">🏪</div>
+                    <div class="bento-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                    </div>
                     <div class="bento-badge-small">Retail/Service</div>
                     <h3 data-lang="sol_retail_title">Omni-Channel Sync</h3>
                     <p data-lang="sol_retail_desc">Centralized booking & POS integration</p>
@@ -166,27 +171,56 @@
         </div>
     </section>
 
-    <!-- Investment Tiers -->
-    <section class="investment-section">
-        <div class="section-container">
-            <div class="investment-header">
-                <h2 data-lang="invest_title">Strategic Deployment Tiers</h2>
+    <!-- Strategic Engagement Framework -->
+    <section class="engagement-section section-container">
+        <div class="section-header align-center">
+            <h2 data-lang="invest_title">Strategic Engagement Framework</h2>
+            <p class="section-subtitle" data-th="รูปแบบการจ้างงานเชิงกลยุทธ์ เพื่อความเป็นเลิศในการดำเนินงานและความเสถียรของระบบในระยะยาว" data-en="Strategic engagement models designed for operational excellence and long-term system stability.">Strategic engagement models designed for operational excellence and long-term system stability.</p>
+        </div>
+        <div class="engagement-grid">
+            <div class="tier-card-strategic">
+                <div class="tier-meta">Engagement Tier I</div>
+                <h3 data-lang="tier1_title">Architecture Audit</h3>
+                <p class="tier-description" data-lang="tier1_desc">Diagnostic assessment of existing lead flows, data leakage points, and automation readiness.</p>
+                <ul class="tier-features">
+                    <li data-th="ตรวจสอบจุดรั่วไหลของข้อมูล" data-en="Data leakage diagnostic">Data leakage diagnostic</li>
+                    <li data-th="ประเมินความพร้อมของ Automation" data-en="Automation readiness report">Automation readiness report</li>
+                    <li data-th="แผนผังระบบแนะนำ (Roadmap)" data-en="Proposed system roadmap">Proposed system roadmap</li>
+                </ul>
+                <p class="case-impact" style="margin-top: 15px;" data-lang="tier1_outcome"><strong>Outcome:</strong> A prioritized roadmap eliminating data leakage.</p>
+                <div class="tier-cta-box">
+                    <a href="contact.html" class="btn-strategic btn-ghost" data-lang="btn_audit">Request a Scope Review</a>
+                </div>
             </div>
-            <div class="investment-grid">
-                <div class="tier-card">
-                    <h3 data-lang="tier1_title">Architecture Audit</h3>
-                    <p class="investment">฿15,000 - ฿45,000</p>
-                    <a href="contact.html" class="btn-premium btn-secondary" data-lang="btn_audit">Initiate Audit</a>
+
+            <div class="tier-card-strategic featured">
+                <div class="tier-meta">Engagement Tier II</div>
+                <h3 data-lang="tier2_title">System Implementation</h3>
+                <p class="tier-description" data-lang="tier2_desc">End-to-end deployment of LeadFlow™ architecture, AI classification, and cross-platform orchestration.</p>
+                <ul class="tier-features">
+                    <li data-th="ติดตั้ง LeadFlow™ Architecture" data-en="LeadFlow™ core deployment">LeadFlow™ core deployment</li>
+                    <li data-th="เชื่อมต่อ CRM & API เต็มรูปแบบ" data-en="Full CRM & API integration">Full CRM & API integration</li>
+                    <li data-th="AI คัดเกรดลีดแบบ Real-time" data-en="Real-time AI classification">Real-time AI classification</li>
+                </ul>
+                <p class="case-impact" style="margin-top: 15px;" data-lang="tier2_outcome"><strong>Outcome:</strong> Operational LeadFlow™ system with measurable CAC reduction.</p>
+                <div class="tier-cta-box">
+                    <a href="contact.html" class="btn-strategic btn-primary" data-lang="btn_execute">Book an Architecture Call</a>
                 </div>
-                <div class="tier-card featured">
-                    <h3 data-lang="tier2_title">Core LeadFlow Build</h3>
-                    <p class="investment">฿150,000 - ฿350,000</p>
-                    <a href="contact.html" class="btn-premium btn-primary" data-lang="btn_execute">Execute Deployment</a>
-                </div>
-                <div class="tier-card">
-                    <h3 data-lang="tier3_title">Enterprise Ecosystem</h3>
-                    <p class="investment">฿750,000+</p>
-                    <a href="contact.html" class="btn-premium btn-secondary" data-lang="btn_engage">Engage Strategy</a>
+            </div>
+
+            <div class="tier-card-strategic">
+                <div class="tier-meta">Engagement Tier III</div>
+                <h3 data-lang="tier3_title">Strategic Partnership</h3>
+                <p class="tier-description" data-lang="tier3_desc">Ongoing ecosystem evolution, autonomous operations, and multi-channel revenue scaling.</p>
+                <ul class="tier-features">
+                    <li data-th="ดูแลและพัฒนาความเสถียรรายเดือน" data-en="Managed system evolution">Managed system evolution</li>
+                    <li data-th="วิเคราะห์ข้อมูลเชิงลึก (BI)" data-en="Predictive performance BI">Predictive performance BI</li>
+                    <li data-th="ระบบอัตโนมัติแบบไร้รอยต่อ" data-en="Autonomous scale operations">Autonomous scale operations</li>
+                </ul>
+                <p class="case-impact" style="margin-top: 15px;" data-lang="tier3_outcome"><strong>Outcome:</strong> Sustained 99.9% uptime and continuous ROI scaling.</p>
+                <p class="case-tech-note" data-lang="sol_tech_bi"></p>
+                <div class="tier-cta-box">
+                    <a href="contact.html" class="btn-strategic btn-ghost" data-lang="btn_engage">Schedule Strategic Consultation</a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirawith Kaewsee | Enterprise Solutions Architect</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Sirawith Kaewsee - Enterprise Solutions Architect. AI & No-Code automation expert building LeadFlow TH for Thai SMEs. 100+ MQLs/day, ฿45 CAC, 99.9% uptime.">
+    <meta name="keywords" content="automation, LeadFlow TH, AI automation, Make.com, FlutterFlow, enterprise architect, Thai entrepreneur, lead generation, no-code">
+    <meta name="author" content="Sirawith Kaewsee">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Language & Canonical -->
+    <link rel="canonical" href="https://bbgunmis-alt.github.io/my-portfolio-2/">
+    <link rel="alternate" hreflang="en" href="https://bbgunmis-alt.github.io/my-portfolio-2/?lang=en">
+    <link rel="alternate" hreflang="th" href="https://bbgunmis-alt.github.io/my-portfolio-2/?lang=th">
+    <link rel="alternate" hreflang="x-default" href="https://bbgunmis-alt.github.io/my-portfolio-2/">
+
+    <!-- Open Graph (Social Share) -->
+    <meta property="og:title" content="Sirawith Kaewsee | Enterprise Solutions Architect">
+    <meta property="og:description" content="AI & No-Code automation expert. LeadFlow TH founder. Transform Thai SMEs to enterprise scale. 100+ MQLs/day.">
+    <meta property="og:image" content="https://bbgunmis-alt.github.io/my-portfolio-2/Image/about-profile.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://bbgunmis-alt.github.io/my-portfolio-2/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sirawith Kaewsee Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sirawithkaewsee">
+    <meta name="twitter:title" content="Sirawith Kaewsee | Enterprise Architect">
+    <meta name="twitter:description" content="AI automation expert. LeadFlow TH founder. Transform Thai businesses.">
+    <meta name="twitter:image" content="https://bbgunmis-alt.github.io/my-portfolio-2/Image/about-profile.png">
+
+    <!-- PWA, Favicon & Theme -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a0f1e">
+    <meta name="color-scheme" content="dark light">
+    <link rel="apple-touch-icon" href="Image/hero-profile.png">
+    <link rel="icon" type="image/png" href="Image/hero-profile.png">
+
+    <!-- Preconnect & Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" as="script">
+    <link rel="preload" href="assets/css/global.css" as="style">
+    
+    <!-- Stylesheets & Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Red+Hat+Display:wght@700;800;900&family=Noto+Sans+Thai:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+
+<body>
+    <!-- Global Animation Elements -->
+    <div class="scroll-progress"></div>
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation with Hamburger Menu -->
+    <nav class="main-nav">
+        <div class="nav-brand" data-en="Sirawith.K" data-th="สิรวิชญ์.K">Sirawith.K</div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="active" data-lang="nav_home">Home</a>
+            <a href="#solutions" class="nav-highlight" data-lang="nav_solutions">Solutions</a>
+            <a href="#about" data-lang="nav_about">About</a>
+            <a href="#projects" data-lang="nav_projects">Projects</a>
+            <a href="#experience" data-lang="nav_experience">Experience</a>
+            <a href="#contact" data-lang="nav_contact">Contact</a>
+
+            <!-- Language Toggle Button -->
+            <div class="lang-switch-wrapper">
+                <button class="lang-btn active" data-lang-val="en">🇺🇸 EN</button>
+                <button class="lang-btn" data-lang-val="th">🇹🇭 ไทย</button>
+                <div class="lang-glider"></div>
+            </div>
+
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        // Theme Management Script
+        const toggleSwitch = document.querySelector('#theme-toggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        } else {
+            // Default to dark mode
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+
+        toggleSwitch.addEventListener('click', function (e) {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            let targetTheme = 'light';
+
+            if (currentTheme === 'light') {
+                targetTheme = 'dark';
+            }
+
+            document.documentElement.setAttribute('data-theme', targetTheme);
+            localStorage.setItem('theme', targetTheme);
+        });
+    </script>
+
+    <!-- Hero Section (Premium Enterprise Style) -->
+    <header class="hero-section">
+        <video autoplay muted loop playsinline class="hero-video-bg">
+            <source src="Image/leadflow-demo.mp4" type="video/mp4">
+            <!-- Fallback is handled via CSS background on .hero-section -->
+        </video>
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-container parallax-target">
+            <div class="hero-content">
+                <div class="hero-typing-wrapper">
+                    <span class="typing-text" id="typing-name"></span><span class="cursor">|</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line" data-en="Engineering Revenue">Engineering Revenue</span>
+                    <span class="title-line gradient-text" data-en="Velocity via AI">Velocity via AI</span>
+                </h1>
+                <p class="hero-subtitle fade-in-up"
+                    data-en="High-yield automated architectures for industry-leading sales organizations. Strategic infrastructure designed for scalability.">
+                    High-yield automated architectures for industry-leading sales organizations. Strategic
+                    infrastructure designed for scalability.
+                </p>
+                <div class="hero-cta-group fade-in-up delay-200">
+                    <a href="#solutions" class="btn-premium btn-primary" data-en="Initiate Strategy Consultation">
+                        Initiate Strategy Consultation
+                    </a>
+                    <a href="#contact" class="btn-premium btn-secondary" data-en="Capability Briefing">
+                        Capability Briefing
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual fade-in-up delay-400">
+                <div class="profile-card">
+                    <div class="profile-image-wrapper">
+                        <img src="Image/about-profile.png" alt="Sirawith Kaewsee - Enterprise Architect"
+                            class="profile-img" fetchpriority="high">
+                        <div class="glow-effect"></div>
+                    </div>
+                    <a href="mailto:sirawith.keawsee@gmail.com" class="status-badge">
+                        <span class="status-dot"></span>
+                        <span data-lang="status_working">Open for Work</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow-down"></div>
+        </div>
+    </header>
+
+    <!-- Typing Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const textElement = document.getElementById('typing-name');
+            const textToType = "Sirawith Kaewsee";
+            let charIndex = 0;
+
+            function typeWriter() {
+                if (charIndex < textToType.length) {
+                    textElement.innerHTML += textToType.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeWriter, 100);
+                } else {
+                    document.querySelector('.cursor').style.animation = 'blink 1s step-end infinite';
+                }
+            }
+
+            // Start typing after a short delay
+            setTimeout(typeWriter, 500);
+        });
+    </script>
+
+    <!-- Metrics Section (Premium Style) -->
+    <section class="metrics-container">
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <span class="metric-value">50+</span>
+                <span class="metric-label">Luxury High-Volume Sales / Yr</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">99.9%</span>
+                <span class="metric-label">System Architecture Uptime</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">100+</span>
+                <span class="metric-label">Automated MQLs / Day</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">฿45</span>
+                <span class="metric-label">Weighted Average CAC</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Solutions Section (Full Bento Layout) -->
+    <section class="solution-grid-section" id="solutions">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge" data-lang="sol_badge">Our Solutions</span>
+                <h2 data-lang="sol_title">Industry-Specific Automation</h2>
+                <p data-lang="sol_subtitle">Scalable AI & No-Code Solutions designed for high-volume enterprise
+                    operations</p>
+            </div>
+
+            <div class="solution-bento">
+                <!-- Main Solution - Real Estate -->
+                <div class="bento-main" id="real-estate-detail">
+                    <div class="bento-content">
+                        <div class="bento-badge">Real Estate Chain</div>
+                        <h3 data-lang="sol_realestate_title">Lead Engine & Auto-Routing</h3>
+                        <p data-lang="sol_realestate_desc">ระบบจัดการลีดอัตโนมัติสำหรับอสังหาริมทรัพย์หลายสาขา
+                            รองรับการกระจายลีดไปยังตัวแทนขายที่เหมาะสมที่สุด</p>
+                        <div class="bento-stats">
+                            <div class="bento-stat">
+                                <span class="stat-value">200+</span>
+                                <span class="stat-label">Leads/Day</span>
+                            </div>
+                            <div class="bento-stat">
+                                <span class="stat-value">+1.25%</span>
+                                <span class="stat-label">Conversion</span>
+                            </div>
+                            <div class="bento-stat">
+                                <span class="stat-value">5</span>
+                                <span class="stat-label">Branches</span>
+                            </div>
+                        </div>
+                        <ul class="feature-list">
+                            <li>AI-powered lead scoring</li>
+                            <li>Real-time branch dashboard</li>
+                            <li>Automated follow-up sequences</li>
+                            <li>CRM integration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Solution 2 - Automotive -->
+                <div class="bento-item bento-purple" id="automotive-detail">
+                    <div class="bento-icon">🚗</div>
+                    <div class="bento-badge-small">Automotive Dealer</div>
+                    <h3 data-lang="sol_automotive_title">AI Sales Concierge</h3>
+                    <p data-lang="sol_automotive_desc">Hybrid AI + Human handoff for luxury standard service</p>
+                    <div class="bento-stats-mini">
+                        <span>&lt;1min Response</span>
+                        <span>-20% Lead Leakage</span>
+                    </div>
+                    <ul class="feature-list-compact">
+                        <li>Natural language (TH/EN)</li>
+                        <li>Seamless human handoff</li>
+                        <li>24/7 availability</li>
+                    </ul>
+                </div>
+
+                <!-- Solution 3 - Retail -->
+                <div class="bento-item bento-amber" id="retail-detail">
+                    <div class="bento-icon">🏪</div>
+                    <div class="bento-badge-small">Retail/Service</div>
+                    <h3 data-lang="sol_retail_title">Omni-Channel Sync</h3>
+                    <p data-lang="sol_retail_desc">Centralized booking & POS integration</p>
+                    <div class="bento-stats-mini">
+                        <span>Zero Double-Booking</span>
+                        <span>+35% Efficiency</span>
+                    </div>
+                    <ul class="feature-list-compact">
+                        <li>Real-time slot sync</li>
+                        <li>Auto reminders</li>
+                        <li>Revenue dashboard</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Proof & Infrastructure -->
+    <section class="tech-proof-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">How It Works</span>
+                <h2 data-lang="tech_stack_title">System Architecture</h2>
+                <p data-lang="tech_stack_desc">Enterprise-grade workflow powered by industry-leading tools</p>
+            </div>
+
+            <!-- Workflow Diagram -->
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <div class="layer-label">Input Layer</div>
+                    <div class="layer-items">
+                        <div class="arch-node">📱 Website</div>
+                        <div class="arch-node">💬 Line OA</div>
+                        <div class="arch-node">📲 WhatsApp</div>
+                        <div class="arch-node">📧 Email</div>
+                    </div>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <div class="layer-label">Processing Layer</div>
+                    <div class="layer-items">
+                        <div class="arch-node highlight">🤖 AI Classification</div>
+                        <div class="arch-node highlight">📊 Smart Routing</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Grid -->
+            <div class="tech-stack-section" style="margin-top: 80px; text-align: center;">
+                <h3 data-lang="tech_stack_title" style="margin-bottom: 30px; font-family: 'Outfit';">Enterprise Tech
+                    Stack</h3>
+                <div class="tech-logos-compact"
+                    style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; opacity: 0.8;">
+                    <div class="tech-logo-item" title="Make.com"><span>Make.com</span></div>
+                    <div class="tech-logo-item" title="OpenAI"><span>OpenAI</span></div>
+                    <div class="tech-logo-item" title="Supabase"><span>Supabase</span></div>
+                    <div class="tech-logo-item" title="FlutterFlow"><span>FlutterFlow</span></div>
+                    <div class="tech-logo-item" title="Line API"><span>Line API</span></div>
+                    <div class="tech-logo-item" title="Google Cloud"><span>Google Cloud</span></div>
+                </div>
+            </div>
+
+            <!-- Infrastructure Cards -->
+            <div class="infra-grid-refined"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 80px;">
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">🔒</div>
+                    <h4 data-lang="infra_security" style="margin: 15px 0;">Enterprise Security</h4>
+                    <p style="color: var(--text-muted);">End-to-end encryption & API Security</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">⚡</div>
+                    <h4 data-lang="infra_uptime" style="margin: 15px 0;">99.9% Uptime</h4>
+                    <p style="color: var(--text-muted);">Redundant server architecture</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">📋</div>
+                    <h4 data-lang="infra_compliance" style="margin: 15px 0;">PDPA Compliant</h4>
+                    <p style="color: var(--text-muted);">Data handling for Thai Law</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Condensed) -->
+    <section class="about-section" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-gallery">
+                    <!-- Main Large Image -->
+                    <div class="gallery-item main-img fade-in-up">
+                        <img src="Image/work2.jpg.png" alt="Sirawith Workshop & Strategy" loading="lazy">
+                        <div class="glass-tag">Strategy</div>
+                    </div>
+                    <!-- Secondary Stacked Images -->
+                    <div class="gallery-column">
+                        <div class="gallery-item sub-img fade-in-up delay-100">
+                            <img src="Image/work1.jpg.JPG" alt="Sirawith Professional Mode" loading="lazy">
+                            <div class="glass-tag">Business</div>
+                        </div>
+                        <div class="gallery-item sub-img fade-in-up delay-200">
+                            <img src="Image/profile.jpg.JPG" alt="Sirawith Portrait" loading="lazy">
+                            <div class="glass-tag">Leadership</div>
+                        </div>
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="experience-badge floating">
+                        <span class="badg-number">8+</span>
+                        <span class="badge-text" data-lang="stat_experience">Years<br>Exp.</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-badge">Strategic Architecture</span>
+                    <h2>Bridging Luxury Strategy &<br>Automated Excellence</h2>
+                    <p class="about-tagline">
+                        Closing high-stakes transactions leads to architecting high-yield systems.
+                    </p>
+                    <div class="about-desc-wrapper"
+                        style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
+                        <p style="margin-bottom: 20px;">
+                            With over eight years of experience architecting transactions for industry leaders like
+                            <strong>BMW (Performance Motors)</strong> and <strong>Origin Property</strong>, my
+                            methodology is rooted in the precision required to move multi-million baht assets.
+                        </p>
+                        <p style="margin-bottom: 20px;">
+                            The shift from closing 50+ luxury sales annually to designing AI architectures was driven by
+                            identifying the "latency gap"—the point where businesses lose millions in manual processing.
+                            I founded LeadFlow TH to replace fragile manual tasks with robust, scalable digital
+                            infrastructure.
+                        </p>
+                        <p style="margin-bottom: 20px;">
+                            Unlike traditional developers, these architectures are designed through the lens of a sales
+                            strategist. I build systems that maintain the boutique service feel of a luxury showroom
+                            while operating with the efficiency of a global enterprise.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">฿XX.M</span>
+                            <span class="stat-label" style="font-size: 0.8rem;">Monthly Pipeline Managed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">90%</span>
+                            <span class="stat-label" style="font-size: 0.8rem;">Reduction in Latency</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-premium btn-primary" style="margin-top: 30px;">
+                        Secure a Capability Audit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Bilingual) -->
+    <section class="experience-section" id="experience">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge" data-lang="exp_badge">Career Journey</span>
+                <h2 data-lang="exp_title">Professional Experience</h2>
+            </div>
+
+            <div class="timeline">
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date" data-lang="exp_job1_date">April 2024 - Present</span>
+                        <h3 data-lang="exp_job1_title">Digital Marketing Specialist (Freelance)</h3>
+                        <ul class="timeline-details">
+                            <li data-lang="exp_job1_desc1">Consulting for SMEs/Startups on AI Automation implementation.
+                            </li>
+                            <li data-lang="exp_job1_desc2">Managing Omni-Channel marketing campaigns for growth.</li>
+                            <li data-lang="exp_job1_desc3">Conducting workshops on Storytelling and Digital Tools.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Job 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date" data-lang="exp_job2_date">Jan 2025 - July 2025</span>
+                        <h3 data-lang="exp_job2_title">Sales & Marketing Executive | Origin Property</h3>
+                        <ul class="timeline-details">
+                            <li data-lang="exp_job2_desc1">Managed Knightsbridge Space sales (Rama 4), exceeding targets
+                                by 25%.</li>
+                            <li data-lang="exp_job2_desc2">Investment analysis (Yield & LTV) for international clients.
+                            </li>
+                            <li data-lang="exp_job2_desc3">Utilized TikTok & LinkedIn Marketing to increase conversion
+                                by 22%.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Job 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date" data-lang="exp_job3_date">Dec 2021 - Dec 2024</span>
+                        <h3 data-lang="exp_job3_title">Luxury Sales Consultant | BMW Performance Motors</h3>
+                        <ul class="timeline-details">
+                            <li data-lang="exp_job3_desc1">Top Performer: Sold 50+ luxury cars/year (130% of target).
+                            </li>
+                            <li data-lang="exp_job3_desc2">Managed HNWI relationships with 15% annual retention rate.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Job 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date" data-lang="exp_job4_date">June 2015 - Nov 2021</span>
+                        <h3 data-lang="exp_job4_title">Store Manager | UNIQLO (Thailand)</h3>
+                        <ul class="timeline-details">
+                            <li data-lang="exp_job4_desc1">Managed team of 25+, drove 20% YoY branch growth.</li>
+                            <li data-lang="exp_job4_desc2">Implemented training systems, increasing CSI by 25%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (Real Cases) -->
+    <section class="projects-section" id="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge" data-en="Case Studies" data-th="กรณีศึกษา">Case Studies</span>
+                <h2 data-en="Featured Projects" data-th="ผลงานที่โดดเด่น">Featured Projects</h2>
+                <p data-en="Real-world LeadFlow implementations" data-th="ผลลัพธ์จริงจากการปรับใช้ LeadFlow">Real-world
+                    LeadFlow implementations</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Case 1: LeadFlow TH -->
+                <div class="project-card fade-in-up">
+                    <img src="Image/project-leadflow-dashboard.jpg" alt="LeadFlow TH" class="project-image"
+                        loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-badge">SME Automation Orchestration</div>
+                        <h3>LeadFlow TH Architecture</h3>
+                        <p style="font-size: 0.85rem; opacity: 0.9; margin-bottom: 15px;">Target: Reducing CAC via
+                            automated orchestration.</p>
+                        <div class="project-metrics">
+                            <div class="metric-v">
+                                <span class="m-val">100+</span>
+                                <span class="m-lab">MQLs/Day</span>
+                            </div>
+                            <div class="metric-v">
+                                <span class="m-val">฿45</span>
+                                <span class="m-lab">CAC</span>
+                            </div>
+                            <div class="metric-v">
+                                <span class="m-val">30h+</span>
+                                <span class="m-lab">Time Saved/Wk</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 2: BMW Leads -->
+                <div class="project-card fade-in-up delay-100">
+                    <img src="Image/project-leadflow-BMW.jpeg" alt="BMW Leads" class="project-image" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-badge">Automotive Sales Engine</div>
+                        <h3>BMW Sales Pipeline</h3>
+                        <p style="font-size: 0.85rem; opacity: 0.9; margin-bottom: 15px;">Target: Eliminate latency in
+                            luxury showroom response.</p>
+                        <div class="project-metrics">
+                            <div class="metric-v">
+                                <span class="m-val">&lt;1m</span>
+                                <span class="m-lab">Response Time</span>
+                            </div>
+                            <div class="metric-v">
+                                <span class="m-val">200+</span>
+                                <span class="m-lab">SQLs/Month</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 3: RealEstate CRM -->
+                <div class="project-card fade-in-up delay-200">
+                    <img src="Image/project-leadflow-Realestate.jpeg" alt="RealEstate CRM" class="project-image"
+                        loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-badge">Enterprise Property Infrastructure</div>
+                        <h3>Origin Property Sync</h3>
+                        <p style="font-size: 0.85rem; opacity: 0.9; margin-bottom: 15px;">Target: Zero-leakage
+                            multi-branch lead routing.</p>
+                        <div class="project-metrics">
+                            <div class="metric-v">
+                                <span class="m-val">+1.25%</span>
+                                <span class="m-lab">Conversion Δ</span>
+                            </div>
+                            <div class="metric-v">
+                                <span class="m-val">100%</span>
+                                <span class="m-lab">Capture Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge">Client Directives</span>
+                    <h2 style="color: white; font-family: var(--font-heading); margin-bottom: 40px;">Strategic Impact
+                        Proof</h2>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="result-badge">+200 Leads/Day</div>
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Challenge: Manual lead tracking was costing us 20% in leakage →
+                            Solution: Automated LeadFlow Integration → RESULT: 200+ Qualified Leads daily with zero
+                            manual entry."</p>
+                        <div class="client-info">
+                            <span class="client-name">Vichai S.</span>
+                            <span class="client-role">Director of Sales</span>
+                            <span class="client-company">Leading Real Estate Group</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="result-badge">&lt;1m Response</div>
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Challenge: 2-hour response times were killing luxury car sales →
+                            Solution: AI Sales Concierge & Handoff → RESULT: Sub-1-minute response time across all
+                            digital channels."</p>
+                        <div class="client-info">
+                            <span class="client-name">Kittisak P.</span>
+                            <span class="client-role">General Manager</span>
+                            <span class="client-company">BMW Authorized Dealer</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="result-badge">฿45 CAC</div>
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Challenge: Rising CAC was eroding SME margins → Solution: Precise
+                            LeadFlow Optimization → RESULT: CAC stabilized at ฿45 per high-intent MQL."</p>
+                        <div class="client-info">
+                            <span class="client-name">Patra W.</span>
+                            <span class="client-role">Founder</span>
+                            <span class="client-company">LeadFlow TH Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Section -->
+        <section class="investment-section" id="investment">
+            <div class="section-container">
+                <div class="investment-header">
+                    <span class="section-badge">Investment Framework</span>
+                    <h2 style="color: white; font-family: var(--font-heading);">Strategic Deployment Tiers</h2>
+                    <p style="color: var(--text-muted);">Architecture tailored to your current pipeline volume and
+                        scaling objectives.</p>
+                </div>
+                <div class="investment-grid">
+                    <div class="tier-card">
+                        <span class="duration">7 Days</span>
+                        <h3>Architecture Audit</h3>
+                        <p class="investment">฿50,000 - ฿75,000</p>
+                        <ul>
+                            <li>Full "Latency Gap" diagnostic</li>
+                            <li>Tech-stack compatibility roadmap</li>
+                            <li>Blueprint for AI Classifier logic</li>
+                        </ul>
+                        <p class="target">Best for: Established SMEs with follow-up fatigue.</p>
+                        <p class="outcome">Exp. Result: 40% lead leakage reduction.</p>
+                        <a href="#contact" class="btn-premium btn-secondary"
+                            style="margin-top: 20px; width: 100%;">Initiate Audit</a>
+                    </div>
+                    <div class="tier-card featured">
+                        <span class="duration">30 - 45 Days</span>
+                        <h3>Core LeadFlow Build</h3>
+                        <p class="investment">฿150,000 - ฿350,000</p>
+                        <ul>
+                            <li>Full Build: Make.com + AI + CRM</li>
+                            <li>Automated MQL Scoring Systems</li>
+                            <li>Custom Lead-Routing (Branch Sync)</li>
+                        </ul>
+                        <p class="target">Best for: Multi-branch dealers & developers.</p>
+                        <p class="outcome">Exp. Result: 90% latency reduction.</p>
+                        <a href="#contact" class="btn-premium btn-primary"
+                            style="margin-top: 20px; width: 100%;">Execute Deployment</a>
+                    </div>
+                    <div class="tier-card">
+                        <span class="duration">60+ Days</span>
+                        <h3>Enterprise Ecosystem</h3>
+                        <p class="investment">฿750,000+</p>
+                        <ul>
+                            <li>Custom Omni-Channel AI Hub</li>
+                            <li>Proprietary Data Warehouse Build</li>
+                            <li>99.9% System Uptime SLA</li>
+                        </ul>
+                        <p class="target">Best for: National retail & enterprises.</p>
+                        <p class="outcome">Exp. Result: Total Operational Certainty.</p>
+                        <a href="#contact" class="btn-premium btn-secondary"
+                            style="margin-top: 20px; width: 100%;">Engage Strategy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="contact-glow"></div>
+            <div class="section-container">
+                <div class="contact-box">
+                    <div class="contact-header">
+                        <h2 data-lang="contact_title">Let's Build Together</h2>
+                        <p data-lang="contact_subtitle">พร้อมยกระดับธุรกิจด้วยระบบ Automation ระดับ Enterprise หรือยัง?
+                        </p>
+                    </div>
+
+                    <div class="contact-grid">
+                        <a href="tel:0858508535" class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>085-850-8535</span>
+                        </a>
+                        <a href="mailto:sirawith.keawsee@gmail.com" class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>sirawith.keawsee@gmail.com</span>
+                        </a>
+                        <a href="https://line.me/ti/p/~Floy.bmw.th" class="contact-item">
+                            <span class="contact-icon">💬</span>
+                            <span>Line: Floy.bmw.th</span>
+                        </a>
+                    </div>
+
+                    <!-- Contact Form (Netlify Integrated) -->
+                    <form id="contactForm" class="contact-form" data-netlify="true" name="contact" method="POST">
+                        <input type="hidden" name="form-name" value="contact">
+                        <div class="form-group">
+                            <label for="name" data-lang="form_name">Name</label>
+                            <input type="text" id="name" name="name" required data-en-placeholder="Your Name"
+                                data-th-placeholder="ชื่อของคุณ" placeholder="Your Name">
+                            <span class="error-msg" data-lang="form_error_name">Please enter your name</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-lang="form_email">Email</label>
+                            <input type="email" id="email" name="email" required data-en-placeholder="your@email.com"
+                                data-th-placeholder="อีเมลของคุณ" placeholder="your@email.com">
+                            <span class="error-msg" data-lang="form_error_email">Please enter a valid email</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-lang="form_message">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                data-en-placeholder="Tell me about your project..."
+                                data-th-placeholder="บอกเล่าโปรเจ็กต์ของคุณ..."
+                                placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <span class="btn-text" data-lang="form_submit">Send Message</span>
+                            <div class="btn-loader"></div>
+                        </button>
+                    </form>
+
+          <!-- Success State -->
+          <div id="formSuccess" class="form-success" style="display: none;">
+            <div class="success-checkmark">✓</div>
+            <div class="success-text-content">
+              <h2 data-lang="success_title">Message Sent!</h2>
+              <p data-lang="success_desc">Thank you for reaching out. I will get back to you shortly.</p>
+              <a href="#" onclick="resetForm(event)" class="btn-premium btn-primary" style="margin-top: 30px;"
+                data-lang="success_btn">Send Another</a>
+            </div>
+          </div>
+
+                    
+
+                    <a href="#solutions" class="btn-cta-large" data-lang="btn_demo">
+                        Request a Solution Demo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-brand" data-en="Sirawith.K" data-th="สิรวิชญ์.K">Sirawith.K</div>
+                <div class="footer-links">
+                    <a href="index.html" data-lang="nav_home">Home</a>
+                    <a href="#solutions" data-lang="nav_solutions">Solutions</a>
+                    <a href="#about" data-lang="nav_about">About</a>
+                    <a href="#contact" data-lang="nav_contact">Contact</a>
+                </div>
+                <p class="footer-copy" data-en="&copy; 2026 Sirawith Kaewsee. All Rights Reserved."
+                    data-th="&copy; 2569 สิรวิชญ์ แก้วสี. สงวนลิขสิทธิ์.">&copy; 2026 Sirawith Kaewsee. All Rights
+                    Reserved.
+                </p>
+            </div>
+        </footer>
+
+        <!-- Floating Hire Me Button -->
+        <a href="#contact" class="floating-hire-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 015.06 2h3a2 2 0 012 1.72 12.06 12.06 0 00.57 2.45 2 2 0 01-.45 2.11L8.9 9.55a16 16 0 006 6l2.27-2.26a2 2 0 012.11-.45 12.06 12.06 0 002.45.57 2 2 0 011.72 2z">
+                </path>
+            </svg>
+            <span data-en="Hire Me" data-th="จ้างเลย">Hire Me</span>
+        </a>
+
+        <!-- GSAP Animations -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <script src="assets/js/animations.js"></script>
+        <script src="assets/js/language.js"></script>
+    <script>
+      // Contact Form Validation & AJAX Submission for Netlify
+      const contactForm = document.getElementById('contactForm');
+      const formSuccess = document.getElementById('formSuccess');
+
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        let isValid = true;
+
+        // Reset previous errors
+        document.querySelectorAll('.error-msg').forEach(el => el.style.display = 'none');
+        nameInput.classList.remove('input-error');
+        emailInput.classList.remove('input-error');
+
+        // Validate Name
+        if (nameInput.value.trim() === '') {
+          isValid = false;
+          const errorMsg = nameInput.nextElementSibling;
+          if (errorMsg && errorMsg.classList.contains('error-msg')) {
+            errorMsg.style.display = 'block';
+          }
+          nameInput.classList.add('input-error');
+        }
+
+        // Validate Email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value)) {
+          isValid = false;
+          const errorMsg = emailInput.nextElementSibling;
+          if (errorMsg && errorMsg.classList.contains('error-msg')) {
+            errorMsg.style.display = 'block';
+          }
+          emailInput.classList.add('input-error');
+        }
+
+        if (isValid) {
+          const submitBtn = document.getElementById('submitBtn');
+          const btnText = submitBtn.querySelector('.btn-text');
+          const btnLoader = submitBtn.querySelector('.btn-loader');
+
+          // Show loader and disable button
+          btnText.style.display = 'none';
+          btnLoader.style.display = 'block';
+          submitBtn.disabled = true;
+
+          const formData = new FormData(contactForm);
+          
+          // Handle Localhost (Live Server) vs Production (Netlify)
+          const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+          const submitPromise = isLocalhost 
+            ? new Promise(resolve => setTimeout(resolve, 1000)) // Simulate success on localhost
+            : fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(formData).toString() });
+
+          submitPromise
+            .then(() => {
+              contactForm.style.display = 'none';
+              formSuccess.style.display = 'flex';
+            })
+            .catch((error) => {
+              alert('Error sending message. Please try again.');
+              // Re-enable form
+              btnText.style.display = 'block';
+              btnLoader.style.display = 'none';
+              submitBtn.disabled = false;
+            });
+        }
+      });
+
+      function resetForm(e) {
+        e.preventDefault();
+        formSuccess.style.display = 'none';
+        contactForm.style.display = 'block';
+        contactForm.reset();
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.querySelector('.btn-text').style.display = 'block';
+        submitBtn.querySelector('.btn-loader').style.display = 'none';
+        submitBtn.disabled = false;
+      }
+    </script>
+
+
+        <script>
+            // Page transition effect
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('loaded');
+            });
+        </script>
+</body>
+
+</html>

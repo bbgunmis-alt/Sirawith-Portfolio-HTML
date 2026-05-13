@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sirawith Kaewsee | Enterprise Architect</title>
+    <meta
+      name="description"
+      content="Sirawith Kaewsee - Enterprise Solutions Architect. AI & No-Code automation for Thai SMEs. LeadFlow TH founder. Make.com specialist."
+    />
+    <meta
+      name="keywords"
+      content="automation, LeadFlow TH, AI automation, Make.com, enterprise architect, Thai entrepreneur, lead generation"
+    />
+    <meta name="author" content="Sirawith Kaewsee" />
+    <meta name="theme-color" content="#0a0f1e" />
+
+    <link
+      rel="canonical"
+      href="https://bbgunmis-alt.github.io/my-portfolio-2/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://bbgunmis-alt.github.io/my-portfolio-2/?lang=en"
+    />
+    <link
+      rel="alternate"
+      hreflang="th"
+      href="https://bbgunmis-alt.github.io/my-portfolio-2/?lang=th"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://bbgunmis-alt.github.io/my-portfolio-2/"
+    />
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sirawith Kaewsee",
+        "jobTitle": "Enterprise Solutions Architect",
+        "url": "https://bbgunmis-alt.github.io/my-portfolio-2/",
+        "image": "https://bbgunmis-alt.github.io/my-portfolio-2/Image/hero-profile.png",
+        "sameAs": [
+          "https://www.linkedin.com/in/sirawith-kaewsee",
+          "https://t.me/irk_sirawith"
+        ]
+      }
+    </script>
+
+    <!-- SEO & Social Media -->
+    <meta
+      property="og:title"
+      content="Sirawith Kaewsee | Enterprise Solutions Architect"
+    />
+    <meta
+      property="og:description"
+      content="AI & No-Code automation expert building LeadFlow TH for Thai SMEs. 100+ MQLs/day. ฿45 CAC."
+    />
+    <meta
+      property="og:image"
+      content="https://bbgunmis-alt.github.io/my-portfolio-2/image/profile.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://bbgunmis-alt.github.io/my-portfolio-2/"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Sirawith Kaewsee | Enterprise Architect"
+    />
+    <meta
+      name="twitter:description"
+      content="AI automation expert. LeadFlow TH founder."
+    />
+    <meta
+      name="twitter:image"
+      content="https://bbgunmis-alt.github.io/my-portfolio-2/image/profile.jpg"
+    />
+
+    <!-- PWA & Favicon -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="Image/hero-profile.png" />
+    <link rel="icon" type="image/png" href="Image/hero-profile.png" />
+
+    <!-- EmailJS Integration -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <!-- Preload Critical Resources -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      as="script"
+    />
+    <link rel="preload" href="assets/css/style.css" as="style" />
+    <link rel="preload" as="image" href="Image/about-profile.png" />
+    <link rel="preload" as="image" href="Image/hero-bg-new.png" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Red+Hat+Display:wght@700;800;900&display=swap"
+      as="style"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Red+Hat+Display:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      /* Dynamic Navigation for Luxury Feel */
+      .main-nav {
+        position: fixed; /* Fix position to top */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Smooth transition */
+        background: transparent; /* Start transparent for Hero */
+        padding: 25px 5%; /* Spacious initially */
+      }
+
+      /* State when scrolled */
+      .main-nav.scrolled {
+        background: rgba(2, 6, 23, 0.75); /* Dark Navy Glass */
+        backdrop-filter: blur(16px); /* Frosted glass effect */
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border */
+        padding: 15px 5%; /* Compact size */
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Global Animation Elements -->
+    <div class="scroll-progress"></div>
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation with Hamburger Menu -->
+    <nav class="main-nav">
+      <div class="nav-brand" data-en="Sirawith.K" data-th="สิรวิชญ์.K">
+        Sirawith.K
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a
+          href="index.html"
+          data-lang="nav_home"
+          data-en="Home"
+          data-th="หน้าหลัก"
+          >Home</a
+        >
+        <a
+          href="solutions.html"
+          class="nav-highlight"
+          data-lang="nav_solutions"
+          data-en="Solutions"
+          data-th="โซลูชัน"
+          >Solutions</a
+        >
+        <a
+          href="projects.html"
+          data-lang="nav_projects"
+          data-en="Projects"
+          data-th="ผลงาน"
+          >Projects</a
+        >
+        <a
+          href="experience.html"
+          data-lang="nav_experience"
+          data-en="Experience"
+          data-th="ประสบการณ์"
+          >Experience</a
+        >
+        <a
+          href="about.html"
+          data-lang="nav_about"
+          data-en="About"
+          data-th="เกี่ยวกับ"
+          >About</a
+        >
+        <a
+          href="contact.html"
+          data-lang="nav_contact"
+          data-en="Contact"
+          data-th="ติดต่อ"
+          >Contact</a
+        >
+
+        <!-- Language Toggle Button -->
+        <div class="lang-switch-wrapper">
+          <button class="lang-btn active" data-lang-val="en">🇺🇸 EN</button>
+          <button class="lang-btn" data-lang-val="th">🇹🇭 ไทย</button>
+          <div class="lang-glider"></div>
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle Dark Mode"
+        >
+          <svg
+            class="sun-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg
+            class="moon-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section (Premium Enterprise Style) -->
+    <header class="hero-section">
+      <video autoplay muted loop playsinline class="hero-video-bg">
+        <source src="Image/leadflow-demo.mp4" type="video/mp4" />
+        <!-- Fallback is handled via CSS background on .hero-section -->
+      </video>
+      <div class="hero-bg-overlay"></div>
+      <div class="hero-container parallax-target">
+        <div class="hero-content">
+          <div class="hero-typing-wrapper">
+            <span class="typing-text" id="typing-name"></span
+            ><span class="cursor">|</span>
+          </div>
+          <h1 class="hero-title">
+            <span
+              class="title-line gradient-text"
+              data-lang="hero_title_2"
+              data-en="Transform your business into full automation with LeadFlow TH Architecture"
+              data-th="เปลี่ยนระบบธุรกิจให้ทำงานอัตโนมัติ ด้วยสถาปัตยกรรม LeadFlow TH"
+              >Transform your business into full automation with LeadFlow TH
+              Architecture</span
+            >
+          </h1>
+          <p
+            class="hero-subtitle fade-in-up"
+            data-lang="hero_subtitle"
+            data-en="From BMW → Real Estate → SME Automation, we built systems that capture leads across all channels → deliver context to sales teams → reduce CAC to just ฿45"
+            data-th="จาก BMW → อสังหา → SME Automation เราสร้างระบบที่เก็บลีดทุกช่องทาง → ส่งทีมขายพร้อมบริบท → ลด CAC เหลือเพียง ฿45"
+          >
+            From BMW → Real Estate → SME Automation, we built systems that
+            capture leads across all channels → deliver context to sales teams →
+            reduce CAC to just ฿45
+          </p>
+          <div class="hero-cta-group fade-in-up delay-200">
+            <a
+              href="solutions.html"
+              class="btn-premium btn-primary"
+              data-lang="hero_btn_primary"
+              data-en="Explore Solutions"
+              data-th="ดูโซลูชันทั้งหมด"
+            >
+              Explore Solutions
+            </a>
+            <a
+              href="projects.html"
+              class="btn-premium btn-secondary"
+              data-lang="hero_btn_secondary"
+              data-en="See Real Client Cases →"
+              data-th="ดูเคสจริงลูกค้า →"
+            >
+              See Real Client Cases →
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-in-up delay-400">
+          <div class="profile-card">
+            <div class="profile-image-wrapper">
+              <picture>
+                <source
+                  media="(max-width: 640px)"
+                  srcset="Image/about-profile.png"
+                />
+                <source
+                  media="(min-width: 641px)"
+                  srcset="Image/about-profile.png"
+                />
+                <img
+                  src="Image/about-profile.png"
+                  alt="Sirawith Kaewsee Enterprise Solutions Architect wearing business suit, Thai automation expert"
+                  class="profile-img"
+                  fetchpriority="high"
+                />
+              </picture>
+              <div class="glow-effect"></div>
+            </div>
+            <a href="mailto:sirawith.keawsee@gmail.com" class="status-badge">
+              <span class="status-dot"></span>
+              <span
+                data-lang="status_working"
+                data-en="Open for Work"
+                data-th="สถานะ: พร้อมรับงาน"
+                >Open for Work</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <div class="arrow-down"></div>
+      </div>
+    </header>
+
+    <!-- Teaser Section (Quick Links) -->
+    <section
+      class="section-container"
+      style="padding: 80px 20px; text-align: center"
+    >
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">🚀</div>
+          <h3 data-lang="nav_solutions" data-en="Solutions" data-th="โซลูชัน">
+            Solutions
+          </h3>
+          <p
+            data-lang="home_teaser_sol_desc"
+            data-en="Automation + Tech Stack"
+            data-th="Automation + Tech Stack"
+          >
+            Automation + Tech Stack
+          </p>
+          <a
+            href="solutions.html"
+            class="btn-text-link"
+            style="margin-top: 15px"
+            data-en="Explore"
+            data-th="ดูรายละเอียด"
+            >Explore</a
+          >
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">🏆</div>
+          <h3 data-lang="nav_projects" data-en="Projects" data-th="ผลงาน">
+            Projects
+          </h3>
+          <p
+            data-lang="home_teaser_proj_desc"
+            data-en="ROI + Case Studies"
+            data-th="ROI + Case Studies"
+          >
+            ROI + Case Studies
+          </p>
+          <a
+            href="projects.html"
+            class="btn-text-link"
+            style="margin-top: 15px"
+            data-en="View Cases"
+            data-th="ดูเคสจริง"
+            >View Cases</a
+          >
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">👨‍💻</div>
+          <h3
+            data-lang="nav_experience"
+            data-en="Experience"
+            data-th="ประสบการณ์"
+          >
+            Experience
+          </h3>
+          <p
+            data-lang="home_teaser_exp_desc"
+            data-en="Timeline + Skills"
+            data-th="Timeline + Skills"
+          >
+            Timeline + Skills
+          </p>
+          <a
+            href="experience.html"
+            class="btn-text-link"
+            style="margin-top: 15px"
+            data-en="See Timeline"
+            data-th="ดูไทม์ไลน์"
+            >See Timeline</a
+          >
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">👤</div>
+          <h3 data-lang="nav_about" data-en="About" data-th="เกี่ยวกับ">
+            About
+          </h3>
+          <p
+            data-lang="home_teaser_about_desc"
+            data-en="Storytelling + Philosophy"
+            data-th="Storytelling + Philosophy"
+          >
+            Storytelling + Philosophy
+          </p>
+          <a
+            href="about.html"
+            class="btn-text-link"
+            style="margin-top: 15px"
+            data-en="Read Story"
+            data-th="อ่านเรื่องราว"
+            >Read Story</a
+          >
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">🤝</div>
+          <h3 data-lang="nav_contact" data-en="Contact" data-th="ติดต่อ">
+            Contact
+          </h3>
+          <p
+            data-lang="home_teaser_contact_desc"
+            data-en="Contact Channels & Form"
+            data-th="ช่องทางติดต่อและฟอร์ม"
+          >
+            Contact Channels & Form
+          </p>
+          <a
+            href="contact.html"
+            class="btn-text-link"
+            style="margin-top: 15px"
+            data-en="Get in Touch"
+            data-th="ติดต่อเรา"
+            >Get in Touch</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics Section (Premium Style) -->
+    <section class="metrics-container">
+      <div class="metrics-grid">
+        <div class="metric-card metric-story-box">
+          <span
+            class="metric-value metric-story-text"
+            data-en="+200 Qualified Leads daily | ฿45 CAC | Conversion +1.25%"
+            data-th="+200 Qualified Leads daily | ฿45 CAC | Conversion +1.25%"
+          >
+            +200 Qualified Leads daily | ฿45 CAC | Conversion +1.25%
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta-section">
+      <div class="final-cta-content">
+        <h2
+          class="final-cta-title"
+          data-lang="final_cta_title"
+          data-en="Ready to transform your business? Book a free 20-minute audit to see how many leads you’re missing"
+          data-th="พร้อมเปลี่ยนระบบธุรกิจของคุณ? จอง Audit ฟรี 20 นาที ดูว่าคุณพลาดลีดไปเท่าไหร่"
+        >
+          Ready to transform your business? Book a free 20-minute audit to see
+          how many leads you’re missing
+        </h2>
+        <a
+          href="contact.html"
+          class="btn-premium btn-primary"
+          style="font-size: 1.2rem; padding: 20px 40px"
+          data-lang="final_cta_btn"
+          data-en="Start Free Audit Now"
+          data-th="เริ่ม Audit ฟรีตอนนี้"
+        >
+          Start Free Audit Now
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div
+          class="footer-brand"
+          data-en="Sirawith.K"
+          data-th="สิรวิชญ์.K (Sirawith.K)"
+        >
+          Sirawith.K
+        </div>
+        <p
+          class="footer-tagline"
+          data-th="ผู้ออกแบบโครงสร้างดิจิทัลสำหรับองค์กรชั้นนำ (Enterprise Digital Architect)"
+          data-en="Architecting Digital Infrastructure for National-Scale Enterprises"
+          style="
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+          "
+        >
+          Architecting Digital Infrastructure for National-Scale Enterprises
+        </p>
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/sirawith-kaewsee"
+            target="_blank"
+            class="social-link"
+            aria-label="LinkedIn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              ></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a
+            href="mailto:sirawith.keawsee@gmail.com"
+            class="social-link"
+            aria-label="Email"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+          <a
+            href="https://t.me/irk_sirawith"
+            target="_blank"
+            class="social-link"
+            aria-label="Telegram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="index.html" data-lang="nav_home">Home</a>
+          <a href="solutions.html" data-lang="nav_solutions">Solutions</a>
+          <a href="about.html" data-lang="nav_about">About</a>
+          <a href="contact.html" data-lang="nav_contact">Contact</a>
+        </div>
+        <p
+          class="footer-copy"
+          data-lang="footer_copy"
+          data-en="© 2026 Sirawith Kaewsee – Enterprise Architect | LeadFlow TH"
+          data-th="© 2026 Sirawith Kaewsee – Enterprise Architect | LeadFlow TH"
+        >
+          © 2026 Sirawith Kaewsee – Enterprise Architect | LeadFlow TH
+        </p>
+      </div>
+    </footer>
+
+    <!-- Floating Hire Me Button -->
+    <a href="contact.html" class="floating-hire-btn">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 015.06 2h3a2 2 0 012 1.72 12.06 12.06 0 00.57 2.45 2 2 0 01-.45 2.11L8.9 9.55a16 16 0 006 6l2.27-2.26a2 2 0 012.11-.45 12.06 12.06 0 002.45.57 2 2 0 011.72 2z"
+        ></path>
+      </svg>
+      <span data-en="Hire Me" data-th="ติดต่อจ้างงาน (Hire Me)">Hire Me</span>
+    </a>
+
+    <!-- GSAP Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script>
+      // Page transition effect
+      document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add('loaded');
+      });
+
+      // Navigation Scroll Effect Logic
+      const nav = document.querySelector('.main-nav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+
+      // Mobile Menu
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          navLinks.classList.toggle('active');
+        });
+      }
+
+      // Typing Script
+      const textElement = document.getElementById('typing-name');
+      if (textElement) {
+        const textToType = 'Sirawith Kaewsee';
+        let charIndex = 0;
+        function typeWriter() {
+          if (charIndex < textToType.length) {
+            textElement.innerHTML += textToType.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeWriter, 100);
+          } else {
+            const cursor = document.querySelector('.cursor');
+            if (cursor) cursor.style.animation = 'blink 1s step-end infinite';
+          }
+        }
+        setTimeout(typeWriter, 500);
+      }
+
+      // Theme Toggle
+      const toggleSwitch = document.querySelector('#theme-toggle');
+      const currentTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (toggleSwitch) {
+        toggleSwitch.addEventListener('click', () => {
+          const current = document.documentElement.getAttribute('data-theme');
+          const targetTheme = current === 'light' ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', targetTheme);
+          localStorage.setItem('theme', targetTheme);
+        });
+      }
+
+      // Active State
+      const currentPath = window.location.pathname;
+      document.querySelectorAll('.nav-links a').forEach((link) => {
+        if (
+          currentPath.includes(link.getAttribute('href')) ||
+          (currentPath === '/' && link.getAttribute('href') === 'index.html')
+        )
+          link.classList.add('active');
+      });
+    </script>
+  </body>
+</html>

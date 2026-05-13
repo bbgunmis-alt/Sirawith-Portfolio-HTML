@@ -1,364 +1,634 @@
 <!DOCTYPE html>
-<html lang="th">
-
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sirawith Kaewsee | Enterprise Architect</title>
-    <meta name="description" content="Sirawith Kaewsee - Enterprise Solutions Architect. AI & No-Code automation for Thai SMEs. LeadFlow TH founder. Make.com specialist.">
-    <meta name="keywords" content="automation, LeadFlow TH, AI automation, Make.com, enterprise architect, Thai entrepreneur, lead generation">
-    <meta name="author" content="Sirawith Kaewsee">
-    <meta name="theme-color" content="#0a0f1e">
+    <title>Floy Sirawich Kaewsri | AI & n8n Automation Consultant</title>
+    
+    <!-- SEO & Metadata -->
+    <meta name="description" content="AI Prompt Engineer & n8n Automation Consultant based in Bangkok. Ex-UNIQLO, BMW, Origin. I design lead systems that convert.">
+    <meta name="keywords" content="AI automation Thailand, n8n consultant Bangkok, prompt engineering portfolio, SME automation, LINE chatbot automation">
+    <meta name="author" content="Floy Sirawich Kaewsri">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Floy Sirawich Kaewsri | AI & n8n Automation Consultant">
+    <meta property="og:description" content="Evidence-led AI automation systems for SMEs. Discover how we save 80% admin time.">
+    <meta property="og:image" content="https://floy.ai/Image/hero-visual.png">
+    <meta property="og:url" content="https://floy.ai">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Floy Sirawich Kaewsri | AI & n8n Automation Consultant">
+    <meta name="twitter:description" content="AI Automation for SMEs. Save 80% admin time.">
+    <meta name="twitter:image" content="https://floy.ai/Image/hero-visual.png">
 
-    <link rel="canonical" href="https://bbgunmis-alt.github.io/my-portfolio-2/">
-    <link rel="alternate" hreflang="en" href="https://bbgunmis-alt.github.io/my-portfolio-2/?lang=en">
-    <link rel="alternate" hreflang="th" href="https://bbgunmis-alt.github.io/my-portfolio-2/?lang=th">
-    <link rel="alternate" hreflang="x-default" href="https://bbgunmis-alt.github.io/my-portfolio-2/">
+    <link rel="canonical" href="https://floy.ai">
+    <link rel="icon" href="favicon.ico">
 
-    <!-- Schema Markup -->
+    <!-- Schema.org Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Sirawith Kaewsee",
-      "jobTitle": "Enterprise Solutions Architect",
-      "url": "https://bbgunmis-alt.github.io/my-portfolio-2/",
-      "image": "https://bbgunmis-alt.github.io/my-portfolio-2/Image/hero-profile.png",
+      "name": "Floy Sirawich Kaewsri",
+      "jobTitle": "AI Prompt Engineer & n8n Automation Consultant",
+      "url": "https://floy.ai",
       "sameAs": [
-        "https://www.linkedin.com/in/sirawith-kaewsee",
-        "https://t.me/irk_sirawith"
-      ]
+        "https://linkedin.com/in/floy-automation",
+        "https://github.com/floy-automation"
+      ],
+      "description": "Bangkok-based SME LeadFlow Architect specialized in AI automation and n8n workflows.",
+      "knowsAbout": ["AI Automation", "n8n", "Prompt Engineering", "SME Operations"]
     }
     </script>
-
-    <!-- SEO & Social Media -->
-    <meta property="og:title" content="Sirawith Kaewsee | Enterprise Solutions Architect">
-    <meta property="og:description" content="AI & No-Code automation expert building LeadFlow TH for Thai SMEs. 100+ MQLs/day. ฿45 CAC.">
-    <meta property="og:image" content="https://bbgunmis-alt.github.io/my-portfolio-2/image/profile.jpg">
-    <meta property="og:url" content="https://bbgunmis-alt.github.io/my-portfolio-2/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sirawith Kaewsee | Enterprise Architect">
-    <meta name="twitter:description" content="AI automation expert. LeadFlow TH founder.">
-    <meta name="twitter:image" content="https://bbgunmis-alt.github.io/my-portfolio-2/image/profile.jpg">
-
-    <!-- PWA & Favicon -->
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="Image/hero-profile.png">
-    <link rel="icon" type="image/png" href="Image/hero-profile.png">
-
-    <!-- EmailJS Integration -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" as="script">
-    <link rel="preload" href="assets/css/global.css" as="style">
-    <link rel="preload" as="image" href="Image/about-profile.png">
-    <link rel="preload" as="image" href="Image/hero-bg-new.png">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Red+Hat+Display:wght@700;800;900&display=swap" as="style">
-
-
+    
+    <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Red+Hat+Display:wght@700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/global.css">
-    <style>
-        /* Dynamic Navigation for Luxury Feel */
-        .main-nav {
-            position: fixed; /* Fix position to top */
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Smooth transition */
-            background: transparent; /* Start transparent for Hero */
-            padding: 25px 5%; /* Spacious initially */
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            dark: '#0a0f1e',
+                            blue: '#1e293b',
+                            accent: '#3b82f6',
+                            slate: '#64748b',
+                            glass: 'rgba(255, 255, 255, 0.03)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
         }
+    </script>
 
-        /* State when scrolled */
-        .main-nav.scrolled {
-            background: rgba(2, 6, 23, 0.75); /* Dark Navy Glass */
-            backdrop-filter: blur(16px); /* Frosted glass effect */
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border */
-            padding: 15px 5%; /* Compact size */
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-        }
-    </style>
+    <!-- Preload Hero Visual -->
+    <link rel="preload" as="image" href="Image/hero-visual.png">
 </head>
-
-<body>
-    <!-- Global Animation Elements -->
-    <div class="scroll-progress"></div>
-    <div class="custom-cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- Navigation with Hamburger Menu -->
-    <nav class="main-nav">
-        <div class="nav-brand" data-en="Sirawith.K" data-th="สิรวิชญ์.K">Sirawith.K</div>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="nav-links" id="navLinks">
-            <a href="index.html" data-lang="nav_home" data-en="Home" data-th="หน้าหลัก">Home</a>
-            <a href="solutions.html" class="nav-highlight" data-lang="nav_solutions" data-en="Solutions" data-th="โซลูชัน">Solutions</a>
-            <a href="projects.html" data-lang="nav_projects" data-en="Projects" data-th="ผลงาน">Projects</a>
-            <a href="experience.html" data-lang="nav_experience" data-en="Experience" data-th="ประสบการณ์">Experience</a>
-            <a href="about.html" data-lang="nav_about" data-en="About" data-th="เกี่ยวกับ">About</a>
-            <a href="contact.html" data-lang="nav_contact" data-en="Contact" data-th="ติดต่อ">Contact</a>
-
-            <!-- Language Toggle Button -->
-            <div class="lang-switch-wrapper">
-                <button class="lang-btn active" data-lang-val="en">🇺🇸 EN</button>
-                <button class="lang-btn" data-lang-val="th">🇹🇭 ไทย</button>
-                <div class="lang-glider"></div>
+<body class="bg-white dark:bg-luxury-dark text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300 antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="main-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-display font-bold text-xl tracking-tight">
+                <span class="text-blue-600">Floy</span>.S
             </div>
-
-            <!-- Theme Toggle Button -->
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#projects" class="hover:text-blue-600 transition-colors" data-lang="nav_projects">Projects</a>
+                <a href="#services" class="hover:text-blue-600 transition-colors" data-lang="nav_services">Services</a>
+                <a href="#process" class="hover:text-blue-600 transition-colors" data-lang="nav_process">Process</a>
+                <a href="#about" class="hover:text-blue-600 transition-colors" data-lang="nav_about">About</a>
+                
+                <div class="flex items-center space-x-4 border-l border-slate-200 dark:border-slate-800 pl-8">
+                    <button id="lang-toggle" class="flex items-center space-x-1 hover:text-blue-600">
+                        <span class="lang-text">EN</span>
+                    </button>
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                        <svg class="sun hidden w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364-6.364l-.707.707M6.343 17.657l-.707.707M16.95 17.657l.707.707M7.757 7.243l.707.707M12 5a7 7 0 110 14 7 7 0 010-14z"></path></svg>
+                        <svg class="moon w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+                    </button>
+                </div>
+            </div>
+            
+            <button class="md:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800" id="mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
+        </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white dark:bg-luxury-dark z-50 transform translate-x-full transition-transform duration-500 md:hidden flex flex-col items-center justify-center space-y-8 text-2xl font-bold">
+            <button id="mobile-menu-close" class="absolute top-6 right-6 p-2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <a href="#projects" class="hover:text-blue-600" data-lang="nav_projects">Projects</a>
+            <a href="#services" class="hover:text-blue-600" data-lang="nav_services">Services</a>
+            <a href="#process" class="hover:text-blue-600" data-lang="nav_process">Process</a>
+            <a href="#about" class="hover:text-blue-600" data-lang="nav_about">About</a>
         </div>
     </nav>
 
-    <!-- Hero Section (Premium Enterprise Style) -->
-    <header class="hero-section">
-        <video autoplay muted loop playsinline class="hero-video-bg">
-            <source src="Image/leadflow-demo.mp4" type="video/mp4">
-            <!-- Fallback is handled via CSS background on .hero-section -->
-        </video>
-        <div class="hero-bg-overlay"></div>
-        <div class="hero-container parallax-target">
-            <div class="hero-content">
-                <div class="hero-typing-wrapper">
-                    <span class="typing-text" id="typing-name"></span><span class="cursor">|</span>
-                </div>
-                <h1 class="hero-title">
-                    <span class="title-line" data-lang="hero_title_1" data-en="Engineering Revenue" data-th="วิศวกรรมสร้างรายได้">Engineering Revenue</span>
-                    <span class="title-line gradient-text" data-lang="hero_title_2" data-en="Velocity via AI" data-th="เร่งความเร็วด้วย AI">Velocity via AI</span>
-                </h1>
-                <p class="hero-subtitle fade-in-up" data-lang="hero_subtitle" data-en="High-yield automated architectures for industry-leading sales organizations. Strategic infrastructure designed for scalability." data-th="สถาปัตยกรรมระบบอัตโนมัติประสิทธิภาพสูง สำหรับองค์กรชั้นนำที่ต้องการขยายตัวอย่างมั่งคั่งและก้าวระโดด">
-                    High-yield automated architectures for industry-leading sales organizations. Strategic
-                    infrastructure designed for scalability.
-                </p>
-                <div class="hero-cta-group fade-in-up delay-200">
-                    <a href="solutions.html" class="btn-premium btn-primary" data-lang="hero_btn_primary" data-en="Initiate Strategy Consultation" data-th="ขอคำปรึกษาเชิงกลยุทธ์">
-                        Initiate Strategy Consultation
-                    </a>
-                    <a href="contact.html" class="btn-premium btn-secondary" data-lang="hero_btn_secondary" data-en="Capability Briefing" data-th="ข้อมูลบริการ (Capability Brief)">
-                        Capability Briefing
-                    </a>
-                </div>
-            </div>
-
-            <div class="hero-visual fade-in-up delay-400">
-                <div class="profile-card">
-                    <div class="profile-image-wrapper">
-                        <picture>
-                            <source media="(max-width: 640px)" srcset="Image/about-profile.png">
-                            <source media="(min-width: 641px)" srcset="Image/about-profile.png">
-                            <img src="Image/about-profile.png" alt="Sirawith Kaewsee Enterprise Solutions Architect wearing business suit, Thai automation expert"
-                                class="profile-img" fetchpriority="high">
-                        </picture>
-                        <div class="glow-effect"></div>
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-10">
+                <div class="space-y-4">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 text-[10px] font-extrabold uppercase tracking-[0.2em]">
+                        <span>● Available for Consulting</span>
                     </div>
-                    <a href="mailto:sirawith.keawsee@gmail.com" class="status-badge">
-                        <span class="status-dot"></span>
-                        <span data-lang="status_working" data-en="Open for Work" data-th="สถานะ: พร้อมรับงาน">Open for Work</span>
-                    </a>
+                    <h1 class="font-display text-4xl sm:text-6xl md:text-8xl font-black leading-[0.95] tracking-tighter" data-lang="hero_name">
+                        Floy Sirawich Kaewsri
+                    </h1>
+                    <div class="space-y-1">
+                        <h2 class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-bold" data-lang="hero_title">
+                            AI Prompt Engineer & n8n Automation Consultant
+                        </h2>
+                        <p class="text-xs text-slate-400 dark:text-slate-600 uppercase tracking-widest font-medium" data-lang="hero_sub">
+                            Bangkok-based SME LeadFlow Architect | Ex-UNIQLO / BMW / Origin
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <div class="arrow-down"></div>
-        </div>
-    </header>
-
-    <!-- Metrics Section (Premium Style) -->
-    <section class="metrics-container">
-        <div class="metrics-grid">
-            <div class="metric-card">
-                <span class="metric-value">50+</span>
-                <span class="metric-label" data-lang="metric_sales_label" data-en="Luxury High-Volume Sales / Yr" data-th="ยอดขายกลุ่ม Luxury / ปี">Luxury High-Volume Sales / Yr</span>
-            </div>
-            <div class="metric-card">
-                <span class="metric-value">99.9%</span>
-                <span class="metric-label" data-lang="metric_uptime_label" data-en="System Architecture Uptime" data-th="ความเสถียรของระบบโครงสร้าง">System Architecture Uptime</span>
-            </div>
-            <div class="metric-card">
-                <span class="metric-value">100+</span>
-                <span class="metric-label" data-lang="metric_mql_label" data-en="Automated MQLs / Day" data-th="MQL อัตโนมัติ / วัน">Automated MQLs / Day</span>
-            </div>
-            <div class="metric-card">
-                <span class="metric-value">฿45</span>
-                <span class="metric-label" data-lang="metric_cac_label" data-en="Weighted Average CAC" data-th="ต้นทุนเฉลี่ยต่อลูกค้า (CAC)">Weighted Average CAC</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Teaser Section (Quick Links) -->
-    <section class="section-container" style="padding: 80px 20px; text-align: center;">
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">🚀</div>
-                <h3 data-lang="nav_solutions" data-en="Solutions" data-th="โซลูชัน">Solutions</h3>
-                <p data-lang="home_teaser_sol_desc" data-en="Automation + Tech Stack" data-th="ระบบอัตโนมัติ + เทคโนโลยี">Automation + Tech Stack</p>
-                <a href="solutions.html" class="btn-text-link" style="margin-top: 15px;" data-lang="teaser_sol_title" data-en="Explore Solutions →" data-th="ดูโซลูชันทั้งหมด →">Explore Solutions →</a>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">🏆</div>
-                <h3 data-lang="nav_projects" data-en="Projects" data-th="ผลงาน">Projects</h3>
-                <p data-lang="home_teaser_proj_desc" data-en="200+ Qualified Leads daily, ฿45 CAC" data-th="200+ ลีดคุณภาพต่อวัน, CAC ฿45">200+ Qualified Leads daily, ฿45 CAC</p>
-                <a href="projects.html" class="btn-text-link" style="margin-top: 15px;" data-lang="teaser_proj_title" data-en="View Case Studies →" data-th="ดูผลงานจริง →">View Case Studies →</a>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">👨‍💻</div>
-                <h3 data-lang="nav_experience" data-en="Experience" data-th="ประสบการณ์">Experience</h3>
-                <p data-lang="home_teaser_exp_desc" data-en="Digital Marketing Specialist, Luxury Sales Consultant" data-th="ผู้เชี่ยวชาญการตลาดดิจิทัล, ที่ปรึกษาการขาย Luxury">Digital Marketing Specialist, Luxury Sales Consultant</p>
-                <a href="experience.html" class="btn-text-link" style="margin-top: 15px;" data-lang="teaser_exp_title" data-en="See Experience →" data-th="ดูประสบการณ์ →">See Experience →</a>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">👤</div>
-                <h3 data-lang="nav_about" data-en="About" data-th="เกี่ยวกับ">About</h3>
-                <p data-lang="home_teaser_about_desc" data-en="Work Philosophy & Personal Brand" data-th="ปรัชญาการทำงาน & แบรนด์บุคคล">Work Philosophy & Personal Brand</p>
-                <a href="about.html" class="btn-text-link" style="margin-top: 15px;" data-lang="teaser_about_title" data-en="Read My Story →" data-th="อ่านเรื่องราวของผม →">Read My Story →</a>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">🤝</div>
-                <h3 data-lang="nav_contact" data-en="Contact" data-th="ติดต่อ">Contact</h3>
-                <p data-lang="home_teaser_contact_desc" data-en="Contact Channels & Form" data-th="ช่องทางติดต่อ & แบบฟอร์ม">Contact Channels & Form</p>
-                <a href="contact.html" class="btn-text-link" style="margin-top: 15px;" data-lang="page_contact_title" data-en="Contact Me →" data-th="ติดต่อฉัน →">Contact Me →</a>
-            </div>
-        </div>
-    </section>
-
-        <!-- Footer -->
-        <footer class="main-footer">
-            <div class="footer-content">
-                <div class="footer-brand" data-en="Sirawith.K" data-th="สิรวิชญ์.K (Sirawith.K)">Sirawith.K</div>
-                <p class="footer-tagline" data-th="ผู้ออกแบบโครงสร้างดิจิทัลสำหรับองค์กรชั้นนำ (Enterprise Digital Architect)" data-en="Architecting Digital Infrastructure for National-Scale Enterprises"
-                    style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">Architecting Digital
-                    Infrastructure for National-Scale Enterprises</p>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/sirawith-kaewsee" target="_blank" class="social-link" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    </a>
-                    <a href="mailto:sirawith.keawsee@gmail.com" class="social-link" aria-label="Email">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    </a>
-                    <a href="https://t.me/irk_sirawith" target="_blank" class="social-link" aria-label="Telegram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                    </a>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html" data-lang="nav_home">Home</a>
-                    <a href="solutions.html" data-lang="nav_solutions">Solutions</a>
-                    <a href="about.html" data-lang="nav_about">About</a>
-                    <a href="contact.html" data-lang="nav_contact">Contact</a>
-                </div>
-                <p class="footer-copy" data-en="&copy; 2026 Sirawith Kaewsee – Enterprise Architect"
-                    data-th="&copy; 2026 สิรวิชญ์ แก้วสี – สถาปนิกโซลูชันองค์กร (Enterprise Architect)">&copy; 2026 Sirawith Kaewsee – Enterprise Architect
+                
+                <p class="hero-text text-xl text-slate-600 dark:text-slate-300 max-w-lg leading-relaxed font-light" data-lang="hero_value">
+                    I design automation systems that save time, reduce manual work, and improve lead conversion.
                 </p>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-4 cta-box">
+                    <a href="https://calendly.com/sirawith-keawsee1" target="_blank" class="w-full sm:w-auto px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-bold transition-all transform hover:-translate-y-1 shadow-2xl shadow-blue-500/20 flex items-center justify-center space-x-3">
+                        <span data-lang="cta_book">Book Calendly</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                    <div class="flex items-center space-x-3">
+                        <a href="https://www.linkedin.com/in/sirawith-k-155182367/" target="_blank" class="p-5 bg-white dark:bg-luxury-glass border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-blue-600 transition-all shadow-sm">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="w-6 h-6 grayscale opacity-60 hover:opacity-100 hover:grayscale-0" alt="LinkedIn">
+                        </a>
+                        <a href="https://line.me/ti/p/~floy.bmw.th" target="_blank" class="p-5 bg-white dark:bg-luxury-glass border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-blue-600 transition-all shadow-sm">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968841.png" class="w-6 h-6 grayscale opacity-60 hover:opacity-100 hover:grayscale-0" alt="LINE">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pt-10 grid grid-cols-2 sm:grid-cols-3 gap-10 border-t border-slate-100 dark:border-slate-800/50">
+                    <div class="space-y-1">
+                        <div class="text-2xl sm:text-3xl font-black text-blue-600 tracking-tighter">50+</div>
+                        <div class="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] font-black text-slate-400" data-lang="signal_1">Systems Delivered</div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="text-2xl sm:text-3xl font-black text-blue-600 tracking-tighter">80%</div>
+                        <div class="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] font-black text-slate-400" data-lang="signal_2">Admin Time Saved</div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="text-2xl sm:text-3xl font-black text-blue-600 tracking-tighter">SME</div>
+                        <div class="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] font-black text-slate-400" data-lang="signal_3">SME Focus</div>
+                    </div>
+                </div>
             </div>
-        </footer>
+            
+            <div class="relative hidden md:block">
+                <div class="absolute -inset-10 bg-gradient-to-tr from-blue-600/10 to-indigo-600/10 rounded-full blur-3xl"></div>
+                <div class="relative rounded-[2rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] border border-white/10 aspect-[4/3] bg-luxury-blue group">
+                    <img src="Image/hero-visual.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Automation Dashboard">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 p-5 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></div>
+                                <span class="text-[10px] font-mono font-bold text-white uppercase tracking-widest">Active Workflow</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-white/40 uppercase">v4.8.0-Stable</span>
+                        </div>
+                        <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-blue-500 w-3/4 animate-shimmer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Floating Hire Me Button -->
-    <a href="contact.html" class="floating-hire-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path
-                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 015.06 2h3a2 2 0 012 1.72 12.06 12.06 0 00.57 2.45 2 2 0 01-.45 2.11L8.9 9.55a16 16 0 006 6l2.27-2.26a2 2 0 012.11-.45 12.06 12.06 0 002.45.57 2 2 0 011.72 2z">
-                </path>
-            </svg>
-            <span data-en="Hire Me" data-th="ติดต่อจ้างงาน (Hire Me)">Hire Me</span>
-        </a>
+    <!-- About -->
+    <section id="about" class="py-32 bg-slate-50 dark:bg-luxury-dark/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="relative group order-2 md:order-1">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative bg-white dark:bg-luxury-blue p-3 rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="Image/hero-profile.png" class="w-full rounded-2xl grayscale brightness-110 hover:grayscale-0 transition-all duration-1000 ease-in-out scale-105 group-hover:scale-100" alt="Floy Profile" loading="lazy">
+                    </div>
+                </div>
+                <div class="space-y-8 order-1 md:order-2">
+                    <div class="inline-block px-3 py-1 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest rounded">Foundations</div>
+                    <h2 class="text-4xl md:text-5xl font-display font-black leading-tight" data-lang="about_title">The Logic Behind the Flow</h2>
+                    <div class="prose prose-lg dark:prose-invert text-slate-600 dark:text-slate-400 font-light leading-relaxed" data-lang="about_content">
+                        <!-- Content via language.js -->
+                    </div>
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div class="p-6 rounded-2xl bg-white dark:bg-luxury-blue border border-slate-100 dark:border-slate-800 shadow-sm">
+                            <div class="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-2">Human Design</div>
+                            <div class="text-lg font-bold">Projector 1/3</div>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white dark:bg-luxury-blue border border-slate-100 dark:border-slate-800 shadow-sm">
+                            <div class="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-2">Enneagram</div>
+                            <div class="text-lg font-bold">Type 5w6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- GSAP Animations -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-        <script src="assets/js/animations.js"></script>
-        <script src="assets/js/language.js"></script>
-        <script>
-            // Page transition effect
-            document.addEventListener('DOMContentLoaded', () => {
-                document.body.classList.add('loaded');
-            });
+    <!-- Projects -->
+    <section id="projects" class="py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-24">
+                <div class="space-y-4">
+                    <div class="inline-block px-3 py-1 bg-slate-900 dark:bg-white dark:text-slate-900 text-white text-[10px] font-black uppercase tracking-widest rounded">Case Studies</div>
+                    <h2 class="text-5xl md:text-7xl font-display font-black tracking-tighter" data-lang="projects_title">Evidence-Led Projects</h2>
+                    <p class="text-xl text-slate-500 max-w-xl font-light" data-lang="projects_sub">Solving complex bottlenecks with clean, scalable automation architecture.</p>
+                </div>
+            </div>
 
-            // Navigation Scroll Effect Logic
-            const nav = document.querySelector('.main-nav');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
-            });
+            <div class="space-y-32">
+                <!-- Project Card Template (Project 1) -->
+                <div class="case-study-card">
+                    <div class="grid lg:grid-cols-12 gap-16">
+                        <div class="lg:col-span-7 space-y-10">
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-3 text-blue-600 font-black text-xs uppercase tracking-widest">
+                                    <span>AI Integration</span>
+                                    <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                                    <span>RAG System</span>
+                                </div>
+                                <h3 class="text-4xl md:text-5xl font-black font-display tracking-tight" data-lang="p1_name">PATSTICKER AI Chatbot</h3>
+                                <p class="text-2xl text-slate-500 italic font-light leading-relaxed" data-lang="p1_one">LINE OA → n8n RAG Agent → Sheets Quote Gen | 80% admin save</p>
+                            </div>
+                            
+                            <!-- 8-Block Details Grid -->
+                            <div class="grid sm:grid-cols-2 gap-x-12 gap-y-10 py-10 border-y border-slate-100 dark:border-slate-800/50">
+                                <div class="space-y-2">
+                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Business Context</h4>
+                                    <p class="text-sm leading-relaxed font-medium" data-lang="p1_ctx">High-volume sticker installation business managing leads primarily through LINE OA.</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Pain Points</h4>
+                                    <p class="text-sm leading-relaxed font-medium" data-lang="p1_pain">Slow response times, manual price calculations, and lost leads during peak hours.</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">The Automation</h4>
+                                    <p class="text-sm leading-relaxed font-medium" data-lang="p1_auto">Autonomous FAQ agent with dynamic price estimation and auto-handoff to human experts.</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="flex items-center justify-between">
+                                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Outcomes & KPI</h4>
+                                        <div class="flex items-center space-x-1 px-2 py-0.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 text-[8px] font-bold uppercase tracking-wider">
+                                            <span class="w-1 h-1 bg-green-500 rounded-full animate-pulse"></span>
+                                            <span data-lang="status_verified">Verified</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm leading-relaxed font-medium" data-lang="p1_kpi">80% reduction in manual admin, 2x increase in conversion rate via instant replies.</p>
+                                </div>
+                            </div>
 
-            // Mobile Menu
-            const hamburger = document.getElementById('hamburger');
-            const navLinks = document.getElementById('navLinks');
-            if(hamburger && navLinks) {
-                hamburger.addEventListener('click', () => {
-                    hamburger.classList.toggle('active');
-                    navLinks.classList.toggle('active');
-                });
-            }
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-slate-100 dark:bg-luxury-glass rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200 dark:border-slate-800">n8n</span>
+                                <span class="px-4 py-2 bg-slate-100 dark:bg-luxury-glass rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200 dark:border-slate-800">LINE API</span>
+                                <span class="px-4 py-2 bg-slate-100 dark:bg-luxury-glass rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200 dark:border-slate-800">OpenAI RAG</span>
+                                <span class="px-4 py-2 bg-slate-100 dark:bg-luxury-glass rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200 dark:border-slate-800">Google Sheets</span>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5">
+                            <div class="sticky top-32 space-y-6">
+                                <div class="rounded-3xl overflow-hidden bg-slate-100 dark:bg-luxury-blue border border-slate-200 dark:border-slate-800 shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
+                                    <img src="Image/projects/p1-main.png" class="w-full object-cover aspect-[4/5]" alt="PATSTICKER AI Chatbot Interface" loading="lazy">
+                                </div>
+                                <div class="text-[10px] text-slate-400 dark:text-slate-500 italic text-center px-4" data-lang="p1_caption">
+                                    Processing: AI analyzing customer intent and calculating custom price in real-time.
+                                </div>
+                                <div class="p-8 bg-blue-50 dark:bg-blue-900/10 rounded-3xl border border-blue-100 dark:border-blue-900/30 space-y-4">
+                                    <div class="flex items-center space-x-3 text-blue-600">
+                                        <div class="p-2 bg-blue-600 text-white rounded-lg">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                        </div>
+                                        <span class="font-black text-sm uppercase tracking-widest">Reliability Layer</span>
+                                    </div>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-medium italic" data-lang="p1_rel">Duplicate lead protection, automatic error logging, and seamless handoff fallback to human admin.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            // Typing Script
-            const textElement = document.getElementById('typing-name');
-            if (textElement) {
-                const textToType = "Sirawith Kaewsee";
-                let charIndex = 0;
-                function typeWriter() {
-                    if (charIndex < textToType.length) {
-                        textElement.innerHTML += textToType.charAt(charIndex);
-                        charIndex++;
-                        setTimeout(typeWriter, 100);
-                    } else {
-                        const cursor = document.querySelector('.cursor');
-                        if(cursor) cursor.style.animation = 'blink 1s step-end infinite';
-                    }
-                }
-                setTimeout(typeWriter, 500);
-            }
+                <!-- Project 2 -->
+                <div class="case-study-card">
+                    <div class="grid lg:grid-cols-12 gap-16">
+                        <div class="lg:col-span-7 space-y-10 lg:order-2">
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-3 text-blue-600 font-black text-xs uppercase tracking-widest">
+                                    <span>Payment Automation</span>
+                                    <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                                    <span>Dynamic PDF</span>
+                                </div>
+                                <h3 class="text-4xl md:text-5xl font-black font-display tracking-tight" data-lang="p2_name">มัน แฉะ มาก 2026 Tickets</h3>
+                                <p class="text-2xl text-slate-500 italic font-light leading-relaxed" data-lang="p2_one">Multi-channel Webhook → PromptPay QR → Auto-Ticket Slides | 24/7 Funnel</p>
+                            </div>
+                            
+                            <div class="grid sm:grid-cols-2 gap-x-12 gap-y-10 py-10 border-y border-slate-100 dark:border-slate-800/50">
+                                <div class="space-y-2">
+                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Business Context</h4>
+                                    <p class="text-sm leading-relaxed font-medium" data-lang="p2_ctx">Large-scale music festival requiring rapid, error-free ticket distribution.</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Pain Points</h4>
+                                    <p class="text-sm leading-relaxed font-medium" data-lang="p2_pain">Manual slip verification and ticket generation led to long wait times and entry errors.</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">The Automation</h4>
+                                    <p class="text-sm leading-relaxed font-medium" data-lang="p2_auto">Fully automated payment validation using PromptPay webhooks and dynamic PDF generation.</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="flex items-center justify-between">
+                                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Outcomes & KPI</h4>
+                                        <div class="flex items-center space-x-1 px-2 py-0.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 text-[8px] font-bold uppercase tracking-wider">
+                                            <span class="w-1 h-1 bg-green-500 rounded-full animate-pulse"></span>
+                                            <span data-lang="status_verified">Verified</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm leading-relaxed font-medium" data-lang="p2_kpi">Instant ticket delivery (sub-60s), zero manual verification errors, and real-time dashboard.</p>
+                                </div>
+                            </div>
 
-            // Theme Toggle
-            const toggleSwitch = document.querySelector('#theme-toggle');
-            const currentTheme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', currentTheme);
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-slate-100 dark:bg-luxury-glass rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200 dark:border-slate-800">Webhook Sync</span>
+                                <span class="px-4 py-2 bg-slate-100 dark:bg-luxury-glass rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200 dark:border-slate-800">PromptPay QR</span>
+                                <span class="px-4 py-2 bg-slate-100 dark:bg-luxury-glass rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200 dark:border-slate-800">n8n</span>
+                                <span class="px-4 py-2 bg-slate-100 dark:bg-luxury-glass rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200 dark:border-slate-800">Google Slides API</span>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 lg:order-1">
+                            <div class="sticky top-32 space-y-6">
+                                <div class="rounded-3xl overflow-hidden bg-slate-100 dark:bg-luxury-blue border border-slate-200 dark:border-slate-800 shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
+                                    <img src="Image/projects/p2-main.png" class="w-full object-cover aspect-[4/5]" alt="Festival Ticket Dashboard" loading="lazy">
+                                </div>
+                                <div class="text-[10px] text-slate-400 dark:text-slate-500 italic text-center px-4" data-lang="p2_caption">
+                                    Dashboard: Real-time tracking of ticket distribution and PromptPay validation status.
+                                </div>
+                                <div class="p-8 bg-blue-50 dark:bg-blue-900/10 rounded-3xl border border-blue-100 dark:border-blue-900/30 space-y-4">
+                                    <div class="flex items-center space-x-3 text-blue-600">
+                                        <div class="p-2 bg-blue-600 text-white rounded-lg">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                        </div>
+                                        <span class="font-black text-sm uppercase tracking-widest">Reliability Layer</span>
+                                    </div>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-medium italic" data-lang="p2_rel">Checksum verification, retry logic for PDF generation, and automated cloud backups.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            if(toggleSwitch) {
-                toggleSwitch.addEventListener('click', () => {
-                    const current = document.documentElement.getAttribute('data-theme');
-                    const targetTheme = current === 'light' ? 'dark' : 'light';
-                    document.documentElement.setAttribute('data-theme', targetTheme);
-                    localStorage.setItem('theme', targetTheme);
-                });
-            }
-        </script>
+                <!-- Project 3 -->
+                <div class="case-study-card">
+                    <div class="grid lg:grid-cols-12 gap-16">
+                        <div class="lg:col-span-7 space-y-10">
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-3 text-blue-600 font-black text-xs uppercase tracking-widest">
+                                    <span>Database Sync</span>
+                                    <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                                    <span>Analytics</span>
+                                </div>
+                                <h3 class="text-4xl md:text-5xl font-black font-display tracking-tight" data-lang="p3_name">Notion Restaurant Sales</h3>
+                                <p class="text-2xl text-slate-500 italic font-light leading-relaxed" data-lang="p3_one">LINE Orders → Notion DB Sync + Analytics Dashboard | 90% manual cut</p>
+                            </div>
+                            
+                            <div class="grid sm:grid-cols-2 gap-x-12 gap-y-10 py-10 border-y border-slate-100 dark:border-slate-800/50">
+                                <div class="space-y-2">
+                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Business Context</h4>
+                                    <p class="text-sm leading-relaxed font-medium" data-lang="p3_ctx">Busy Bangkok cafe with data scattered across delivery apps and LINE.</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Pain Points</h4>
+                                    <p class="text-sm leading-relaxed font-medium" data-lang="p3_pain">No unified view of sales, manual data entry at end-of-shift, and inaccurate reporting.</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">The Automation</h4>
+                                    <p class="text-sm leading-relaxed font-medium" data-lang="p3_auto">Syncing all order sources into a relational Notion database with automated daily summaries.</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="flex items-center justify-between">
+                                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Outcomes & KPI</h4>
+                                        <div class="flex items-center space-x-1 px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 text-[8px] font-bold uppercase tracking-wider">
+                                            <span class="w-1 h-1 bg-blue-500 rounded-full"></span>
+                                            <span data-lang="status_estimated">Estimated</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm leading-relaxed font-medium" data-lang="p3_kpi">90% reduction in reporting time, 100% data accuracy, and instant visibility.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-slate-100 dark:bg-luxury-glass rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200 dark:border-slate-800">Notion API</span>
+                                <span class="px-4 py-2 bg-slate-100 dark:bg-luxury-glass rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200 dark:border-slate-800">LINE Pay</span>
+                                <span class="px-4 py-2 bg-slate-100 dark:bg-luxury-glass rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200 dark:border-slate-800">n8n</span>
+                                <span class="px-4 py-2 bg-slate-100 dark:bg-luxury-glass rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200 dark:border-slate-800">Chart Engine</span>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5">
+                            <div class="sticky top-32 space-y-6">
+                                <div class="rounded-3xl overflow-hidden bg-slate-100 dark:bg-luxury-blue border border-slate-200 dark:border-slate-800 shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
+                                    <img src="Image/projects/p3-main.png" class="w-full object-cover aspect-[4/5]" alt="Notion Sales Analytics" loading="lazy">
+                                </div>
+                                <div class="text-[10px] text-slate-400 dark:text-slate-500 italic text-center px-4" data-lang="p3_caption">
+                                    Output: Unified sales view with automated profit margins calculated daily.
+                                </div>
+                                <div class="p-8 bg-blue-50 dark:bg-blue-900/10 rounded-3xl border border-blue-100 dark:border-blue-900/30 space-y-4">
+                                    <div class="flex items-center space-x-3 text-blue-600">
+                                        <div class="p-2 bg-blue-600 text-white rounded-lg">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                        </div>
+                                        <span class="font-black text-sm uppercase tracking-widest">Reliability Layer</span>
+                                    </div>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-medium italic" data-lang="p3_rel">Format normalization, duplicate entry filtering, and weekly auto-audits.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-32 bg-slate-900 text-white overflow-hidden relative">
+        <div class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white dark:from-luxury-dark to-transparent opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center space-y-6 mb-24">
+                <div class="inline-block px-3 py-1 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest rounded mx-auto">Investment Tiers</div>
+                <h2 class="text-4xl sm:text-5xl md:text-7xl font-display font-black tracking-tighter" data-lang="services_title">Consulting Tiers</h2>
+                <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light" data-lang="services_sub">Transparent investment levels designed for operational scalability.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Tier 1 -->
+                <div class="p-10 rounded-[2.5rem] bg-slate-800/30 border border-slate-800 backdrop-blur-xl space-y-10 group hover:border-slate-600 transition-all duration-500">
+                    <div class="space-y-4">
+                        <div class="text-blue-400 text-xs font-black uppercase tracking-[0.2em]" data-lang="tier1_name">SME Starter</div>
+                        <div class="text-5xl font-black"><span data-lang="tier1_price">10k</span><span class="text-sm text-slate-500 font-bold ml-2 uppercase">THB</span></div>
+                    </div>
+                    <ul class="space-y-5 text-slate-400 text-sm font-medium">
+                        <li class="flex items-center space-x-3">
+                            <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                            <span data-lang="tier1_f1">n8n Core Workflow</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                            <span data-lang="tier1_f2">Single API Integration</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                            <span data-lang="tier1_f3">Basic Error Handling</span>
+                        </li>
+                    </ul>
+                    <a href="https://calendly.com/sirawith-keawsee1" target="_blank" class="block w-full py-5 text-center bg-slate-800 hover:bg-slate-700 rounded-2xl font-bold transition-all focus:ring-2 focus:ring-blue-600 outline-none" data-lang="tier1_cta">Request Quote</a>
+                </div>
+                
+                <!-- Tier 2 (Featured) -->
+                <div class="p-10 rounded-[2.5rem] bg-blue-600 border border-blue-500 space-y-10 relative overflow-hidden transform md:scale-105 shadow-[0_32px_64px_-16px_rgba(37,99,235,0.4)]">
+                    <div class="absolute top-6 right-6 px-4 py-1.5 bg-white/20 rounded-full text-[10px] font-black uppercase tracking-widest text-white backdrop-blur-md">Recommended</div>
+                    <div class="space-y-4">
+                        <div class="text-blue-100 text-xs font-black uppercase tracking-[0.2em]" data-lang="tier2_name">SME Pro</div>
+                        <div class="text-5xl font-black text-white"><span data-lang="tier2_price">50k</span><span class="text-sm text-blue-200 font-bold ml-2 uppercase">THB</span></div>
+                    </div>
+                    <ul class="space-y-5 text-blue-50 text-sm font-medium">
+                        <li class="flex items-center space-x-3">
+                            <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                            <span data-lang="tier2_f1">Full LeadFlow™ System</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                            <span data-lang="tier2_f2">Multi-platform Orchestration</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                            <span data-lang="tier2_f3">Custom AI RAG Integration</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                            <span data-lang="tier2_f4">Enterprise Reliability Layer</span>
+                        </li>
+                    </ul>
+                    <a href="https://calendly.com/sirawith-keawsee1" target="_blank" class="block w-full py-5 text-center bg-white text-blue-600 font-black rounded-2xl hover:bg-blue-50 transition-all shadow-xl focus:ring-2 focus:ring-white outline-none" data-lang="tier2_cta">Start Project</a>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="p-10 rounded-[2.5rem] bg-slate-800/30 border border-slate-800 backdrop-blur-xl space-y-10 group hover:border-slate-600 transition-all duration-500">
+                    <div class="space-y-4">
+                        <div class="text-slate-500 text-xs font-black uppercase tracking-[0.2em]" data-lang="tier3_name">Enterprise</div>
+                        <div class="text-4xl font-black" data-lang="tier3_price">Custom</div>
+                    </div>
+                    <ul class="space-y-5 text-slate-400 text-sm font-medium">
+                        <li class="flex items-center space-x-3">
+                            <div class="w-1.5 h-1.5 bg-slate-600 rounded-full"></div>
+                            <span data-lang="tier3_f1">Complex Ecosystem Sync</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-1.5 h-1.5 bg-slate-600 rounded-full"></div>
+                            <span data-lang="tier3_f2">Internal AI Model Tuning</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-1.5 h-1.5 bg-slate-600 rounded-full"></div>
+                            <span data-lang="tier3_f3">Managed Operations & SLA</span>
+                        </li>
+                    </ul>
+                    <a href="https://calendly.com/sirawith-keawsee1" target="_blank" class="block w-full py-5 text-center bg-slate-800 hover:bg-slate-700 rounded-2xl font-bold transition-all focus:ring-2 focus:ring-blue-600 outline-none" data-lang="tier3_cta">Contact for Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="space-y-8">
+                    <div class="inline-block px-3 py-1 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest rounded" data-lang="methodology">Methodology</div>
+                    <h2 class="text-4xl sm:text-5xl md:text-7xl font-display font-black tracking-tighter" data-lang="process_title">The Automation Factory</h2>
+                    <p class="text-lg md:text-xl text-slate-500 font-light leading-relaxed" data-lang="process_sub">Systematic, evidence-led deployment from diagnostic to scaling.</p>
+                </div>
+                <div class="grid gap-6">
+                    <!-- Step 1 -->
+                    <div class="process-step group p-8 rounded-3xl bg-slate-50 dark:bg-luxury-blue/30 border border-slate-100 dark:border-slate-800 hover:border-blue-600 transition-all duration-500">
+                        <div class="flex items-start gap-6">
+                            <div class="text-3xl font-black text-blue-600 opacity-20 group-hover:opacity-100 transition-opacity">01</div>
+                            <div class="space-y-2">
+                                <h3 class="text-xl font-black font-display" data-lang="step1_title">Discover</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 font-medium" data-lang="step1_desc">Mapping bottlenecks and data leakage points.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="process-step group p-8 rounded-3xl bg-slate-50 dark:bg-luxury-blue/30 border border-slate-100 dark:border-slate-800 hover:border-blue-600 transition-all duration-500">
+                        <div class="flex items-start gap-6">
+                            <div class="text-3xl font-black text-blue-600 opacity-20 group-hover:opacity-100 transition-opacity">02</div>
+                            <div class="space-y-2">
+                                <h3 class="text-xl font-black font-display" data-lang="step2_title">Design</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 font-medium" data-lang="step2_desc">Architecting logic flow and tool selection.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="process-step group p-8 rounded-3xl bg-slate-50 dark:bg-luxury-blue/30 border border-slate-100 dark:border-slate-800 hover:border-blue-600 transition-all duration-500">
+                        <div class="flex items-start gap-6">
+                            <div class="text-3xl font-black text-blue-600 opacity-20 group-hover:opacity-100 transition-opacity">03</div>
+                            <div class="space-y-2">
+                                <h3 class="text-xl font-black font-display" data-lang="step3_title">Build</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 font-medium" data-lang="step3_desc">Developing n8n workflows and AI templates.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="process-step group p-8 rounded-3xl bg-slate-50 dark:bg-luxury-blue/30 border border-slate-100 dark:border-slate-800 hover:border-blue-600 transition-all duration-500">
+                        <div class="flex items-start gap-6">
+                            <div class="text-3xl font-black text-blue-600 opacity-20 group-hover:opacity-100 transition-opacity">04</div>
+                            <div class="space-y-2">
+                                <h3 class="text-xl font-black font-display" data-lang="step4_title">Deploy</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 font-medium" data-lang="step4_desc">Rigorous testing and live implementation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-slate-100 dark:border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-2 space-y-6">
+                    <div class="font-display font-black text-3xl">Floy.S</div>
+                    <p class="text-slate-500 max-w-sm font-medium" data-lang="footer_note">Designed for fast, evidence-led automation consulting.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-[10px] font-black uppercase tracking-widest text-slate-400" data-lang="footer_contact">Contact</h4>
+                    <ul class="space-y-2 text-sm font-bold">
+                        <li><a href="mailto:Sirawith.keawsee@gmail.com" class="hover:text-blue-600 transition-colors focus:ring-1 focus:ring-blue-600 outline-none rounded">Sirawith.keawsee@gmail.com</a></li>
+                        <li><a href="https://line.me/ti/p/~floy.bmw.th" target="_blank" class="hover:text-blue-600 transition-colors focus:ring-1 focus:ring-blue-600 outline-none rounded">LINE: floy.bmw.th</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-[10px] font-black uppercase tracking-widest text-slate-400" data-lang="footer_social">Social</h4>
+                    <ul class="space-y-2 text-sm font-bold">
+                        <li><a href="https://www.linkedin.com/in/sirawith-k-155182367/" target="_blank" class="hover:text-blue-600 transition-colors focus:ring-1 focus:ring-blue-600 outline-none rounded">LinkedIn</a></li>
+                        <li><a href="https://github.com/bbgunmis-alt" target="_blank" class="hover:text-blue-600 transition-colors focus:ring-1 focus:ring-blue-600 outline-none rounded">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-slate-100 dark:border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs text-slate-400 font-bold tracking-widest uppercase text-center md:text-left" data-lang="footer_copy">© 2026 Sirawich Kaewsri. All rights reserved.</p>
+                <div class="flex items-center space-x-6 text-[10px] font-black uppercase tracking-widest text-slate-400">
+                    <a href="#" class="hover:text-blue-600 focus:ring-1 focus:ring-blue-600 outline-none rounded" data-lang="privacy">Privacy Policy</a>
+                    <a href="#" class="hover:text-blue-600 focus:ring-1 focus:ring-blue-600 outline-none rounded" data-lang="terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
-
 </html>

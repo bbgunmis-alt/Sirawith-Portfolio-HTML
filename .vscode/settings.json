@@ -1,7 +1,22 @@
 {
-        "accessibility.signalOptions.debouncePositionChanges": true,
-        "github.copilot.chat.agent.autoFix": true,
-        "github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
-        "github.copilot.chat.alternateGptPrompt.enabled": true,
-        "github.copilot.chat.anthropic.contextEditing.enabled": true
+  "accessibility.signalOptions.debouncePositionChanges": true,
+  "github.copilot.chat.agent.autoFix": true,
+  "github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
+  "github.copilot.chat.alternateGptPrompt.enabled": true,
+  "github.copilot.chat.anthropic.contextEditing.enabled": true,
+
+  // Editor & Formatter
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Prettier
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.trailingComma": "es5",
+  "prettier.tabWidth": 2,
+
+  // ESLint & Stylelint
+  "eslint.validate": ["javascript", "javascriptreact"],
+  "stylelint.validate": ["css", "scss"]
 }

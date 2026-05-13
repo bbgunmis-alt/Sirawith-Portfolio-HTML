@@ -53,8 +53,8 @@
             <a href="about.html" data-lang="nav_about">About</a>
             <a href="contact.html" data-lang="nav_contact">Contact</a>
             <div class="lang-switch-wrapper">
-                <button class="lang-btn active" data-lang-val="en">EN</button>
-                <button class="lang-btn" data-lang-val="th">TH</button>
+                <button class="lang-btn active" data-lang-val="en">🇺🇸 EN</button>
+                <button class="lang-btn" data-lang-val="th">🇹🇭 ไทย</button>
                 <div class="lang-glider"></div>
             </div>
             <!-- Theme Toggle -->
@@ -75,38 +75,87 @@
     <section class="projects-section">
         <div class="section-container">
             <div class="projects-grid">
-                <!-- Case 1 -->
-                <div class="project-card">
-                    <img src="Image/project-leadflow-dashboard.jpg" class="project-image" alt="LeadFlow TH SME Automation Dashboard showing lead growth metrics and ROI analysis" loading="lazy">
-                    <div class="project-overlay">
-                        <div class="project-badge">SME Automation</div>
-                        <h3 data-lang="p1_title">LeadFlow TH Architecture</h3>
-                        <div class="project-metrics">
-                            <div class="metric-v"><span class="m-val">100+</span><span class="m-lab">MQLs/Day</span></div>
-                            <div class="metric-v"><span class="m-val">฿45</span><span class="m-lab">CAC</span></div>
+                <!-- Case 1: LeadFlow TH -->
+                <div class="project-card case-brief">
+                    <div class="case-meta">
+                        <span class="case-industry">Enterprise SaaS</span>
+                        <span class="case-result-pill">+40% Lead Velocity</span>
+                    </div>
+                    <h3 data-lang="p1_title">LeadFlow TH Architecture</h3>
+                    <p class="case-impact" data-lang="p1_impact">Orchestrating 100+ daily MQLs through an autonomous LLM-driven classification engine.</p>
+                    <p class="case-tech-note" data-lang="p1_tech"></p>
+                    
+                    <div class="logic-flow">
+                        <div class="logic-item before">
+                            <span class="logic-label">Legacy</span>
+                            <span class="logic-val" data-lang="p1_before">Manual Entry</span>
+                        </div>
+                        <div class="logic-arrow">→</div>
+                        <div class="logic-item after">
+                            <span class="logic-label">Architected</span>
+                            <span class="logic-val" data-lang="p1_after">AI Orchestration</span>
                         </div>
                     </div>
-                </div>
-                <!-- Case 2 -->
-                <div class="project-card">
-                    <img src="Image/project-leadflow-BMW.jpeg" class="project-image" alt="BMW Performance Motors Luxury Car Sales Pipeline AI Response System under 1 minute" loading="lazy">
-                    <div class="project-overlay">
-                        <div class="project-badge">Automotive</div>
-                        <h3 data-lang="p2_title">BMW Sales Pipeline</h3>
-                        <div class="project-metrics">
-                            <div class="metric-v"><span class="m-val">&lt;1m</span><span class="m-lab">Response</span></div>
-                        </div>
+
+                    <div class="case-stats">
+                        <div class="c-stat"><strong>100+</strong><span data-lang="p1_s1">Daily MQLs</span></div>
+                        <div class="c-stat"><strong>฿45</strong><span data-lang="p1_s2">Stable CAC</span></div>
                     </div>
                 </div>
-                <!-- Case 3 -->
-                <div class="project-card">
-                    <img src="Image/project-leadflow-Realestate.jpeg" class="project-image" alt="Origin Property Real Estate Lead Automation System Dashboard showing 200+ leads per day" loading="lazy">
-                    <div class="project-overlay">
-                        <div class="project-badge">Real Estate</div>
-                        <h3 data-lang="p3_title">Origin Property Sync</h3>
-                        <div class="project-metrics">
-                            <div class="metric-v"><span class="m-val">+1.25%</span><span class="m-lab">Conv. Rate</span></div>
+
+                <!-- Case 2: BMW Sales Pipeline -->
+                <div class="project-card case-brief">
+                    <div class="case-meta">
+                        <span class="case-industry">Automotive (Luxury)</span>
+                        <span class="case-result-pill">&lt;1m Response</span>
+                    </div>
+                    <h3 data-lang="p2_title">BMW Sales Pipeline</h3>
+                    <p class="case-impact" data-lang="p2_impact">Bridging luxury showroom standards with digital speed. Zero-latency lead delivery to consultants.</p>
+                    <p class="case-tech-note" data-lang="p2_tech"></p>
+                    
+                    <div class="logic-flow">
+                        <div class="logic-item before">
+                            <span class="logic-label">Legacy</span>
+                            <span class="logic-val" data-lang="p2_before">24h Response</span>
                         </div>
+                        <div class="logic-arrow">→</div>
+                        <div class="logic-item after">
+                            <span class="logic-label">Architected</span>
+                            <span class="logic-val" data-lang="p2_after">Sub-60s Pulse</span>
+                        </div>
+                    </div>
+
+                    <div class="case-stats">
+                        <div class="c-stat"><strong>&lt;60s</strong><span data-lang="p2_s1">Response Time</span></div>
+                        <div class="c-stat"><strong>130%</strong><span data-lang="p2_s2">Target Attainment</span></div>
+                    </div>
+                </div>
+
+                <!-- Case 3: Origin Property -->
+                <div class="project-card case-brief">
+                    <div class="case-meta">
+                        <span class="case-industry">Real Estate</span>
+                        <span class="case-result-pill">฿0 Manual Data Loss</span>
+                    </div>
+                    <h3 data-lang="p3_title">Origin Property Sync</h3>
+                    <p class="case-impact" data-lang="p3_impact">End-to-end CRM synchronization eliminating data leakage across multi-channel ad campaigns.</p>
+                    <p class="case-tech-note" data-lang="p3_tech"></p>
+                    
+                    <div class="logic-flow">
+                        <div class="logic-item before">
+                            <span class="logic-label">Legacy</span>
+                            <span class="logic-val" data-lang="p3_before">Data Leakage</span>
+                        </div>
+                        <div class="logic-arrow">→</div>
+                        <div class="logic-item after">
+                            <span class="logic-label">Architected</span>
+                            <span class="logic-val" data-lang="p3_after">Unified Sync</span>
+                        </div>
+                    </div>
+
+                    <div class="case-stats">
+                        <div class="c-stat"><strong>+1.25%</strong><span data-lang="p3_s1">Conv. Rate Lift</span></div>
+                        <div class="c-stat"><strong>100%</strong><span data-lang="p3_s2">Data Integrity</span></div>
                     </div>
                 </div>
             </div>
@@ -120,21 +169,21 @@
             </div>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <div class="result-badge" data-th="+200 Leads/Day" data-en="+200 Leads/Day">+200 Leads/Day</div>
+                    <div class="result-badge-premium">+200 Leads/Day</div>
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text" data-en="“200+ Qualified Leads daily with zero manual entry.”" data-th="“200+ Qualified Leads daily with zero manual entry.”">“200+ Qualified Leads daily with zero manual entry.”</p>
+                    <p class="testimonial-text" data-en="“200+ Qualified Leads daily with zero manual entry.”" data-th="“ลูกค้าเกรด A กว่า 200 รายต่อวัน โดยไม่ต้องกรอกข้อมูลเอง”">“200+ Qualified Leads daily with zero manual entry.”</p>
                     <div class="client-info"><span class="client-name">Vichai S.</span><span class="client-company">Real Estate Group</span></div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="result-badge" data-th="<1m Response" data-en="<1m Response"><1m Response</div>
+                    <div class="result-badge-premium">&lt;1m Response</div>
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text" data-en="“Sub-1-minute response time across all digital channels.”" data-th="“Sub-1-minute response time across all digital channels.”">“Sub-1-minute response time across all digital channels.”</p>
+                    <p class="testimonial-text" data-en="“Sub-1-minute response time across all digital channels.”" data-th="“ตอบกลับลูกค้าได้ภายในไม่ถึง 1 นาที ในทุกช่องทางดิจิทัล”">“Sub-1-minute response time across all digital channels.”</p>
                     <div class="client-info"><span class="client-name">Kittisak P.</span><span class="client-company">BMW Authorized Dealer</span></div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="result-badge" data-th="฿45 CAC" data-en="฿45 CAC">฿45 CAC</div>
+                    <div class="result-badge-premium">฿45 CAC</div>
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text" data-en="“CAC stabilized at ฿45 per high-intent MQL.”" data-th="“CAC stabilized at ฿45 per high-intent MQL.”">“CAC stabilized at ฿45 per high-intent MQL.”</p>
+                    <p class="testimonial-text" data-en="“CAC stabilized at ฿45 per high-intent MQL.”" data-th="“ต้นทุนต่อลูกค้าใหม่คงที่อยู่ที่ ฿45 สำหรับกลุ่มที่มีความสนใจสูง”">“CAC stabilized at ฿45 per high-intent MQL.”</p>
                     <div class="client-info"><span class="client-name">Patra W.</span><span class="client-company">LeadFlow TH Client</span></div>
                 </div>
             </div>

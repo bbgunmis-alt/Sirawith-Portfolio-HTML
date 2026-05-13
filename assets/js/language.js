@@ -1,418 +1,305 @@
 const translations = {
-            en: {
-                        // Nav
-                        nav_home: "Home",
-                        nav_solutions: "Solutions",
-                        nav_about: "About",
-                        nav_projects: "Projects",
-                        nav_experience: "Experience",
-                        nav_contact: "Contact",
+    en: {
+        // Nav
+        nav_projects: "Projects",
+        nav_services: "Services",
+        nav_process: "Process",
+        nav_about: "About",
 
-                        // Hero
-                        hero_title_1: "Sirawith Kaewsee",
-                        hero_title_2: "Engineering Revenue",
-                        hero_subtitle: "High-yield automated architectures for industry-leading sales organizations. Strategic infrastructure designed for scalability.",
-                        hero_btn_primary: "Initiate Strategy Consultation",
-                        hero_btn_secondary: "Capability Briefing",
-                        status_working: "Open for Work",
+        // Hero
+        hero_name: "Floy Sirawich Kaewsri",
+        hero_title: "AI Prompt Engineer & n8n Automation Consultant",
+        hero_sub: "Bangkok-based SME LeadFlow Architect | Ex-UNIQLO / BMW / Origin",
+        hero_value: "I design automation systems that save time, reduce manual work, and improve lead conversion.",
+        cta_book: "Book a Strategy Session",
+        signal_1: "Systems Delivered",
+        signal_2: "Admin Time Saved",
+        signal_3: "SME Focus",
 
-                        // Features
-                        feature_1_title: "AI Lead Automation",
-                        feature_1_desc: "No-code systems generating <span class='highlight-text'>100+ MQLs/day</span> for Thai SMEs → Enterprise scale",
-                        feature_2_title: "Make.com Orchestration",
-                        feature_2_desc: "Multi-platform workflows (FlutterFlow + Gumloop) <span class='highlight-text'>99.9% uptime</span>",
-                        feature_3_title: "Real Estate & Auto CRM",
-                        feature_3_desc: "BMW showroom + ORIGIN Property experience → <span class='highlight-text'>Custom AI Scoring</span>",
-                        feature_4_title: "Rapid ROI Systems",
-                        feature_4_desc: "CAC < ฿50/lead, <span class='highlight-text'>7-day pilot programs</span>, Enterprise-grade playbooks",
-                        feature_cta: "See Case Studies →",
+        // KPI Status Labels
+        status_verified: "Verified",
+        status_estimated: "Estimated",
+        status_pilot: "Pilot Phase",
 
-                        // Projects
-                        projects_badge: "Case Studies",
-                        projects_title: "Recent LeadFlow Success",
-                        projects_subtitle: "Real results for industry-leading partners",
-                        p1_title: "SME Automation – LeadFlow TH Architecture",
-                        p2_title: "BMW Sales Pipeline",
-                        p3_title: "Origin Property Sync",
+        // About
+        about_title: "The Logic Behind the Flow",
+        about_content: `
+            <p>I specialize in building "LeadFlow" ecosystems—systems that treat data like a factory line. With a background in operations at <strong>UNIQLO</strong> and customer experience at <strong>BMW</strong>, I understand that automation is only valuable if it feels human and scales reliably.</p>
+            <p>Today, I help SME teams in Bangkok leverage <strong>n8n</strong> and <strong>AI Prompt Engineering</strong> to cut manual drudgery. Whether it's a RAG-powered chatbot for a sticker business or a high-volume ticketing engine for a festival, my focus is always on <em>evidence-led results</em>.</p>
+        `,
 
-                        // Solutions Preview
-                        sol_badge: "What We Build",
-                        sol_title: "Enterprise Automation Solutions",
-                        sol_subtitle: "Scalable systems designed for high-volume operations",
+        // Projects Section
+        projects_title: "Evidence-Led Projects",
+        projects_sub: "Solving complex bottlenecks with clean, scalable automation architecture.",
+        
+        // P1: PATSTICKER
+        p1_name: "PATSTICKER AI Chatbot",
+        p1_one: "LINE OA → n8n RAG Agent → Sheets Quote Gen | 80% admin save",
+        p1_ctx: "High-volume sticker installation business managing leads primarily through LINE OA.",
+        p1_pain: "Slow response times, manual price calculations, and lost leads during peak hours.",
+        p1_auto: "Autonomous FAQ agent with dynamic price estimation and auto-handoff to human experts.",
+        p1_kpi: "80% reduction in manual admin, 2x increase in conversion rate via instant replies.",
+        p1_rel: "Duplicate lead protection, automatic error logging, and seamless handoff fallback.",
+        p1_caption: "Processing: AI analyzing customer intent and calculating custom price in real-time.",
 
-                        // About
-                        about_badge: "About Me",
-                        about_title: "My Journey",
-                        about_tagline: "Luxury Sales Consultant | Investment Advisor | Solutions Architect",
-                        about_desc: "From Luxury Sales → Digital Marketing → Enterprise Architect. My path has been defined by understanding value. Starting in high-end sales, I learned what drives decisions. In digital marketing, I learned how to scale that influence. Now, as an Enterprise Architect, I build the systems that make it all happen automatically.",
-                        about_phil_title: "Philosophy",
-                        about_phil_quote: "“Luxury Minimalism + Automation for Accessibility”",
-                        about_phil_desc: "I believe technology should be elegant, not overwhelming. My approach combines the clean aesthetics of luxury minimalism with the power of automation, making complex enterprise-grade systems accessible and easy to manage.",
-                        about_brand_title: "Personal Brand",
-                        about_brand_desc: "A fusion of Branding, Tech, and Business Automation. I don't just deliver code; I deliver a cohesive digital identity backed by robust infrastructure that drives revenue.",
-                        btn_cv: "Download CV",
+        // P2: Tickets
+        p2_name: "มัน แฉะ มาก 2026 Tickets",
+        p2_one: "Multi-channel Webhook → PromptPay QR → Auto-Ticket Slides | 24/7 Funnel",
+        p2_ctx: "Large-scale music festival requiring rapid, error-free ticket distribution.",
+        p2_pain: "Manual slip verification and ticket generation led to long wait times and entry errors.",
+        p2_auto: "Fully automated payment validation using PromptPay webhooks and dynamic PDF generation.",
+        p2_kpi: "Instant ticket delivery (sub-60s), zero manual verification errors, and real-time sales dashboard.",
+        p2_rel: "Checksum verification, retry logic for PDF generation, and automated cloud backups.",
+        p2_caption: "Dashboard: Real-time tracking of ticket distribution and PromptPay validation status.",
 
-                        // Experience (EN)
-                        exp_badge: "Career Journey",
-                        exp_title: "Professional Experience",
-                        exp_job1_date: "April 2024 - Present",
-                        exp_job1_title: "Digital Marketing Specialist (Consulting for SMEs)",
-                        exp_job1_desc1: "Consulting for SMEs/Startups on AI Automation implementation.",
-                        exp_job1_desc2: "Managing Omni-Channel marketing campaigns for growth.",
-                        exp_job1_desc3: "Conducting workshops on Storytelling and Digital Tools.",
-                        exp_job2_date: "Jan 2025 - July 2025",
-                        exp_job2_title: "Sales & Marketing Executive",
-                        exp_job2_desc1: "Managed Knightsbridge Space sales (Rama 4), exceeding targets by 25%.",
-                        exp_job2_desc2: "Investment analysis (Yield & LTV) for international clients.",
-                        exp_job2_desc3: "Utilized TikTok & LinkedIn Marketing to increase conversion by 22%.",
-                        exp_job3_date: "Dec 2021 - Dec 2024",
-                        exp_job3_title: "Luxury Sales Consultant",
-                        exp_job3_desc1: "Top Performer: Sold 50+ luxury cars/year (130% of target).",
-                        exp_job3_desc2: "Managed HNWI relationships with 15% annual retention rate.",
-                        exp_job4_date: "June 2015 - Nov 2021",
-                        exp_job4_title: "Store Manager | UNIQLO (Thailand)",
-                        exp_job4_desc1: "Managed team of 25+, drove 20% YoY branch growth.",
-                        exp_job4_desc2: "Implemented training systems, increasing CSI by 25%.",
+        // P3: Notion Restaurant
+        p3_name: "Notion Restaurant Sales Automation",
+        p3_one: "LINE Orders → Notion DB Sync + Analytics Dashboard | 90% manual cut",
+        p3_ctx: "Busy Bangkok cafe with data scattered across delivery apps and LINE.",
+        p3_pain: "No unified view of sales, manual data entry at end-of-shift, and inaccurate reporting.",
+        p3_auto: "Syncing all order sources into a relational Notion database with automated daily summaries.",
+        p3_kpi: "90% reduction in reporting time, 100% data accuracy, and instant profit/loss visibility.",
+        p3_rel: "Format normalization, duplicate entry filtering, and weekly auto-audits.",
+        p3_caption: "Output: Unified sales view with automated profit margins calculated daily.",
 
-                        // Contact
-                        contact_title: "Let's Build Together",
-                        contact_subtitle: "Ready to upgrade your business with Enterprise-grade Automation?",
-                        form_name: "Your Name",
-                        form_email: "Your Email",
-                        form_message: "Project Details",
-                        channel_email: "Email",
-                        channel_telegram: "Telegram",
-                        channel_linkedin: "LinkedIn",
-                        form_error_name: "Please enter your name",
-                        form_error_email: "Please enter a valid email",
-                        form_error_message: "Please enter at least 10 characters",
-                        form_submit: "Send Message",
-                        form_success: "Message Sent Successfully!",
-                        success_title: "Message Sent!",
-                        success_desc: "Thank you for reaching out. I will get back to you shortly.",
-                        success_btn: "Back to Top",
-                        btn_demo: "Request a Solution Demo",
+        // Services
+        services_title: "Consulting Tiers",
+        services_sub: "Transparent investment levels designed for operational scalability.",
+        tier1_name: "SME Starter",
+        tier1_price: "10k",
+        tier1_f1: "n8n Core Workflow",
+        tier1_f2: "Single API Integration",
+        tier1_f3: "Basic Error Handling",
+        tier1_cta: "Request Quote",
+        tier2_name: "SME Pro",
+        tier2_price: "50k",
+        tier2_f1: "Full LeadFlow™ System",
+        tier2_f2: "Multi-platform Orchestration",
+        tier2_f3: "Custom AI RAG Integration",
+        tier2_f4: "Enterprise Reliability Layer",
+        tier2_cta: "Start Project",
+        tier3_name: "Enterprise",
+        tier3_price: "Custom",
+        tier3_f1: "Complex Ecosystem Sync",
+        tier3_f2: "Internal AI Model Tuning",
+        tier3_f3: "Managed Operations & SLA",
+        tier3_cta: "Contact for Quote",
 
-                        // Solutions Page Specific
-                        sol_page_title: "Solutions",
-                        sol_page_subtitle: "Scalable Automation Architecture for High-Volume Operations",
-                        sol_realestate_title: "Real Estate Automation",
-                        sol_realestate_desc: "Auto-routing leads from Facebook/TikTok to LINE OA & CRM. <span class='highlight-text'>200+ leads/day</span> with zero manual entry.",
-                        sol_automotive_title: "Automotive AI Sales",
-                        sol_automotive_desc: "Personalized showroom experience. <span class='highlight-text'>Calculates financing & books test drives</span> automatically.",
-                        sol_retail_title: "Retail Omni-Channel",
-                        sol_retail_desc: "Sync inventory across Shopee, Lazada, and POS. <span class='highlight-text'>Real-time stock updates</span> preventing overselling.",
-                        tech_stack_title: "LeadFlow TH Architecture",
-                        tech_stack_desc: "Built on globally recognized, secure, and scalable platforms.",
-                        infra_security: "Enterprise-Grade Security",
-                        infra_uptime: "99.9% Application Uptime",
-                        infra_compliance: "PDPA & GDPR Compliant Data Handling",
+        // Process
+        process_title: "The Automation Factory",
+        process_sub: "Systematic, evidence-led deployment from diagnostic to scaling.",
+        step1_title: "Discover",
+        step1_desc: "Mapping your current bottlenecks and data leakage points.",
+        step2_title: "Design",
+        step2_desc: "Architecting the logic flow and choosing the right tools.",
+        step3_title: "Build",
+        step3_desc: "Developing n8n workflows and AI prompt templates.",
+        step4_title: "Deploy",
+        step4_desc: "Rigorous testing and live system implementation.",
+        step5_title: "Scale",
+        step5_desc: "Handover and ongoing ecosystem optimization.",
 
-                        // Page Titles (New Multi-page Structure)
-                        page_home_title: "Revenue Engineering",
-                        page_sol_title: "Solutions",
-                        page_proj_title: "Projects / Case Studies",
-                        page_exp_title: "Experience",
-                        page_about_title: "About",
-                        page_contact_title: "Contact",
+        // Footer
+        footer_note: "Designed for fast, evidence-led automation consulting.",
+        footer_copy: "© 2026 Sirawich Kaewsri. All rights reserved.",
+        footer_contact: "Contact",
+        footer_social: "Social",
+        privacy: "Privacy Policy",
+        terms: "Terms of Service"
+    },
+    th: {
+        // Nav
+        nav_projects: "ผลงาน",
+        nav_services: "บริการ",
+        nav_process: "ขั้นตอน",
+        nav_about: "เกี่ยวกับ",
 
-                        // Teasers
-                        teaser_sol_title: "Explore Solutions",
-                        teaser_proj_title: "View Case Studies",
-                        teaser_exp_title: "See Experience",
-                        teaser_about_title: "Read My Story",
+        // Hero
+        hero_name: "ฟลอย ศิรวิชญ์ แก้วศรี",
+        hero_title: "AI Prompt Engineer & n8n Automation Consultant",
+        hero_sub: "ผู้ออกแบบระบบ LeadFlow สำหรับ SME | ประสบการณ์จาก UNIQLO / BMW / Origin",
+        hero_value: "ผมออกแบบระบบอัตโนมัติที่ช่วยประหยัดเวลา ลดงานแมนนวล และเพิ่มอัตราการเปลี่ยนเป็นลูกค้า (Lead Conversion)",
+        cta_book: "จองเวลาปรึกษาเพื่อวางแผนระบบ",
+        signal_1: "ระบบที่ส่งมอบแล้ว",
+        signal_2: "ประหยัดเวลาแอดมิน",
+        signal_3: "เน้นกลุ่ม SME",
 
-                        // Home Teaser Descriptions
-                        home_teaser_sol_desc: "Automation + Tech Stack",
-                        home_teaser_proj_desc: "200+ Qualified Leads daily, ฿45 CAC",
-                        home_teaser_exp_desc: "Digital Marketing Specialist, Luxury Sales Consultant",
-                        home_teaser_about_desc: "Work Philosophy & Personal Brand",
-                        home_teaser_contact_desc: "Contact Channels & Form",
+        // KPI Status Labels
+        status_verified: "ตรวจสอบแล้ว",
+        status_estimated: "ประมาณการ",
+        status_pilot: "ช่วงทดลอง",
 
-                        // Skills & Certs
-                        skills_title: "Skills Matrix",
-                        cert_title: "Certifications",
-                        skill_auto: "Automation",
-                        skill_ux: "UX/UI Design",
-                        skill_local: "Localization",
-                        skill_brand: "Branding",
-                        cert_google: "Google Ads",
-                        cert_ux: "UX/UI Design",
-                        cert_auto: "Automation Tools"
-            },
-            th: {
-                        // Nav
-                        nav_home: "หน้าหลัก (Home)",
-                        nav_solutions: "โซลูชัน (Solutions)",
-                        nav_about: "เกี่ยวกับผม (Profile)",
-                        nav_projects: "ผลงานเด่น (Case Studies)",
-                        nav_experience: "ประสบการณ์ (Experience)",
-                        nav_contact: "ติดต่อ (Contact)",
+        // About
+        about_title: "ตรรกะเบื้องหลังการไหลของข้อมูล",
+        about_content: `
+            <p>ผมเชี่ยวชาญในการสร้างระบบนิเวศ "LeadFlow" หรือการจัดการข้อมูลให้เหมือนสายพานในโรงงาน ด้วยประสบการณ์ด้าน Operations จาก <strong>UNIQLO</strong> และ Customer Experience จาก <strong>BMW</strong> ผมเชื่อว่าระบบอัตโนมัติจะมีค่าก็ต่อเมื่อมันยังคงความรู้สึกเป็นมนุษย์และทำงานได้อย่างเสถียร</p>
+            <p>ปัจจุบัน ผมช่วยทีม SME ในกรุงเทพฯ ใช้ประโยชน์จาก <strong>n8n</strong> และ <strong>AI Prompt Engineering</strong> เพื่อตัดงานที่ซ้ำซ้อน ไม่ว่าจะเป็นแชทบอท RAG สำหรับธุรกิจสติกเกอร์ หรือระบบขายตั๋วคอนเสิร์ตจำนวนมาก งานของผมเน้นที่ <em>ผลลัพธ์ที่พิสูจน์ได้จริง</em> เสมอ</p>
+        `,
 
-                        // Hero
-                        hero_title_1: "Sirawith Kaewsee",
-                        hero_title_2: "วิศวกรรมสร้างรายได้ (Engineering Revenue)",
-                        hero_subtitle: "สถาปัตยกรรมระบบอัตโนมัติประสิทธิภาพสูง สำหรับองค์กรชั้นนำที่ต้องการขยายตัวอย่างมั่งคั่งและก้าวระโดด",
-                        hero_btn_primary: "ขอคำปรึกษาเชิงกลยุทธ์ (Strategy Consult)",
-                        hero_btn_secondary: "ข้อมูลบริการ (Capability Brief)",
-                        status_working: "สถานะ: พร้อมรับงาน (Open for Work)",
+        // Projects
+        projects_title: "ผลงานที่พิสูจน์ด้วยตัวเลข",
+        projects_sub: "แก้ปัญหาคอขวดที่ซับซ้อนด้วยสถาปัตยกรรมที่สะอาดและขยายต่อได้",
 
-                        // Metrics
-                        metric_sales_label: "ยอดขายกลุ่ม Luxury ต่อปี (Luxury Sales Vol.)",
-                        metric_uptime_label: "ความเสถียรของระบบโครงสร้าง (System Uptime)",
-                        metric_mql_label: "MQL อัตโนมัติ / วัน (Automated MQLs)",
-                        metric_cac_label: "ต้นทุนเฉลี่ยต่อลูกค้า (Weighted Average CAC)",
+        // P1: PATSTICKER
+        p1_name: "แชทบอท AI สำหรับ PATSTICKER",
+        p1_one: "LINE OA → n8n RAG Agent → ระบบเสนอราคาอัตโนมัติ | ประหยัดงานแอดมิน 80%",
+        p1_ctx: "ธุรกิจติดตั้งสติกเกอร์และฟิล์มที่มีลูกค้าทักทาง LINE OA จำนวนมาก",
+        p1_pain: "ตอบคำถามช้า, คำนวณราคาด้วยมือ, และเสียโอกาสการขายในช่วงที่แอดมินไม่ว่าง",
+        p1_auto: "ระบบตอบคำถามอัตโนมัติพร้อมประเมินราคา และส่งต่อให้ผู้เชี่ยวชาญเมื่อจำเป็น",
+        p1_kpi: "ลดงานแอดมิน 80%, เพิ่มโอกาสปิดการขายได้ 2 เท่าจากการตอบโต้ที่รวดเร็ว",
+        p1_rel: "ระบบป้องกันการบันทึกลีดซ้ำ, ระบบบันทึกข้อผิดพลาดอัตโนมัติ และการส่งต่องานอย่างไร้รอยต่อ",
+        p1_caption: "การประมวลผล: AI วิเคราะห์ความต้องการของลูกค้าและคำนวณราคาแบบเรียลไทม์",
 
-                        // Features / Stats
-                        feature_1_title: "คัดกรองลีดด้วย AI (AI Classification)",
-                        feature_1_desc: "สร้าง <span class='highlight-text'>100+ ลีดคุณภาพ (MQLs) ต่อวัน</span> ยกระดับธุรกิจสู่มาตรฐานสากล",
-                        feature_2_title: "ระบบเชื่อมต่อข้อมูล (Data Orchestration)",
-                        feature_2_desc: "เชื่อมต่อ Workflow ข้ามแพลตฟอร์มผ่าน Make.com ด้วย <span class='highlight-text'>ความเสถียร 99.9%</span>",
-                        feature_3_title: "CRM เฉพาะอุตสาหกรรม (Specialized CRM)",
-                        feature_3_desc: "นำประสบการณ์จาก BMW & Origin Property มาสร้าง <span class='highlight-text'>AI Scoring Model</span> ที่แม่นยำ",
-                        feature_4_title: "ผลตอบแทนการลงทุน (Rapid ROI)",
-                        feature_4_desc: "ลดต้นทุน CAC ต่ำกว่า ฿50 พร้อม <span class='highlight-text'>ติดตั้งระบบนำร่องใน 7 วัน</span>",
-                        feature_cta: "ดูผลงานจริง (View Case Studies) →",
+        // P2: Tickets
+        p2_name: "ระบบขายตั๋ว มัน แฉะ มาก 2026",
+        p2_one: "Webhook หลายช่องทาง → PromptPay QR → ออกตั๋วอัตโนมัติ | ทำงาน 24/7",
+        p2_ctx: "เทศกาลดนตรีขนาดใหญ่ที่ต้องการความรวดเร็วและความแม่นยำในการส่งตั๋ว",
+        p2_pain: "การเช็คสลิปและออกตั๋วด้วยมือทำให้คิวยาวและมีความเสี่ยงเรื่องความผิดพลาด",
+        p2_auto: "ระบบตรวจสอบยอดเงินอัตโนมัติผ่าน PromptPay และสร้างตั๋ว PDF แบบ Dynamic",
+        p2_kpi: "ส่งตั๋วได้ทันที (ใน 60 วินาที), ความผิดพลาดเป็นศูนย์, และมี Dashboard ดูยอดขายแบบ Real-time",
+        p2_rel: "ระบบตรวจสอบ Checksum ของยอดโอน, ระบบ Retry เมื่อสร้างไฟล์พลาด และการสำรองข้อมูลบน Cloud",
+        p2_caption: "แดชบอร์ด: ติดตามสถานะการส่งตั๋วและการตรวจสอบยอดเงิน PromptPay แบบเรียลไทม์",
 
+        // P3: Notion Restaurant
+        p3_name: "ระบบจัดการยอดขายร้านอาหารผ่าน Notion",
+        p3_one: "LINE Orders → Notion DB Sync + Analytics Dashboard | ลดงานแมนนวล 90%",
+        p3_ctx: "ร้านกาแฟในกรุงเทพฯ ที่มีข้อมูลกระจัดกระจายอยู่ตามแอปฯ Delivery และ LINE",
+        p3_pain: "ไม่มีภาพรวมยอดขายที่ชัดเจน, ต้องคีย์ข้อมูลลงตารางตอนปิดร้าน และรายงานคลาดเคลื่อน",
+        p3_auto: "เชื่อมโยงออเดอร์จากทุกช่องทางลงใน Notion Database พร้อมสรุปยอดรายวันอัตโนมัติ",
+        p3_kpi: "ลดเวลาทำรายงาน 90%, ข้อมูลแม่นยำ 100%, และเห็นกำไร/ขาดทุนได้ทันที",
+        p3_rel: "ระบบปรับฟอร์แมตข้อมูลให้ตรงกัน, ตัวกรองข้อมูลซ้ำ และระบบตรวจสอบความถูกต้องรายสัปดาห์",
+        p3_caption: "ผลลัพธ์: มุมมองยอดขายที่รวมทุกช่องทาง พร้อมคำนวณกำไรรายวันอัตโนมัติ",
 
-                        // Projects
-                        projects_badge: "ผลงานเด่น (Selected Works)",
-                        projects_title: "ความสำเร็จของลูกค้า (Success Stories)",
-                        projects_subtitle: "ผลลัพธ์จริงจากการใช้งานระบบ LeadFlow (Proven Results)",
-                        p1_title: "ระบบอัตโนมัติ SME – สถาปัตยกรรม LeadFlow TH",
-                        p2_title: "ระบบบริหารการขาย BMW",
-                        p3_title: "Origin Property Sync",
+        // Services
+        services_title: "ระดับการลงทุน",
+        services_sub: "ราคาที่โปร่งใส ออกแบบมาเพื่อการขยายตัวของธุรกิจคุณ",
+        tier1_name: "SME Starter",
+        tier1_price: "10k",
+        tier1_f1: "เวิร์กโฟลว์ n8n พื้นฐาน",
+        tier1_f2: "การเชื่อมต่อ 1 ระบบ (API)",
+        tier1_f3: "ระบบจัดการข้อผิดพลาดเบื้องต้น",
+        tier1_cta: "ขอใบเสนอราคา",
+        tier2_name: "SME Pro",
+        tier2_price: "50k",
+        tier2_f1: "ระบบ LeadFlow™ เต็มรูปแบบ",
+        tier2_f2: "การเชื่อมต่อหลายแพลตฟอร์ม",
+        tier2_f3: "ระบบ AI RAG เฉพาะธุรกิจ",
+        tier2_f4: "ระบบความเสถียรระดับองค์กร",
+        tier2_cta: "เริ่มโปรเจกต์",
+        tier3_name: "องค์กรขนาดใหญ่",
+        tier3_price: "ตามตกลง",
+        tier3_f1: "ระบบนิเวศน์ที่ซับซ้อน",
+        tier3_f2: "การเทรน AI Model ภายใน",
+        tier3_f3: "การดูแลระบบและ SLA",
+        tier3_cta: "ติดต่อสอบถามราคา",
 
-                        // Solutions Preview
-                        sol_badge: "บริการของเรา (Our Solutions)",
-                        sol_title: "โซลูชันระดับองค์กร (Enterprise Solutions)",
-                        sol_subtitle: "ออกแบบระบบเพื่อรองรับปริมาณงานมหาศาลและการขยายตัวอย่างไร้ขีดจำกัด (Scalability)",
+        // Process
+        process_title: "โรงงานผลิต Automation",
+        process_sub: "กระบวนการติดตั้งที่เป็นระบบและพิสูจน์ได้จริง",
+        step1_title: "Discover",
+        step1_desc: "ค้นหาคอขวดและจุดที่ข้อมูลรั่วไหลในระบบปัจจุบันของคุณ",
+        step2_title: "Design",
+        step2_desc: "ออกแบบโครงสร้างตรรกะและเลือกเครื่องมือที่เหมาะสมที่สุด",
+        step3_title: "Build",
+        step3_desc: "พัฒนาระบบ n8n และเทมเพลต AI Prompt สำหรับธุรกิจคุณ",
+        step4_title: "Deploy",
+        step4_desc: "ทดสอบระบบอย่างเข้มงวดและติดตั้งใช้งานจริง",
+        step5_title: "Scale",
+        step5_desc: "ส่งมอบงานและดูแลปรับจูนระบบให้เติบโตไปพร้อมกับคุณ",
 
-                        // Bento Solutions Details
-                        sol_realestate_title: "ระบบจัดการลีดอสังหาฯ (Real Estate Engine)",
-                        sol_realestate_desc: "จัดเส้นทางลีดอัตโนมัติ (Auto-Routing) สำหรับโครงการขนาดใหญ่ เพื่อประสิทธิภาพสูงสุด",
-                        sol_automotive_title: "ผู้ช่วยขายอัจฉริยะ (AI Sales Concierge)",
-                        sol_automotive_desc: "ผสาน AI และ Human Touch เพื่อมาตรฐานการบริการระดับ Luxury (Hybrid Service)",
-                        sol_retail_title: "เชื่อมต่อทุกช่องทาง (Omni-Channel Sync)",
-                        sol_retail_desc: "ศูนย์รวมการจองและสต็อกสินค้า เชื่อมต่อ POS และ Online Platform ไร้รอยต่อ",
-
-                        // Technical Stack
-                        tech_stack_title: "สถาปัตยกรรม LeadFlow TH (LeadFlow TH Architecture)",
-                        tech_stack_desc: "ขับเคลื่อนด้วยเครื่องมือมาตรฐานสากล ความปลอดภัยและเสถียรภาพสูงสุด",
-                        infra_security: "ความปลอดภัยระดับองค์กร (Enterprise Security)",
-                        infra_uptime: "ความเสถียรระบบ (System Uptime)",
-                        infra_compliance: "มาตรฐานข้อมูล (PDPA Compliance)",
-
-                        // Page Titles (New Multi-page Structure)
-                        page_home_title: "วิศวกรรมยอดขาย (Revenue Engineering)",
-                        page_sol_title: "โซลูชัน (Solutions)",
-                        page_proj_title: "ผลงาน (Projects / Case Studies)",
-                        page_exp_title: "ประสบการณ์ (Experience)",
-                        page_about_title: "เกี่ยวกับผม (About)",
-                        page_contact_title: "ติดต่อ (Contact)",
-
-                        // Teasers
-                        teaser_sol_title: "ดูโซลูชันทั้งหมด",
-                        teaser_proj_title: "ดูผลงานจริง",
-                        teaser_exp_title: "ดูประสบการณ์",
-                        teaser_about_title: "อ่านเรื่องราวของผม",
-
-                        // Home Teaser Descriptions
-                        home_teaser_sol_desc: "Automation + Tech Stack",
-                        home_teaser_proj_desc: "200+ Qualified Leads daily, ฿45 CAC",
-                        home_teaser_exp_desc: "Digital Marketing Specialist, Luxury Sales Consultant",
-                        home_teaser_about_desc: "ปรัชญาการทำงานและ Personal Brand",
-                        home_teaser_contact_desc: "ช่องทางติดต่อและฟอร์ม",
-
-                        // Skills & Certs
-                        skills_title: "ทักษะความเชี่ยวชาญ (Skills Matrix)",
-                        cert_title: "ใบรับรอง (Certifications)",
-                        skill_auto: "ระบบอัตโนมัติ (Automation)",
-                        skill_ux: "การออกแบบ UX/UI",
-                        skill_local: "การปรับให้เข้ากับท้องถิ่น (Localization)",
-                        skill_brand: "การสร้างแบรนด์ (Branding)",
-                        cert_google: "Google Ads",
-                        cert_ux: "UX/UI Design",
-                        cert_auto: "Automation Tools"
-
-                        // New Tech Stack Labels
-                        tech_make: "ระบบควบคุมอัตโนมัติ (Orchestration Core)",
-                        tech_openai: "ปัญญาประดิษฐ์ (Generative AI)",
-                        tech_line: "การเชื่อมต่อลูกค้า (LINE Integration)",
-                        tech_hubspot: "ระบบบริหารความสัมพันธ์ (CRM System)",
-                        tech_gcloud: "โครงสร้างพื้นฐานคลาวด์ (Cloud Infra)",
-                        tech_notion: "ระบบจัดการความรู้ (Knowledge OS)",
-                        tech_zapier: "การเชื่อมต่อแอปพลิเคชัน (App Integration)",
-                        tech_airtable: "ฐานข้อมูลอัจฉริยะ (Smart Database)",
-
-                        // About
-                        about_badge: "สถาปัตยกรรมเชิงกลยุทธ์ (Strategic Arch.)",
-                        about_title: "เส้นทางของผม (My Journey)",
-                        about_tagline: "Solutions Architect | Sales Strategist | Investment Advisor",
-                        about_desc: "จาก Luxury Sales → Digital Marketing → Enterprise Architect เส้นทางของผมถูกกำหนดด้วยการเข้าใจถึง 'คุณค่า' เริ่มต้นจากการขายระดับไฮเอนด์ที่ทำให้เข้าใจการตัดสินใจซื้อ สู่การตลาดดิจิทัลที่ขยายผลลัพธ์ และปัจจุบันในฐานะสถาปนิกองค์กร ผมสร้างระบบที่ขับเคลื่อนทุกอย่างให้เป็นอัตโนมัติ",
-                        about_phil_title: "ปรัชญาการทำงาน (Philosophy)",
-                        about_phil_quote: "“Luxury Minimalism + Automation for Accessibility”",
-                        about_phil_desc: "ผมเชื่อว่าเทคโนโลยีควรมีความสง่างาม ไม่ใช่ความยุ่งยาก แนวทางของผมผสานความเรียบหรูแบบ Luxury Minimalism เข้ากับพลังของระบบอัตโนมัติ ทำให้ระบบระดับองค์กรที่ซับซ้อนกลายเป็นเรื่องที่เข้าถึงและจัดการได้ง่าย",
-                        about_brand_title: "ตัวตนของผม (Personal Brand)",
-                        about_brand_desc: "การผสมผสานระหว่าง Branding, Tech และ Business Automation ผมไม่ได้ส่งมอบเพียงแค่โค้ด แต่ผมส่งมอบอัตลักษณ์ทางดิจิทัลที่ขับเคลื่อนด้วยโครงสร้างพื้นฐานที่แข็งแกร่งเพื่อสร้างรายได้จริง",
-                        stat_experience: "ปีแห่งประสบการณ์ (Years Exp.)",
-                        btn_cv: "ดาวน์โหลดโปรไฟล์ (Download Profile)",
-
-                        // Experience
-                        exp_badge: "เส้นทางอาชีพ (Career Path)",
-                        exp_title: "ประสบการณ์ทำงาน (Professional Exp.)",
-                        exp_job1_date: "Apr 2024 - Present",
-                        exp_job1_title: "Digital Marketing Specialist (Consulting for SMEs)",
-                        exp_job1_desc1: "ที่ปรึกษาด้าน AI Automation และการวางระบบสำหรับองค์กร SME/Startup",
-                        exp_job1_desc2: "บริหารแคมเปญ Omni-Channel สำหรับสินค้า High-Ticket และ Luxury",
-                        exp_job1_desc3: "วิทยากรด้าน Digital Storytelling และ Modern Marketing Tools",
-                        exp_job2_date: "Jan 2025 - July 2025",
-                        exp_job2_title: "Sales & Marketing Executive",
-                        exp_job2_desc1: "บริหารโครงการ Knightsbridge Space ยอดขายทะลุเป้า 25%",
-                        exp_job2_desc2: "วิเคราะห์การลงทุน (Yield & LTV) สำหรับลูกค้ากลุ่ม HNWI",
-                        exp_job2_desc3: "เพิ่ม Conversion Rate 22% ด้วยกลยุทธ์ Social Marketing",
-                        exp_job3_date: "Dec 2021 - Dec 2024",
-                        exp_job3_title: "Luxury Sales Consultant",
-                        exp_job3_desc1: "Top Performer: ยอดขายรถหรู 50+ คัน/ปี (130% ของเป้าหมาย)",
-                        exp_job3_desc2: "บริหารความสัมพันธ์ลูกค้า High-End (Retention Rate 15%)",
-                        exp_job4_date: "June 2015 - Nov 2021",
-                        exp_job4_title: "Store Manager | UNIQLO (Thailand)",
-                        exp_job4_desc1: "บริหารทีม 25+ ท่าน ขับเคลื่อนการเติบโตสาขา 20% YoY",
-                        exp_job4_desc2: "วางระบบ Training มาตรฐานสากล เพิ่มคะแนน CSI 25%",
-
-                        // Contact
-                        contact_title: "ร่วมงานกับเรา (Collaboration)",
-                        contact_subtitle: "พร้อมยกระดับธุรกิจด้วยระบบ Automation ระดับ Enterprise แล้วหรือยัง?",
-                        form_name: "ชื่อ (Name)",
-                        form_email: "อีเมล (Email)",
-                        form_message: "ข้อความ (Message)",
-                        channel_email: "ส่งอีเมล (Email)",
-                        channel_telegram: "เทเลแกรม (Telegram)",
-                        channel_linkedin: "ลิงก์อิน (LinkedIn)",
-                        form_error_name: "กรุณาระบุชื่อของคุณ",
-                        form_error_email: "กรุณาระบุอีเมลที่ถูกต้อง",
-                        form_error_message: "กรุณากรอกข้อมูลอย่างน้อย 10 ตัวอักษร",
-                        form_submit: "ส่งข้อความ (Send Inquiry)",
-                        form_success: "ได้รับข้อมูลของคุณเรียบร้อยแล้ว!",
-                        success_title: "ส่งข้อมูลสำเร็จ!",
-                        success_desc: "ขอบคุณที่ให้ความสนใจ ผมจะติดต่อกลับเพื่อพูดคุยรายละเอียดโดยเร็วที่สุด",
-                        success_btn: "กลับสู่ด้านบน (Back to Top)",
-                        btn_demo: "ขอนัดสาธิตระบบ (Request Demo)",
-
-
-                        // Investment Tiers
-                        invest_badge: "แผนการลงทุน (Investment Tiers)",
-                        invest_title: "ระดับการติดตั้งระบบเชิงกลยุทธ์",
-                        invest_subtitle: "เลือกสถาปัตยกรรมที่เหมาะสมกับปริมาณงานและเป้าหมายธุรกิจของคุณ",
-                        tier1_title: "Starter",
-                        tier1_outcome: "ผลลัพธ์: ลดลีดรั่วไหล 40% (Leakage Reduction)",
-                        tier2_title: "Growth",
-                        tier2_outcome: "ผลลัพธ์: ลดเวลาทำงาน 90% (Latency Reduction)",
-                        tier3_title: "Enterprise",
-                        tier3_outcome: "ผลลัพธ์: ความเสถียรสูงสุด 100% (Operational Certainty)",
-                        btn_audit: "เริ่มการตรวจสอบ (Initiate Audit)",
-                        btn_execute: "ดำเนินการติดตั้ง (Execute Deployment)",
-                        btn_engage: "วางแผนกลยุทธ์ (Engage Strategy)"
-            }
+        // Footer
+        footer_note: "ออกแบบมาเพื่อการปรึกษาด้าน Automation ที่รวดเร็วและพิสูจน์ได้ด้วยผลลัพธ์",
+        footer_copy: "© 2026 ศิรวิชญ์ แก้วศรี. สงวนลิขสิทธิ์",
+        footer_contact: "ช่องทางการติดต่อ",
+        footer_social: "โซเชียลมีเดีย",
+        privacy: "นโยบายความเป็นส่วนตัว",
+        terms: "ข้อกำหนดการให้บริการ"
+    }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-            const langBtns = document.querySelectorAll('.lang-btn');
-            const glider = document.querySelector('.lang-glider');
-
-            // Check saved language
-            const currentLang = localStorage.getItem('lang') || 'en';
-            setLanguage(currentLang);
-
-            langBtns.forEach(btn => {
-                        btn.addEventListener('click', () => {
-                                    const lang = btn.getAttribute('data-lang-val');
-                                    setLanguage(lang);
-                        });
+function setLanguage(lang) {
+    const dictionaryElements = document.querySelectorAll('[data-lang]');
+    
+    // GSAP Fade Animation
+    if (typeof gsap !== 'undefined') {
+        gsap.to('body', { opacity: 0, duration: 0.1, onComplete: () => {
+            dictionaryElements.forEach(el => {
+                const key = el.getAttribute('data-lang');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
             });
-
-            function setLanguage(lang) {
-                        // UI Toggle Update
-                        langBtns.forEach(btn => btn.classList.remove('active'));
-                        const activeBtn = document.querySelector(`.lang-btn[data-lang-val="${lang}"]`);
-                        if (activeBtn) activeBtn.classList.add('active');
-
-                        // GSAP Glider Animation (60fps)
-                        if (glider && typeof gsap !== 'undefined') {
-                                    const xPos = lang === 'th' ? '100%' : '0%';
-                                    gsap.to(glider, {
-                                                x: xPos,
-                                                duration: 0.4,
-                                                ease: "power2.out"
-                                    });
-                        }
-
-                        // Collect all translatable elements
-                        const dictionaryElements = document.querySelectorAll('[data-lang]');
-                        const directElements = document.querySelectorAll('[data-th]');
-                        const allElements = [...dictionaryElements, ...directElements];
-
-                        // GSAP Timeline for Staggered Fade Animation
-                        if (typeof gsap !== 'undefined' && allElements.length > 0) {
-                                    const tl = gsap.timeline();
-
-                                    // Fade Out
-                                    tl.to(allElements, {
-                                                opacity: 0,
-                                                y: -5,
-                                                duration: 0.2,
-                                                stagger: 0.02,
-                                                ease: "power1.in"
-                                    });
-
-                                    // Change Text (after fade out)
-                                    tl.call(() => {
-                                                // Dictionary translations
-                                                dictionaryElements.forEach(el => {
-                                                            const key = el.getAttribute('data-lang');
-                                                            if (translations[lang] && translations[lang][key]) {
-                                                                        el.innerHTML = translations[lang][key];
-                                                            }
-                                                });
-
-                                                // Direct data-th/data-en translations
-                                                directElements.forEach(el => {
-                                                            const text = lang === 'th' ? el.getAttribute('data-th') : el.getAttribute('data-en');
-                                                            if (text) el.textContent = text;
-                                                });
-
-                                                // Handle Placeholders
-                                                const inputs = document.querySelectorAll('[data-th-placeholder]');
-                                                inputs.forEach(el => {
-                                                            const phText = lang === 'th' ? el.getAttribute('data-th-placeholder') : el.getAttribute('data-en-placeholder');
-                                                            if (phText) el.placeholder = phText;
-                                                });
-                                    });
-
-                                    // Fade In
-                                    tl.to(allElements, {
-                                                opacity: 1,
-                                                y: 0,
-                                                duration: 0.3,
-                                                stagger: 0.02,
-                                                ease: "power2.out"
-                                    });
-                        } else {
-                                    // Fallback without GSAP
-                                    dictionaryElements.forEach(el => {
-                                                const key = el.getAttribute('data-lang');
-                                                if (translations[lang] && translations[lang][key]) {
-                                                            el.innerHTML = translations[lang][key];
-                                                }
-                                    });
-                                    directElements.forEach(el => {
-                                                const text = lang === 'th' ? el.getAttribute('data-th') : el.getAttribute('data-en');
-                                                if (text) el.textContent = text;
-                                    });
-                        }
-
-                        // Save preference
-                        localStorage.setItem('lang', lang);
-                        document.documentElement.lang = lang;
+            
+            document.querySelectorAll('.lang-text').forEach(el => el.innerText = lang.toUpperCase());
+            document.documentElement.lang = lang;
+            localStorage.setItem('lang', lang);
+            
+            gsap.to('body', { opacity: 1, duration: 0.2 });
+        }});
+    } else {
+        dictionaryElements.forEach(el => {
+            const key = el.getAttribute('data-lang');
+            if (translations[lang] && translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
             }
+        });
+        document.querySelectorAll('.lang-text').forEach(el => el.innerText = lang.toUpperCase());
+        document.documentElement.lang = lang;
+        localStorage.setItem('lang', lang);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('lang') || 'en';
+    setLanguage(savedLang);
+    
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
+    function toggleMobileMenu(show) {
+        if (show) {
+            mobileMenu.classList.remove('translate-x-full');
+        } else {
+            mobileMenu.classList.add('translate-x-full');
+        }
+    }
+
+    mobileMenuBtn.addEventListener('click', () => toggleMobileMenu(true));
+    mobileMenuClose.addEventListener('click', () => toggleMobileMenu(false));
+    mobileLinks.forEach(link => link.addEventListener('click', () => toggleMobileMenu(false)));
+
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+        const currentLang = localStorage.getItem('lang') || 'en';
+        setLanguage(currentLang === 'en' ? 'th' : 'en');
+    });
+
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const sunIcon = themeToggle.querySelector('.sun');
+    const moonIcon = themeToggle.querySelector('.moon');
+    
+    function updateTheme(isDark) {
+        if (isDark) {
+            document.documentElement.classList.add('dark');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        }
+    }
+    
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    updateTheme(savedTheme === 'dark' || (!savedTheme && systemPrefersDark));
+    
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateTheme(isDark);
+    });
 });

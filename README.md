@@ -1,25 +1,30 @@
-# Sirawith Kaewsee - Enterprise Solutions Architect Portfolio
+# Floy Sirawich Kaewsri | AI Automation Portfolio
 
-A premium portfolio website for an Enterprise Solutions Architect, featuring AI & No-Code automation solutions.
+A premium, minimal-luxury, bilingual (Thai/English) portfolio designed for an AI Automation Consultant.
 
-## ✨ Features
-- **Luxury Aesthetic**: Dark mode with teal & violet accents, glassmorphism, and smooth animations.
-- **Dynamic Content**: Bilingual support (TH/EN) with GSAP-powered transitions.
-- **Interactive Solutions**: Bento-grid style case studies for Real Estate, Automotive, and Retail.
-- **LeadFlow CRM**: Integrated contact form with validation and success animations.
-- **Performance Optimized**: Lazy loading, SEO meta tags, and PWA manifest.
+## Tech Stack
+- **Framework**: Tailwind CSS (CDN for fast deployment)
+- **Animations**: GSAP + ScrollTrigger
+- **Logic**: Vanilla JavaScript for Language & Theme management
+- **Deployment**: Optimized for GitHub Pages (Static HTML/CSS/JS)
 
-## 🛠️ Tech Stack
-- **Frontend**: HTML5, Vanilla CSS, JavaScript
-- **Animations**: GSAP 3.12.5, ScrollTrigger
-- **Infrastructure**: Optimized for GitHub Pages
+## Key Features
+- **Bilingual Engine**: Real-time language switching (EN/TH) with semantic alignment.
+- **Evidence-Led Narrative**: Case studies follow a strict 8-block outcome-focused template.
+- **Minimal Luxury UI**: High-contrast typography, bento grids, and glassmorphism details.
+- **Performance**: Zero heavy frameworks; fast loading and mobile-first.
 
-## 🤖 Development Environment
-- **Workspace**: VS Code
-- **AI Pairing**: Continue.dev extension
-- **Model**: Gemini 1.5 Flash (API Free Tier)
+## Site Structure
+1. **Hero**: Trust-focused intro with CTA and credibility signals.
+2. **About**: Professional background (UNIQLO, BMW) and personality layers.
+3. **Projects**: 3 Detailed case studies (PATSTICKER, Festival Tickets, Notion Restaurant).
+4. **Services**: Tiered investment levels (Starter, Pro, Enterprise).
+5. **Process**: Systematic "Automation Factory" methodology.
+6. **Contact**: Multi-channel access (Calendly, LINE, LinkedIn).
 
-## 🚀 Getting Started
-1. Clone the repository: `git clone https://github.com/bbgunmis-alt/my-portfolio-2.git`
-2. Open in VS Code.
-3. Use Live Server to preview the project.
+## Setup & Customization
+- **Change Projects**: Update `assets/js/language.js` with new project copy.
+- **Colors**: Edit the Tailwind configuration in `index.html` to change the `luxury-blue` or `luxury-accent`.
+- **Images**: Place project screenshots in `Image/projects/`.
+
+Designed for conversion. Built for scale.
