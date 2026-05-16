@@ -2075,3 +2075,28 @@ body {
     font-size: 1rem;
     font-weight: 900;
 }
+
+/* --- EXPERIENCE TIMELINE & BRAND TOKENS --- */
+:root {
+    --brand-900: #0a0f1e;
+    --brand-600: #3b82f6;
+}
+
+.bg-brand-900 { background-color: var(--brand-900); }
+.bg-brand-600 { background-color: var(--brand-600); }
+.text-brand-600 { color: var(--brand-600); }
+.border-brand-600 { border-color: var(--brand-600); }
+
+.timeline-item {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-item:hover {
+    transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+    .timeline-item:hover {
+        transform: translateY(-5px);
+    }
+}

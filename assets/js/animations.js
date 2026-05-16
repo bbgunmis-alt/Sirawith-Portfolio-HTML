@@ -65,4 +65,32 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 0.8,
         ease: "back.out(1.7)"
     });
+
+    // Experience Timeline Stagger
+    gsap.from(".timeline-item", {
+        scrollTrigger: {
+            trigger: "#experience",
+            start: "top 70%"
+        },
+        opacity: 0,
+        x: -30,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power3.out"
+    });
+
+    // Highlights Stat Reveal
+    gsap.from(".highlight-pill", {
+        scrollTrigger: {
+            trigger: ".highlights-bar",
+            start: "top 85%"
+        },
+        opacity: 0,
+        scale: 0.9,
+        y: 20,
+        stagger: 0.1,
+        duration: 0.8,
+        ease: "back.out(1.7)"
+    });
 });
+

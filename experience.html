@@ -5,41 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience | Sirawith Kaewsee</title>
     <link rel="stylesheet" href="assets/css/global.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Red+Hat+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Red+Hat+Display:wght@700;800;900&family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- SEO & Favicon -->
-    <meta name="description" content="Professional journey of Sirawith Kaewsee: From Luxury Sales to Enterprise Solutions Architect. LeadFlow TH founder.">
-    <meta name="keywords" content="Experience, Resume, Career, Automation Specialist, Sales Executive, Make.com">
+    <meta name="description" content="Professional journey of Sirawith Kaewsee: Luxury Real Estate & Investment Consultant. High-Value Revenue Driver.">
+    <meta name="keywords" content="Experience, Resume, Career, Luxury Real Estate, Investment Consultant, Automation Specialist">
     <meta name="author" content="Sirawith Kaewsee">
     <meta name="theme-color" content="#0a0f1e">
 
     <link rel="canonical" href="https://bbgunmis-alt.github.io/my-portfolio-2/experience.html">
     <link rel="alternate" hreflang="th" href="https://bbgunmis-alt.github.io/my-portfolio-2/experience.html?lang=th">
     <link rel="alternate" hreflang="en" href="https://bbgunmis-alt.github.io/my-portfolio-2/experience.html?lang=en">
-    <link rel="alternate" hreflang="x-default" href="https://bbgunmis-alt.github.io/my-portfolio-2/experience.html">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Experience | Sirawith Kaewsee - Enterprise Solutions Architect">
-    <meta property="og:description" content="Professional journey from Luxury Sales to Enterprise Solutions Architect. AI & No-Code automation expert.">
-    <meta property="og:image" content="https://bbgunmis-alt.github.io/my-portfolio-2/image/profile.jpg">
-    <meta property="og:url" content="https://bbgunmis-alt.github.io/my-portfolio-2/experience.html">
-    <meta property="og:type" content="profile">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://bbgunmis-alt.github.io/my-portfolio-2/image/profile.jpg">
+    <style>
+        :root {
+            --luxury-gold: #c5a059;
+            --luxury-dark: #0a0f1e;
+            --text-muted: rgba(255, 255, 255, 0.6);
+        }
 
-    <!-- Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "mainEntity": {
-        "@type": "Person",
-        "name": "Sirawith Kaewsee",
-        "jobTitle": "Enterprise Solutions Architect",
-        "url": "https://bbgunmis-alt.github.io/my-portfolio-2/"
-      }
-    }
-    </script>
-    <link rel="icon" type="image/png" href="Image/hero-profile.png">
+        .premium-hero {
+            padding: 180px 20px 100px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(197, 160, 89, 0.05) 0%, transparent 70%), var(--luxury-dark);
+        }
+
+        .hero-label {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.3em;
+            font-size: 0.8rem;
+            color: var(--luxury-gold);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .hero-name {
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.25rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        /* About Section Bilingual */
+        .about-bilingual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .about-bilingual { grid-template-columns: 1fr; gap: 40px; }
+            .about-text-th { border-left: none !important; padding-left: 0 !important; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; }
+        }
+
+        /* Bento Grid for Wins */
+        .wins-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .win-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .win-card:hover {
+            border-color: var(--luxury-gold);
+            transform: translateY(-5px);
+        }
+
+        .win-value {
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--luxury-gold);
+            margin-bottom: 10px;
+        }
+
+        .win-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Premium Timeline */
+        .timeline-premium {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline-item-premium {
+            position: relative;
+            padding-left: 40px;
+            padding-bottom: 80px;
+            border-left: 1px solid rgba(197, 160, 89, 0.3);
+        }
+
+        .timeline-item-premium::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 0;
+            width: 9px;
+            height: 9px;
+            background: var(--luxury-gold);
+            border-radius: 50%;
+        }
+
+        .timeline-date-tag {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            color: var(--luxury-gold);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .timeline-role {
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .timeline-company {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .timeline-bullets {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline-bullets li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .timeline-bullets li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--luxury-gold);
+        }
+
+        /* Skill Matrix */
+        .skill-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .skill-group h3 {
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 1.25rem;
+            color: #fff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-group h3 svg { color: var(--luxury-gold); }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: rgba(197, 160, 89, 0.1);
+            color: var(--luxury-gold);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-family: 'Inter', sans-serif;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+    </style>
 </head>
 <body>
     <div class="scroll-progress"></div>
@@ -61,100 +231,177 @@
                 <button class="lang-btn" data-lang-val="th">🇹🇭 ไทย</button>
                 <div class="lang-glider"></div>
             </div>
-            <!-- Theme Toggle -->
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </button>
         </div>
     </nav>
 
-    <header class="solutions-hero">
-        <div class="solutions-hero-content">
-            <h1 class="text-gradient" data-lang="page_exp_title">Experience</h1>
+    <header class="premium-hero">
+        <div class="section-container">
+            <span class="hero-label">STRATEGIC REVENUE ARCHITECT</span>
+            <h1 class="hero-name">SIRAWITH KAEWSEE</h1>
+            <p class="hero-title">Luxury Real Estate & Investment Consultant | High-Value Revenue Driver</p>
+            <p class="hero-subtitle" style="max-width: 600px; margin: 0 auto 40px; color: var(--text-muted);">
+                Bridging luxury real estate strategy with AI-driven automation to maximize high-value revenue and investor ROI.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <a href="contact.html" class="btn-submit" style="text-decoration: none;">Request Strategy Consultation</a>
+            </div>
         </div>
     </header>
 
-    <section class="experience-section">
+    <!-- About Section (Bilingual) -->
+    <section id="about" class="solution-grid-section" style="padding: 120px 20px; background: var(--bg-primary);">
         <div class="section-container">
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date" data-lang="exp_job1_date">April 2024 - Present</span>
-                        <h3 data-lang="exp_job1_title">Digital Marketing Specialist</h3>
-                        <ul class="timeline-details"><li data-lang="exp_job1_desc1">Consulting for SMEs</li></ul>
-                    </div>
+            <div class="about-bilingual">
+                <div class="about-text-en">
+                    <h2 class="hero-name" style="font-size: 2.5rem; text-align: left; margin-bottom: 30px;">Who I Am.</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted);">
+                        I bridge the gap between luxury real estate strategy and automated excellence. With a track record across <strong>BMW, Origin Property, and UNIQLO</strong>, I don't just sell property; I architect automated revenue engines that discover, nurture, and convert high-net-worth investors with surgical precision.
+                    </p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date" data-lang="exp_job2_date">Jan 2025 - July 2025</span>
-                        <h3 data-lang="exp_job2_title">Sales & Marketing Executive</h3>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date" data-lang="exp_job3_date">Dec 2021 - Dec 2024</span>
-                        <h3 data-lang="exp_job3_title">Luxury Sales Consultant</h3>
-                    </div>
+                <div class="about-text-th" style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 40px;">
+                    <h2 class="hero-name" style="font-size: 2.5rem; text-align: left; margin-bottom: 30px;">ตัวตนและกลยุทธ์.</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); font-family: 'Inter', 'Kanit', sans-serif;">
+                        ผมเชื่อมโยงกลยุทธ์การขายอสังหาริมทรัพย์ระดับลักชัวรีเข้ากับความแม่นยำของระบบอัตโนมัติ ด้วยประสบการณ์จากแบรนด์ระดับโลกอย่าง <strong>BMW, Origin Property และ UNIQLO</strong> ผมไม่ได้เพียงแค่ขายอสังหาฯ แต่ผมสร้าง "เครื่องจักรขับเคลื่อนรายได้" ที่ช่วยค้นหาและดูแลกลุ่มลูกค้าระดับ HNWI ให้กับคุณด้วยความแม่นยำสูงสุด
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills & Certifications -->
-    <section class="infrastructure-section">
+    <!-- Selected Wins (Bento) -->
+    <section id="wins" class="tech-proof-section" style="background: #000; padding: 100px 20px;">
         <div class="section-container">
-            <div class="section-header">
-                <h2 data-lang="skills_title">Skills Matrix</h2>
+            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                <h2 class="hero-name" style="font-size: 3rem;" data-en="SELECTED WINS" data-th="ความสำเร็จที่โดดเด่น">SELECTED WINS</h2>
+                <p class="hero-subtitle" style="color: var(--text-muted);" data-en="Measurable impact across luxury sectors." data-th="ผลลัพธ์ที่พิสูจน์ได้จริงในเซกเมนต์ลักชัวรี">Measurable impact across luxury sectors.</p>
             </div>
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                    </div>
-                    <h3 data-lang="skill_auto">Automation</h3>
-                    <p data-th="ออกแบบและวางระบบ Workflows อัตโนมัติ" data-en="Architecting and deploying automated workflows.">Architecting and deploying automated workflows.</p>
+            <div class="wins-grid">
+                <div class="win-card">
+                    <span class="win-value">฿50M+</span>
+                    <span class="win-label" data-en="Revenue generated in 5 months at Origin Property." data-th="สร้างรายได้มากกว่า 50 ล้านบาทใน 5 เดือนที่ Origin Property">Revenue generated in 5 months at Origin Property.</span>
                 </div>
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    </div>
-                    <h3 data-lang="skill_ux">UX/UI Design</h3>
-                    <p data-th="ออกแบบอินเทอร์เฟซที่เน้น Conversion" data-en="Designing conversion-focused interfaces.">Designing conversion-focused interfaces.</p>
+                <div class="win-card">
+                    <span class="win-value">130%</span>
+                    <span class="win-label" data-en="Sales quota achievement at BMW Performance Motors." data-th="ทำยอดขายทะลุเป้า 130% ที่ BMW Performance Motors">Sales quota achievement at BMW Performance Motors.</span>
                 </div>
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                    </div>
-                    <h3 data-lang="skill_local">Localization</h3>
-                    <p data-th="ปรับแต่งระบบให้เข้ากับบริบทไทย-อังกฤษ" data-en="Bilingual systems for Thai-English markets.">Bilingual systems for Thai-English markets.</p>
+                <div class="win-card">
+                    <span class="win-value">50+</span>
+                    <span class="win-label" data-en="Premium units closed annually." data-th="ปิดการขายยูนิตระดับพรีเมียมมากกว่า 50 ยูนิตต่อปี">Premium units closed annually.</span>
+                </div>
+                <div class="win-card">
+                    <span class="win-value">20%</span>
+                    <span class="win-label" data-en="Year-over-Year sales growth at UNIQLO Thailand." data-th="อัตราการเติบโตของยอดขาย 20% ต่อปีที่ UNIQLO Thailand">Year-over-Year sales growth at UNIQLO Thailand.</span>
+                </div>
+                <div class="win-card" style="grid-column: span 1; background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), transparent);">
+                    <span class="win-value" style="font-size: 1.5rem; margin-top: 10px;" data-en="AUTOMATED PIPELINES" data-th="ระบบอัตโนมัติ">AUTOMATED PIPELINES</span>
+                    <span class="win-label" data-en="Architected n8n / Make / Google Sheets / LINE OA ecosystems for high-conversion lead tracking." data-th="วางสถาปัตยกรรม n8n / Make / Google Sheets / LINE OA เพื่อการติดตามลีดที่มีประสิทธิภาพสูง">Architected n8n / Make / Google Sheets / LINE OA ecosystems for high-conversion lead tracking.</span>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="section-header" style="margin-top: 80px;">
-                <h2 data-lang="cert_title">Certifications</h2>
+    <!-- Experience Timeline -->
+    <section id="experience" class="infrastructure-section" style="background: var(--bg-primary); padding: 100px 20px;">
+        <div class="section-container">
+            <div class="section-header" style="margin-bottom: 80px;">
+                <h2 class="hero-name" style="font-size: 3rem;">THE TIMELINE</h2>
             </div>
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <div class="tech-icon-wrapper">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    </div>
-                    <span class="tech-label" data-lang="cert_google">Google Ads</span>
+            <div class="timeline-premium">
+                <!-- Role 1 -->
+                <div class="timeline-item-premium">
+                    <span class="timeline-date-tag" data-en="DEC 2023 – PRESENT" data-th="ธันวาคม 2023 – ปัจจุบัน">DEC 2023 – PRESENT</span>
+                    <h3 class="timeline-role" data-en="Independent Digital Marketing Consultant" data-th="ที่ปรึกษาด้านการตลาดดิจิทัลอิสระ">Independent Digital Marketing Consultant</h3>
+                    <span class="timeline-company" data-en="Strategic Advisor for Aesthetic Clinics & SMBs" data-th="ที่ปรึกษากลยุทธ์สำหรับคลินิกความงามและ SME">Strategic Advisor for Aesthetic Clinics & SMBs</span>
+                    <ul class="timeline-bullets">
+                        <li data-en="Performance marketing orchestration for high-growth clinics." data-th="วางแผนและบริหารจัดการ Performance Marketing สำหรับคลินิกที่เติบโตสูง">Performance marketing orchestration for high-growth clinics.</li>
+                        <li data-en="Advanced tracking: Meta Pixel & Conversions API coaching for accurate attribution." data-th="ระบบติดตามผลขั้นสูง: สอนและวางระบบ Meta Pixel & Conversions API เพื่อการวัดผลที่แม่นยำ">Advanced tracking: Meta Pixel & Conversions API coaching for accurate attribution.</li>
+                        <li data-en="Brand identity and DNA architecture for emerging premium brands." data-th="สร้างเอกลักษณ์ของแบรนด์ (Brand Identity) และวางโครงสร้าง DNA สำหรับแบรนด์พรีเมียมใหม่">Brand identity and DNA architecture for emerging premium brands.</li>
+                    </ul>
                 </div>
-                <div class="tech-item">
-                    <div class="tech-icon-wrapper">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    </div>
-                    <span class="tech-label" data-lang="cert_ux">UX/UI Design</span>
+
+                <!-- Role 2 -->
+                <div class="timeline-item-premium">
+                    <span class="timeline-date-tag" data-en="JAN 2025 – MAY 2025" data-th="มกราคม 2025 – พฤษภาคม 2025">JAN 2025 – MAY 2025</span>
+                    <h3 class="timeline-role" data-en="Luxury Investment Consultant" data-th="ที่ปรึกษาการลงทุนระดับลักชัวรี">Luxury Investment Consultant</h3>
+                    <span class="timeline-company">Origin Property Public Company</span>
+                    <ul class="timeline-bullets">
+                        <li data-en="Delivered THB 50M gross revenue in a 5-month sprint." data-th="สร้างรายได้รวม 50 ล้านบาทภายในระยะเวลา 5 เดือน">Delivered THB 50M gross revenue in a 5-month sprint.</li>
+                        <li data-en="Closed 6 luxury units at KnightsBridge Sukhumvit–Rama IV." data-th="ปิดการขาย 6 ยูนิตระดับลักชัวรีที่ KnightsBridge Sukhumvit–Rama IV">Closed 6 luxury units at KnightsBridge Sukhumvit–Rama IV.</li>
+                        <li data-en="Engineered a low-code inbound pipeline using n8n, Make.com, and TikTok APIs." data-th="พัฒนาระบบ Inbound Pipeline แบบ Low-code โดยใช้ n8n, Make.com และ TikTok APIs">Engineered a low-code inbound pipeline using n8n, Make.com, and TikTok APIs.</li>
+                        <li data-en="Leveraged Claude 3.5 & Gemini for personalized investor financial modeling." data-th="ใช้ Claude 3.5 & Gemini ในการสร้างแบบจำลองทางการเงินส่วนบุคคลสำหรับนักลงทุน">Leveraged Claude 3.5 & Gemini for personalized investor financial modeling.</li>
+                    </ul>
                 </div>
-                <div class="tech-item">
-                    <div class="tech-icon-wrapper">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+
+                <!-- Role 3 -->
+                <div class="timeline-item-premium">
+                    <span class="timeline-date-tag">DEC 2021 – DEC 2024</span>
+                    <h3 class="timeline-role">Luxury Sales Consultant</h3>
+                    <span class="timeline-company">BMW Performance Motors</span>
+                    <ul class="timeline-bullets">
+                        <li>Closed 50+ premium automotive units annually.</li>
+                        <li>Consistently exceeded sales targets, hitting 130% of quota.</li>
+                        <li>Curated and managed a proprietary HNWI and Expatriate client database.</li>
+                        <li>Boosted online discovery-to-sale conversion by 20% via digital campaigns.</li>
+                    </ul>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="timeline-item-premium">
+                    <span class="timeline-date-tag">JAN 2015 – SEP 2020</span>
+                    <h3 class="timeline-role">Store Operations Manager</h3>
+                    <span class="timeline-company">UNIQLO Thailand Company</span>
+                    <ul class="timeline-bullets">
+                        <li>Managed and trained a high-performance team of 25+ staff members.</li>
+                        <li>Delivered 20% Year-over-Year sales growth through operational excellence.</li>
+                        <li>Achieved a 25% increase in customer satisfaction scores.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix -->
+    <section id="skills" class="tech-proof-section" style="background: #000; padding: 100px 20px;">
+        <div class="section-container">
+            <div class="section-header" style="margin-bottom: 60px;">
+                <h2 class="hero-name" style="font-size: 3rem;">CORE EXPERTISE</h2>
+            </div>
+            <div class="skill-matrix">
+                <div class="skill-group">
+                    <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg> Luxury & Investment</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HNWI Sales</span>
+                        <span class="skill-tag">Investment Storytelling</span>
+                        <span class="skill-tag">Real Estate Valuation</span>
+                        <span class="skill-tag">Expatriate Advisory</span>
                     </div>
-                    <span class="tech-label" data-lang="cert_auto">Automation Tools</span>
+                </div>
+                <div class="skill-group">
+                    <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path></svg> AI & Prompt Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Claude 3.5 / Gemini</span>
+                        <span class="skill-tag">Financial Modeling AI</span>
+                        <span class="skill-tag">Content Automation</span>
+                        <span class="skill-tag">Sales Scripting AI</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg> Workflow & Automation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">n8n</span>
+                        <span class="skill-tag">Make.com</span>
+                        <span class="skill-tag">Google Sheets CRM</span>
+                        <span class="skill-tag">API Orchestration</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Growth Marketing</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Meta CAPI</span>
+                        <span class="skill-tag">TikTok Ads</span>
+                        <span class="skill-tag">Brand DNA Design</span>
+                        <span class="skill-tag">Performance Funnels</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -174,8 +421,8 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                 </a>
             </div>
-            <p class="footer-copy" data-en="&copy; 2026 Sirawith Kaewsee – Enterprise Architect"
-                data-th="&copy; 2026 Sirawith Kaewsee – สถาปนิกโซลูชันองค์กร (Enterprise Architect)">&copy; 2026 Sirawith Kaewsee – Enterprise Architect</p>
+            <p class="footer-copy" data-en="&copy; 2026 Sirawith Kaewsee – Strategic Advisor"
+                data-th="&copy; 2026 Sirawith Kaewsee – ที่ปรึกษากลยุทธ์รายได้">&copy; 2026 Sirawith Kaewsee – Strategic Advisor</p>
         </div>
     </footer>
 
@@ -190,9 +437,33 @@
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/language.js"></script>
     <script>
-        // Page Load
         document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.add('loaded');
+            
+            // GSAP Animations
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.from('.win-card', {
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: '.wins-grid',
+                    start: 'top 80%'
+                }
+            });
+
+            gsap.from('.timeline-item-premium', {
+                x: -30,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.3,
+                scrollTrigger: {
+                    trigger: '.timeline-premium',
+                    start: 'top 70%'
+                }
+            });
         });
 
         // Mobile Menu
@@ -202,25 +473,6 @@
             hamburger.addEventListener('click', () => {
                 hamburger.classList.toggle('active');
                 navLinks.classList.toggle('active');
-            });
-        }
-
-        // Active State
-        const currentPath = window.location.pathname;
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            if(currentPath.includes(link.getAttribute('href'))) link.classList.add('active');
-        });
-
-        // Theme Toggle
-        const toggleSwitch = document.querySelector('#theme-toggle');
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        if(toggleSwitch) {
-            toggleSwitch.addEventListener('click', () => {
-                const current = document.documentElement.getAttribute('data-theme');
-                const targetTheme = current === 'light' ? 'dark' : 'light';
-                document.documentElement.setAttribute('data-theme', targetTheme);
-                localStorage.setItem('theme', targetTheme);
             });
         }
     </script>

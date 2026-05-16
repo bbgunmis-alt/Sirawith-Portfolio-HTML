@@ -1,14 +1,16 @@
 const translations = {
     en: {
         // Nav
+        nav_home: "Home",
+        nav_solutions: "Solutions",
         nav_projects: "Projects",
-        nav_services: "Services",
-        nav_process: "Process",
+        nav_experience: "Experience",
         nav_about: "About",
+        nav_contact: "Contact",
 
         // Hero
-        hero_name: "Floy Sirawich Kaewsri",
-        hero_title: "AI Prompt Engineer & n8n Automation Consultant",
+        hero_name: "Sirawith Kaewsee",
+        hero_title: "Luxury Real Estate & Investment Consultant",
         hero_sub: "Bangkok-based SME LeadFlow Architect | Ex-UNIQLO / BMW / Origin",
         hero_value: "I design automation systems that save time, reduce manual work, and improve lead conversion.",
         cta_book: "Book a Strategy Session",
@@ -109,14 +111,16 @@ const translations = {
     },
     th: {
         // Nav
+        nav_home: "หน้าแรก",
+        nav_solutions: "โซลูชัน",
         nav_projects: "ผลงาน",
-        nav_services: "บริการ",
-        nav_process: "ขั้นตอน",
+        nav_experience: "ประสบการณ์",
         nav_about: "เกี่ยวกับ",
+        nav_contact: "ติดต่อ",
 
         // Hero
-        hero_name: "ฟลอย ศิรวิชญ์ แก้วศรี",
-        hero_title: "AI Prompt Engineer & n8n Automation Consultant",
+        hero_name: "ศิรวิชญ์ แก้วศรี",
+        hero_title: "ที่ปรึกษาการลงทุนและอสังหาริมทรัพย์ระดับลักชัวรี",
         hero_sub: "ผู้ออกแบบระบบ LeadFlow สำหรับ SME | ประสบการณ์จาก UNIQLO / BMW / Origin",
         hero_value: "ผมออกแบบระบบอัตโนมัติที่ช่วยประหยัดเวลา ลดงานแมนนวล และเพิ่มอัตราการเปลี่ยนเป็นลูกค้า (Lead Conversion)",
         cta_book: "จองเวลาปรึกษาเพื่อวางแผนระบบ",
@@ -219,20 +223,33 @@ const translations = {
 
 function setLanguage(lang) {
     const dictionaryElements = document.querySelectorAll('[data-lang]');
+    const bilingualElements = document.querySelectorAll('[data-en][data-th]');
     
     // GSAP Fade Animation
     if (typeof gsap !== 'undefined') {
         gsap.to('body', { opacity: 0, duration: 0.1, onComplete: () => {
+            // Handle dictionary translations
             dictionaryElements.forEach(el => {
                 const key = el.getAttribute('data-lang');
                 if (translations[lang] && translations[lang][key]) {
                     el.innerHTML = translations[lang][key];
                 }
             });
+
+            // Handle direct bilingual attributes
+            bilingualElements.forEach(el => {
+                const content = el.getAttribute(`data-${lang}`);
+                if (content) el.innerHTML = content;
+            });
             
             document.querySelectorAll('.lang-text').forEach(el => el.innerText = lang.toUpperCase());
             document.documentElement.lang = lang;
             localStorage.setItem('lang', lang);
+
+            // Update active state for buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-lang-val') === lang);
+            });
             
             gsap.to('body', { opacity: 1, duration: 0.2 });
         }});
@@ -243,9 +260,16 @@ function setLanguage(lang) {
                 el.innerHTML = translations[lang][key];
             }
         });
+        bilingualElements.forEach(el => {
+            const content = el.getAttribute(`data-${lang}`);
+            if (content) el.innerHTML = content;
+        });
         document.querySelectorAll('.lang-text').forEach(el => el.innerText = lang.toUpperCase());
         document.documentElement.lang = lang;
         localStorage.setItem('lang', lang);
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang-val') === lang);
+        });
     }
 }
 
@@ -271,9 +295,20 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuClose.addEventListener('click', () => toggleMobileMenu(false));
     mobileLinks.forEach(link => link.addEventListener('click', () => toggleMobileMenu(false)));
 
-    document.getElementById('lang-toggle').addEventListener('click', () => {
-        const currentLang = localStorage.getItem('lang') || 'en';
-        setLanguage(currentLang === 'en' ? 'th' : 'en');
+    // Language Toggles (Single ID or Multiple Buttons)
+    const langToggle = document.getElementById('lang-toggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            const currentLang = localStorage.getItem('lang') || 'en';
+            setLanguage(currentLang === 'en' ? 'th' : 'en');
+        });
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const selectedLang = btn.getAttribute('data-lang-val');
+            if (selectedLang) setLanguage(selectedLang);
+        });
     });
 
     // Theme Toggle Logic
