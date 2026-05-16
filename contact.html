@@ -78,13 +78,15 @@
                         <span class="contact-icon">✈️</span>
                         <span data-lang="channel_telegram">Telegram</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/sirawith-kaewsee" class="contact-item" target="_blank">
+                    <a href="https://www.linkedin.com/in/sirawith-k-155182367" class="contact-item" target="_blank">
                         <span class="contact-icon">💼</span>
                         <span data-lang="channel_linkedin">LinkedIn</span>
                     </a>
                 </div>
-                <form id="contactForm" class="contact-form" name="contact" method="POST" netlify>
-                    <input type="hidden" name="form-name" value="contact">
+                <form id="contactForm" class="contact-form" name="contact" method="POST" action="https://formsubmit.co/sirawith.keawsee@gmail.com">
+                    <input type="hidden" name="_subject" value="Portfolio contact (contact page)">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://bbgunmis-alt.github.io/my-portfolio-2/contact.html?sent=1">
                     <div class="form-group">
                         <label data-lang="form_name">Name</label>
                         <input type="text" name="name" id="name" required 
@@ -230,12 +232,13 @@
                     
                     const formData = new FormData(form);
                     
-                    fetch("/", {
+                    fetch("https://formsubmit.co/ajax/sirawith.keawsee@gmail.com", {
                         method: "POST",
-                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                        body: new URLSearchParams(formData).toString()
+                        headers: { Accept: "application/json" },
+                        body: formData
                     })
-                    .then(() => {
+                    .then((res) => {
+                        if (!res.ok) throw new Error("Submission failed");
                         btn.classList.remove('loading');
                         
                      // GSAP Animation
