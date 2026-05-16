@@ -1,0 +1,48 @@
+/* Accessibility & production hardening — shared across pages */
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+body { font-size: 16px; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+.nav-links a,
+.lang-btn,
+.hamburger,
+.btn-strategic,
+.btn-submit,
+.contact-item,
+button,
+a.inline-flex {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.hamburger {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .main-nav { padding: 12px 4%; }
+    .section-container,
+    .max-w-6xl { padding-left: 1rem; padding-right: 1rem; }
+}

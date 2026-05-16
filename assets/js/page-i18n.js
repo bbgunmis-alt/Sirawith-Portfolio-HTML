@@ -2,8 +2,12 @@
     function setPageLang(lang) {
         document.documentElement.lang = lang;
         document.querySelectorAll('[data-en][data-th]').forEach(function (el) {
-            var val = el.getAttribute('data-' + lang);
+            var val = el.getAttribute('data-' + lang) || el.getAttribute('data-en');
             if (val) el.textContent = val;
+        });
+        document.querySelectorAll('[data-en-placeholder][data-th-placeholder]').forEach(function (el) {
+            var ph = el.getAttribute('data-' + lang + '-placeholder') || el.getAttribute('data-en-placeholder');
+            if (ph) el.setAttribute('placeholder', ph);
         });
         document.querySelectorAll('.lang-btn').forEach(function (btn) {
             var active = btn.getAttribute('data-lang-val') === lang;

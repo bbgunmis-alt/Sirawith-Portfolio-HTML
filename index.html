@@ -11,7 +11,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://bbgunmis-alt.github.io/my-portfolio-2/">
+    <link rel="icon" type="image/png" href="Image/hero-profile.png">
+    <link rel="apple-touch-icon" href="Image/hero-profile.png">
+    <link rel="manifest" href="manifest.json">
+    <meta property="og:title" content="Floy Sirawich Kaewsri | AI & Automation for SME">
+    <meta property="og:description" content="LeadFlow TH — LINE OA, n8n, and automation systems for premium SMEs. Ex-UNIQLO, BMW, Origin.">
+    <meta property="og:image" content="https://bbgunmis-alt.github.io/my-portfolio-2/Image/hero-profile.png">
+    <meta property="og:url" content="https://bbgunmis-alt.github.io/my-portfolio-2/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="th_TH">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Floy Sirawich Kaewsri | AI & Automation">
+    <meta name="twitter:description" content="Luxury sales + automation systems for high-value SMEs in Thailand.">
+    <meta name="twitter:image" content="https://bbgunmis-alt.github.io/my-portfolio-2/Image/hero-profile.png">
+    <link rel="preload" href="Image/profile-hero.webp" as="image" type="image/webp">
     <link rel="preload" href="Image/project-leadflow-dashboard.webp" as="image" type="image/webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Sirawith Kaewsee",
+        "alternateName": "Floy Sirawich Kaewsri",
+        "jobTitle": "LeadFlow Architect | Luxury Real Estate & Automation Consultant",
+        "url": "https://bbgunmis-alt.github.io/my-portfolio-2/",
+        "image": "https://bbgunmis-alt.github.io/my-portfolio-2/Image/hero-profile.png",
+        "email": "sirawith.keawsee@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/sirawith-k-155182367",
+          "https://line.me/ti/p/~Floy.bmw.th",
+          "https://t.me/irk_sirawith"
+        ],
+        "knowsAbout": ["Marketing Automation", "n8n", "LINE OA", "Luxury Real Estate"]
+      }
+    }
+    </script>
     
     <!-- Tailwind CSS (CDN for minimal setup) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -52,6 +88,28 @@
                 box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             }
         }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+            outline: 2px solid #2563eb;
+            outline-offset: 2px;
+        }
+        .lang-btn { min-height: 44px; min-width: 44px; padding: 0.5rem 0.75rem; font-size: 1rem; }
+        .experience-context-bg {
+            background-image: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url('Image/experience-context.webp');
+            background-size: cover;
+            background-position: center;
+        }
+        .about-cta.glass-spot {
+            background: rgba(239, 246, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
@@ -60,32 +118,29 @@
     <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50" aria-label="หลัก">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#top" class="text-2xl font-bold tracking-tight text-gray-900">Floy<span class="text-brand-600">.</span>S</a>
-            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
-                <a href="#services" class="hover:text-brand-600 transition">บริการ (Services)</a>
-                <a href="#projects" class="hover:text-brand-600 transition">ผลงาน (Projects)</a>
-                <a href="#experience" class="hover:text-brand-600 transition">ประสบการณ์ (Experience)</a>
-                <a href="#about" class="hover:text-brand-600 transition">เกี่ยวกับผม (About)</a>
-                <a href="#contact" class="hover:text-brand-600 transition">ติดต่อ (Contact)</a>
+            <div class="hidden md:flex items-center space-x-6 text-base font-medium">
+                <a href="#services" class="hover:text-brand-600 transition py-2" data-en="Services" data-th="บริการ">บริการ</a>
+                <a href="#projects" class="hover:text-brand-600 transition py-2" data-en="Projects" data-th="ผลงาน">ผลงาน</a>
+                <a href="#experience" class="hover:text-brand-600 transition py-2" data-en="Experience" data-th="ประสบการณ์">ประสบการณ์</a>
+                <a href="#about" class="hover:text-brand-600 transition py-2" data-en="About" data-th="เกี่ยวกับ">เกี่ยวกับ</a>
+                <a href="#contact" class="hover:text-brand-600 transition py-2" data-en="Contact" data-th="ติดต่อ">ติดต่อ</a>
                 <div class="flex items-center gap-1 border border-gray-200 rounded-lg p-0.5" role="group" aria-label="เลือกภาษา">
                     <button type="button" class="lang-btn text-xs font-semibold px-2 py-1 rounded-md text-white bg-brand-600" data-lang-val="th" aria-pressed="true">TH</button>
                     <button type="button" class="lang-btn text-xs font-semibold px-2 py-1 rounded-md text-gray-600" data-lang-val="en" aria-pressed="false">EN</button>
                 </div>
             </div>
-            <a href="#contact" class="hidden md:inline-flex bg-brand-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-brand-900 transition shadow-md">
-                รับคำปรึกษาฟรี
-            </a>
-            <!-- Mobile Menu Button (simplified for MVP) -->
-            <button type="button" class="md:hidden text-gray-600 focus:outline-none" onclick="(function(){var m=document.getElementById('mobile-menu');var b=this;var hidden=m.classList.toggle('hidden');b.setAttribute('aria-expanded',hidden?'false':'true');}).call(this)" aria-label="เปิด/ปิดเมนูมือถือ" aria-expanded="false" aria-controls="mobile-menu">
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center min-h-[44px] bg-brand-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-brand-900 transition shadow-md" data-en="Free consultation" data-th="รับคำปรึกษาฟรี">รับคำปรึกษาฟรี</a>
+            <button type="button" class="md:hidden min-h-[44px] min-w-[44px] p-2 text-gray-600 focus:outline-none" onclick="(function(){var m=document.getElementById('mobile-menu');var b=this;var hidden=m.classList.toggle('hidden');b.setAttribute('aria-expanded',hidden?'false':'true');}).call(this)" aria-label="เปิด/ปิดเมนูมือถือ" aria-expanded="false" aria-controls="mobile-menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-4 shadow-lg absolute w-full">
-            <a href="#services" class="block text-gray-700 hover:text-brand-600">บริการ (Services)</a>
-            <a href="#projects" class="block text-gray-700 hover:text-brand-600">ผลงาน (Projects)</a>
-            <a href="#experience" class="block text-gray-700 hover:text-brand-600">ประสบการณ์ (Experience)</a>
-            <a href="#about" class="block text-gray-700 hover:text-brand-600">เกี่ยวกับผม (About)</a>
-            <a href="#contact" class="block text-brand-600 font-medium">ติดต่อ (Contact)</a>
+            <a href="#services" class="block py-2 text-gray-700 hover:text-brand-600" data-en="Services" data-th="บริการ">บริการ</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:text-brand-600" data-en="Projects" data-th="ผลงาน">ผลงาน</a>
+            <a href="#experience" class="block py-2 text-gray-700 hover:text-brand-600" data-en="Experience" data-th="ประสบการณ์">ประสบการณ์</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-brand-600" data-en="About" data-th="เกี่ยวกับ">เกี่ยวกับ</a>
+            <a href="#contact" class="block py-2 text-brand-600 font-medium" data-en="Contact" data-th="ติดต่อ">ติดต่อ</a>
             <div class="flex items-center gap-1 border border-gray-200 rounded-lg p-0.5 w-fit pt-2" role="group" aria-label="เลือกภาษา">
                 <button type="button" class="lang-btn text-xs font-semibold px-2 py-1 rounded-md text-white bg-brand-600" data-lang-val="th" aria-pressed="true">TH</button>
                 <button type="button" class="lang-btn text-xs font-semibold px-2 py-1 rounded-md text-gray-600" data-lang-val="en" aria-pressed="false">EN</button>
@@ -94,9 +149,13 @@
     </nav>
 
     <!-- 1) Hero Section -->
-    <section id="top" class="hero pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12" style="background-image:url('Image/2.png');background-size:cover;background-position:center;" >
+    <section id="top" class="hero pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 bg-gradient-to-br from-gray-50 via-white to-brand-50">
         <div class="md:w-1/2 space-y-6">
-            <div class="badge inline-block px-3 py-1 bg-brand-100 text-brand-600 text-sm font-semibold rounded-full"
+            <picture>
+                <source srcset="Image/profile-hero.webp" type="image/webp">
+                <img src="Image/profile_full.png" alt="Sirawith Kaewsee — professional portrait, luxury real estate and automation consultant" class="w-28 h-28 md:w-32 md:h-32 rounded-2xl object-cover border-4 border-white shadow-lg" width="128" height="128" fetchpriority="high">
+            </picture>
+            <div class="badge inline-block px-3 py-1 bg-brand-100 text-brand-600 text-base font-semibold rounded-full"
                  data-en="Luxury Real Estate & Investment Consultant"
                  data-th="ที่ปรึกษาการลงทุนและอสังหาริมทรัพย์ระดับลักชัวรี">
                 Luxury Real Estate & Investment Consultant
@@ -113,12 +172,8 @@
                 Bridging luxury real estate strategy with AI-driven automation to maximize high-value revenue and investor ROI.
             </p>
             <div class="cta-row pt-4 flex flex-col sm:flex-row gap-4">
-                <a href="#contact" class="text-center bg-brand-600 hover:bg-brand-900 text-white px-8 py-4 rounded-xl font-medium transition shadow-lg shadow-brand-500/30 text-lg">
-                    ออกแบบระบบของคุณ (ปรึกษาฟรี)
-                </a>
-                <a href="#projects" class="text-center bg-white border-2 border-gray-200 hover:border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-medium transition text-lg">
-                    ดูตัวอย่างผลงาน
-                </a>
+                <a href="#contact" class="text-center min-h-[44px] inline-flex items-center justify-center bg-brand-600 hover:bg-brand-900 text-white px-8 py-4 rounded-xl font-medium transition shadow-lg shadow-brand-500/30 text-lg" data-en="Design your system (free consult)" data-th="ออกแบบระบบของคุณ (ปรึกษาฟรี)">ออกแบบระบบของคุณ (ปรึกษาฟรี)</a>
+                <a href="#projects" class="text-center min-h-[44px] inline-flex items-center justify-center bg-white border-2 border-gray-200 hover:border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-medium transition text-lg" data-en="View portfolio" data-th="ดูตัวอย่างผลงาน">ดูตัวอย่างผลงาน</a>
             </div>
         </div>
         <div class="md:w-1/2 w-full">
@@ -128,7 +183,7 @@
                     <picture class="block w-full h-full">
                         <source srcset="Image/project-leadflow-dashboard.avif" type="image/avif">
                         <source srcset="Image/project-leadflow-dashboard.webp" type="image/webp">
-                        <img src="Image/project-leadflow-dashboard.jpg" alt="ภาพหน้าจอตัวอย่างระบบ LeadFlow TH Dashboard อัตโนมัติ" class="w-full h-full object-cover rounded-xl" fetchpriority="high" width="800" height="450">
+                        <img src="Image/project-leadflow-dashboard.jpg" alt="LeadFlow TH dashboard — proof of automation and lead tracking system" class="w-full h-full object-cover rounded-xl" loading="lazy" width="800" height="450">
                     </picture>
                 </div>
             </div>
@@ -140,7 +195,7 @@
         <div class="max-w-6xl mx-auto px-6">
             <!-- Trust Row -->
             <div class="trust-row text-center mb-10">
-                <p class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6">ผู้เชี่ยวชาญผู้อยู่เบื้องหลังระบบอัตโนมัติให้กับแบรนด์</p>
+                <p class="text-base font-semibold text-gray-500 uppercase tracking-widest mb-6" data-en="Trusted by premium brands" data-th="ผู้เชี่ยวชาญผู้อยู่เบื้องหลังระบบอัตโนมัติให้กับแบรนด์">ผู้เชี่ยวชาญผู้อยู่เบื้องหลังระบบอัตโนมัติให้กับแบรนด์</p>
                 <div class="flex flex-wrap justify-center items-center gap-8 opacity-60 grayscale">
                     <span class="text-xl font-bold font-serif tracking-tight text-gray-800">UNIQLO</span>
                     <span class="text-xl font-bold font-serif tracking-tight text-gray-800">BMW</span>
@@ -152,22 +207,22 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center border-t border-gray-100 pt-10">
                 <div class="stat-item p-4">
                     <div class="text-4xl font-bold text-brand-600 mb-2">5x</div>
-                    <div class="text-sm text-gray-600" data-en="Faster lead response & nurturing" data-th="ตอบกลับและดูแลลูกค้าเร็วขึ้น">ตอบกลับและดูแลลูกค้าเร็วขึ้น</div>
+                    <div class="text-base text-gray-600" data-en="Faster lead response & nurturing" data-th="ตอบกลับและดูแลลูกค้าเร็วขึ้น">ตอบกลับและดูแลลูกค้าเร็วขึ้น</div>
                 </div>
                 <div class="stat-item p-4">
                     <div class="text-4xl font-bold text-brand-600 mb-2">25%</div>
-                    <div class="text-sm text-gray-600" data-en="Increase in conversion & ROI" data-th="เพิ่มโอกาสและยอดปิดการขาย">เพิ่มโอกาสและยอดปิดการขาย</div>
+                    <div class="text-base text-gray-600" data-en="Increase in conversion & ROI" data-th="เพิ่มโอกาสและยอดปิดการขาย">เพิ่มโอกาสและยอดปิดการขาย</div>
                 </div>
                 <div class="stat-item p-4">
                     <div class="text-4xl font-bold text-brand-600 mb-2">24/7</div>
-                    <div class="text-sm text-gray-600" data-en="Seamless automated operations" data-th="ระบบทำงานอัตโนมัติไร้รอยต่อ">ระบบทำงานอัตโนมัติไร้รอยต่อ</div>
+                    <div class="text-base text-gray-600" data-en="Seamless automated operations" data-th="ระบบทำงานอัตโนมัติไร้รอยต่อ">ระบบทำงานอัตโนมัติไร้รอยต่อ</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 1.6) Experience Timeline + Highlights Section -->
-    <section class="section experience py-24 bg-white" id="experience">
+    <section class="section experience py-24 bg-white experience-context-bg" id="experience">
         <div class="max-w-6xl mx-auto px-6">
             <div class="section-head text-center max-w-3xl mx-auto mb-16">
                 <p class="eyebrow" data-en="Career Timeline" data-th="เส้นทางอาชีพ">Career Timeline</p>
@@ -301,8 +356,14 @@
                 </p>
             </div>
 
+            <div class="flex flex-col md:flex-row gap-8 items-center mb-12 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm">
+                <picture>
+                    <source srcset="Image/profile-hero.webp" type="image/webp">
+                    <img src="Image/hero-profile.png" alt="Sirawith Kaewsee — credibility and professional background" class="w-32 h-32 md:w-40 md:h-40 rounded-2xl object-cover" width="160" height="160" loading="lazy">
+                </picture>
+                <p class="text-base text-gray-600 leading-relaxed flex-1" data-en="Ex-UNIQLO, BMW Performance Motors, and Origin Property — now building LeadFlow systems for premium SMEs." data-th="ประสบการณ์จาก UNIQLO, BMW และ Origin — ปัจจุบันสร้างระบบ LeadFlow ให้ SME มูลค่าสูง">ประสบการณ์จาก UNIQLO, BMW และ Origin — ปัจจุบันสร้างระบบ LeadFlow ให้ SME มูลค่าสูง</p>
+            </div>
             <div class="about-grid grid md:grid-cols-3 gap-8">
-                <!-- Positioning -->
                 <div class="about-card bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
                     <p class="about-label text-xs font-bold text-brand-600 uppercase tracking-widest mb-4" data-en="Positioning" data-th="จุดยืน">Positioning</p>
                     <p class="about-copy text-gray-800 font-medium leading-relaxed" data-en="I build calm, strategic, performance-led systems that connect websites, automation, and sales into one scalable engine." data-th="ผมออกแบบระบบที่นิ่ง ชัด และขับเคลื่อนด้วยผลลัพธ์ เชื่อมเว็บไซต์ ระบบอัตโนมัติ และการขายให้กลายเป็นเครื่องจักรเดียวที่สเกลได้">
@@ -330,7 +391,7 @@
                 </div>
 
                 <!-- Why It Matters -->
-                <div class="about-card about-cta bg-brand-50 p-8 rounded-2xl shadow-sm border border-brand-100 hover:shadow-md transition flex flex-col justify-between">
+                <div class="about-card about-cta glass-spot bg-brand-50 p-8 rounded-2xl shadow-sm border border-brand-100 hover:shadow-md transition flex flex-col justify-between">
                     <div>
                         <p class="about-label text-xs font-bold text-brand-600 uppercase tracking-widest mb-4" data-en="Why It Matters" data-th="ทำไมถึงสำคัญ">Why It Matters</p>
                         <p class="about-copy text-gray-800 leading-relaxed mb-8" data-en="The goal is not just a beautiful website. The goal is a system that builds trust, captures leads, and supports sales around the clock." data-th="เป้าหมายไม่ใช่แค่เว็บที่สวย แต่คือระบบที่สร้างความเชื่อมั่น เก็บ lead และช่วยขายได้ตลอด 24 ชั่วโมง">
@@ -585,8 +646,8 @@
     <section id="contact" class="py-20 bg-gray-900 text-white">
         <div class="max-w-3xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">พร้อมเปลี่ยนธุรกิจให้เป็นระบบอัตโนมัติหรือยัง?</h2>
-                <p class="text-gray-300">กรอกข้อมูลด้านล่างเพื่อให้ผมประเมินระบบที่เหมาะสมกับธุรกิจคุณ</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-en="Ready to automate your business?" data-th="พร้อมเปลี่ยนธุรกิจให้เป็นระบบอัตโนมัติหรือยัง?">พร้อมเปลี่ยนธุรกิจให้เป็นระบบอัตโนมัติหรือยัง?</h2>
+                <p class="text-gray-300 text-base" data-en="Fill in the form and I will recommend the right system for your business." data-th="กรอกข้อมูลด้านล่างเพื่อให้ผมประเมินระบบที่เหมาะสมกับธุรกิจคุณ">กรอกข้อมูลด้านล่างเพื่อให้ผมประเมินระบบที่เหมาะสมกับธุรกิจคุณ</p>
             </div>
 
             <form action="https://formsubmit.co/sirawith.keawsee@gmail.com" method="POST" class="bg-gray-800 p-8 rounded-2xl shadow-xl space-y-6">
@@ -637,7 +698,8 @@
                 const notice = document.createElement('p');
                 notice.className = 'text-center text-green-300 font-medium mb-6';
                 notice.setAttribute('role', 'status');
-                notice.textContent = 'ส่งข้อมูลสำเร็จแล้ว ขอบคุณครับ จะติดต่อกลับโดยเร็ว';
+                var lang = localStorage.getItem('lang') || 'th';
+                notice.textContent = lang === 'en' ? 'Message sent. Thank you — I will reply soon.' : 'ส่งข้อมูลสำเร็จแล้ว ขอบคุณครับ จะติดต่อกลับโดยเร็ว';
                 contactSection.querySelector('form')?.before(notice);
                 contactSection.scrollIntoView({ behavior: 'smooth' });
             }
@@ -673,6 +735,7 @@
         });
     </script>
     
+    <script src="assets/js/form-config.js" defer></script>
     <script src="assets/js/page-i18n.js" defer></script>
     <!-- GSAP & Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>

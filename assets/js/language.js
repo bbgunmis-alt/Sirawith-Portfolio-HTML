@@ -107,7 +107,31 @@ const translations = {
         footer_contact: "Contact",
         footer_social: "Social",
         privacy: "Privacy Policy",
-        terms: "Terms of Service"
+        terms: "Terms of Service",
+
+        page_contact_title: "Strategic Inquiry",
+        contact_subtitle: "Consultation for Revenue Architecture & Scale",
+        channel_email: "Email",
+        channel_line: "LINE: Floy.bmw.th",
+        channel_telegram: "Telegram",
+        channel_linkedin: "LinkedIn",
+        form_name: "Name",
+        form_email: "Email",
+        form_tier: "Engagement Tier",
+        form_message: "Engagement Details",
+        form_error_name: "Please enter your name",
+        form_error_email: "Please enter a valid email",
+        form_error_message: "Please enter at least 10 characters",
+        form_submit: "Send Message",
+        success_title: "Message Sent!",
+        success_desc: "Thank you for reaching out. I will get back to you shortly.",
+        page_about_title: "About",
+        about_tagline: "Luxury Sales Consultant | Solutions Architect",
+        about_vision_title: "Strategic Vision",
+        about_vision_desc: "Bridging the gap between high-ticket luxury strategy and precision automated execution.",
+        about_ledger_title: "Experience Ledger",
+        about_ledger_desc: "UNIQLO, BMW Performance Motors, Origin Property, and independent consulting.",
+        btn_cv: "Request Architecture Audit"
     },
     th: {
         // Nav
@@ -217,7 +241,31 @@ const translations = {
         footer_contact: "ช่องทางการติดต่อ",
         footer_social: "โซเชียลมีเดีย",
         privacy: "นโยบายความเป็นส่วนตัว",
-        terms: "ข้อกำหนดการให้บริการ"
+        terms: "ข้อกำหนดการให้บริการ",
+
+        page_contact_title: "ติดต่อเพื่อปรึกษา",
+        contact_subtitle: "ปรึกษาด้านสถาปัตยกรรมรายได้และการขยายระบบ",
+        channel_email: "อีเมล",
+        channel_line: "LINE: Floy.bmw.th",
+        channel_telegram: "Telegram",
+        channel_linkedin: "LinkedIn",
+        form_name: "ชื่อ",
+        form_email: "อีเมล",
+        form_tier: "ระดับการจ้างงาน",
+        form_message: "รายละเอียดความต้องการ",
+        form_error_name: "กรุณากรอกชื่อ",
+        form_error_email: "กรุณากรอกอีเมลที่ถูกต้อง",
+        form_error_message: "กรุณากรอกอย่างน้อย 10 ตัวอักษร",
+        form_submit: "ส่งข้อความ",
+        success_title: "ส่งข้อความสำเร็จ!",
+        success_desc: "ขอบคุณที่ติดต่อ จะติดต่อกลับโดยเร็ว",
+        page_about_title: "เกี่ยวกับ",
+        about_tagline: "ที่ปรึกษาการขายลักชัวรี | สถาปนิกโซลูชัน",
+        about_vision_title: "วิสัยทัศน์เชิงกลยุทธ์",
+        about_vision_desc: "เชื่อมกลยุทธ์ลักชัวรีกับระบบอัตโนมัติที่แม่นยำและขยายผลได้",
+        about_ledger_title: "ประสบการณ์หลัก",
+        about_ledger_desc: "UNIQLO, BMW Performance Motors, Origin Property และที่ปรึกษาอิสระ",
+        btn_cv: "ขอ Architecture Audit"
     }
 };
 
@@ -231,14 +279,13 @@ function setLanguage(lang) {
             // Handle dictionary translations
             dictionaryElements.forEach(el => {
                 const key = el.getAttribute('data-lang');
-                if (translations[lang] && translations[lang][key]) {
-                    el.innerHTML = translations[lang][key];
-                }
+                const pack = translations[lang] || translations.en;
+                if (pack && pack[key]) el.innerHTML = pack[key];
             });
 
             // Handle direct bilingual attributes
             bilingualElements.forEach(el => {
-                const content = el.getAttribute(`data-${lang}`);
+                const content = el.getAttribute(`data-${lang}`) || el.getAttribute('data-en');
                 if (content) el.innerHTML = content;
             });
             
@@ -256,12 +303,11 @@ function setLanguage(lang) {
     } else {
         dictionaryElements.forEach(el => {
             const key = el.getAttribute('data-lang');
-            if (translations[lang] && translations[lang][key]) {
-                el.innerHTML = translations[lang][key];
-            }
+            const pack = translations[lang] || translations.en;
+            if (pack && pack[key]) el.innerHTML = pack[key];
         });
         bilingualElements.forEach(el => {
-            const content = el.getAttribute(`data-${lang}`);
+            const content = el.getAttribute(`data-${lang}`) || el.getAttribute('data-en');
             if (content) el.innerHTML = content;
         });
         document.querySelectorAll('.lang-text').forEach(el => el.innerText = lang.toUpperCase());
@@ -274,26 +320,38 @@ function setLanguage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('lang') || 'en';
+    const savedLang = localStorage.getItem('lang') || 'th';
     setLanguage(savedLang);
-    
-    // Mobile Menu Toggle
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active') ? 'true' : 'false');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenuClose = document.getElementById('mobile-menu-close');
     const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-
-    function toggleMobileMenu(show) {
-        if (show) {
-            mobileMenu.classList.remove('translate-x-full');
-        } else {
-            mobileMenu.classList.add('translate-x-full');
-        }
+    if (mobileMenuBtn && mobileMenu) {
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        const toggleMobileMenu = (show) => {
+            mobileMenu.classList.toggle('translate-x-full', !show);
+        };
+        mobileMenuBtn.addEventListener('click', () => toggleMobileMenu(true));
+        if (mobileMenuClose) mobileMenuClose.addEventListener('click', () => toggleMobileMenu(false));
+        mobileLinks.forEach(link => link.addEventListener('click', () => toggleMobileMenu(false)));
     }
-
-    mobileMenuBtn.addEventListener('click', () => toggleMobileMenu(true));
-    mobileMenuClose.addEventListener('click', () => toggleMobileMenu(false));
-    mobileLinks.forEach(link => link.addEventListener('click', () => toggleMobileMenu(false)));
 
     // Language Toggles (Single ID or Multiple Buttons)
     const langToggle = document.getElementById('lang-toggle');
