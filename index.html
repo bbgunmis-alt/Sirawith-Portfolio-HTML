@@ -100,9 +100,17 @@
         }
         .lang-btn { min-height: 44px; min-width: 44px; padding: 0.5rem 0.75rem; font-size: 1rem; }
         .experience-context-bg {
-            background-image: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url('Image/experience-context.webp');
-            background-size: cover;
-            background-position: center;
+            background-image: linear-gradient(to right, rgba(255,255,255,0.94) 45%, rgba(255,255,255,0.72) 70%, rgba(255,255,255,0.35) 100%), url('Image/experience-7.webp');
+            background-size: auto  min(85%, 520px);
+            background-position: right center;
+            background-repeat: no-repeat;
+        }
+        @media (max-width: 768px) {
+            .experience-context-bg {
+                background-image: linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.93)), url('Image/experience-7.webp');
+                background-size: auto min(40%, 220px);
+                background-position: top right;
+            }
         }
         .about-cta.glass-spot {
             background: rgba(239, 246, 255, 0.75);
