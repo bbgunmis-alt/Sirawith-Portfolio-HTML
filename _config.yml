@@ -1,2 +1,0 @@
-baseurl: "/my-portfolio-2"
-exclude: ["README.md", "node_modules"]
