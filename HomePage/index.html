@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sirawith's Professional Workspace — Portfolios & LeadFlow Thailand">
-  <title>Sirawith | Workspace</title>
+  <meta name="description" content="Sirawith Kaewsee (FLOY) — Workspace Hub for Portfolio and LeadFlow Thailand">
+  <title>Sirawith Kaewsee (FLOY) | Workspace Hub</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -19,6 +19,7 @@
     }
     .container {
       text-align: center;
+      padding: 2rem;
       max-width: 600px;
       width: 100%;
       animation: fadeIn 0.8s ease-in;
@@ -35,10 +36,7 @@
     .header p { font-size: 1.1rem; color: #a0a0a0; }
     .buttons { display: flex; flex-direction: column; gap: 1.5rem; }
     .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
+      display: block;
       padding: 1.5rem 2rem;
       background: rgba(255, 255, 255, 0.1);
       border: 2px solid rgba(255, 255, 255, 0.2);
@@ -49,6 +47,7 @@
       font-weight: 600;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       backdrop-filter: blur(10px);
+      text-align: left;
     }
     .btn:hover {
       background: rgba(255, 255, 255, 0.15);
@@ -65,6 +64,19 @@
       box-shadow: 0 12px 35px rgba(0, 212, 255, 0.45);
     }
     .btn-icon { font-size: 1.5rem; }
+    .btn-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+    }
+    .btn-desc {
+      color: #d1d5db;
+      font-size: 0.95rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
     .footer {
       margin-top: 3rem;
       color: #666;
@@ -83,17 +95,17 @@
 <body>
   <div class="container">
     <div class="header">
-      <h1>🚀 Sirawith's Workspace</h1>
+      <h1>🚀 Sirawith Kaewsee (FLOY)</h1>
       <p>Pro Websites • Automation • AI Solutions</p>
     </div>
     <div class="buttons">
       <a href="https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/portfolio.html" class="btn btn-primary">
-        <span class="btn-icon">👤</span>
-        My Portfolio
+        <div class="btn-title"><span class="btn-icon">👤</span>My Portfolio</div>
+        <div class="btn-desc">ผลงาน เว็บไซต์ ประสบการณ์ และ automation projects ของ Sirawith</div>
       </a>
       <a href="https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/" class="btn">
-        <span class="btn-icon">🏭</span>
-        LeadFlow Thailand
+        <div class="btn-title"><span class="btn-icon">🏭</span>LeadFlow Thailand</div>
+        <div class="btn-desc">หน้าเสนอระบบ lead automation สำหรับธุรกิจไทยและอสังหาริมทรัพย์</div>
       </a>
     </div>
     <div class="footer">
