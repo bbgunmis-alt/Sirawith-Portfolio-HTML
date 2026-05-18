@@ -751,7 +751,7 @@
             <h2 class="form-title">ขอปรึกษาฟรี</h2>
             <p class="form-subtitle">ฝากข้อมูล 3 ช่อง แล้วทีม LeadFlow จะช่วยประเมิน Workflow ที่ควรเริ่มก่อน</p>
             
-            <form id="registrationForm" class="lead-form" onsubmit="submitForm(event)">
+            <form id="lead-form" class="lead-form" onsubmit="submitForm(event)">
                 <div class="form-group">
                     <label for="name">ชื่อ *</label>
                     <input type="text" id="name" name="name" placeholder="ชื่อ" required>
@@ -782,6 +782,10 @@
         function closeModal() {
             document.getElementById('formModal').classList.remove('active');
             document.body.style.overflow = 'auto';
+        }
+
+        if (window.location.hash === '#lead-form') {
+            openModal();
         }
         
         // Close modal when clicking outside
