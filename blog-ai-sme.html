@@ -6,6 +6,7 @@
     <title>AI Automation สำหรับ SME ไทย | Blog</title>
     <meta name="description" content="บทความ SEO สำหรับ SME ไทยที่อยากใช้ AI Automation ลดต้นทุน เพิ่มยอดขาย และเชื่อม Make.com, n8n, LINE OA เข้ากับ workflow ธุรกิจ">
     <link rel="canonical" href="https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/blog-ai-sme.html">
+    <script src="assets/js/conversion-tracking.js" defer></script>
     <style>
         * { box-sizing: border-box; }
         body { margin: 0; font-family: Inter, Kanit, "Segoe UI", sans-serif; color: #1a1710; background: #fbfaf6; line-height: 1.7; }
@@ -23,9 +24,13 @@
         .cta { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 14px 22px; border-radius: 10px; background: #c9a227; color: #1a1710; font-weight: 800; text-decoration: none; }
         .links { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 18px; }
         .links a:not(.cta) { color: #6b5b1d; font-weight: 700; }
+        .newsletter-form, .lead-magnet-form { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+        .newsletter-form input, .lead-magnet-form input { flex: 1 1 260px; min-height: 48px; border: 1px solid rgba(26, 23, 16, .22); border-radius: 10px; padding: 0 14px; font: inherit; }
+        .newsletter-form .btn-primary, .lead-magnet-form .btn-primary { min-height: 48px; border: 0; border-radius: 10px; padding: 0 20px; background: #1a1710; color: #fff; font-weight: 800; cursor: pointer; }
         @media (max-width: 768px) {
             .hero { padding: 32px 22px; }
             .section { padding: 24px 20px; }
+            .newsletter-form .btn-primary, .lead-magnet-form .btn-primary { width: 100%; }
         }
     </style>
 </head>
@@ -41,6 +46,18 @@
             <h1>AI Automation สำหรับ SME ไทย</h1>
             <p class="lead">คู่มือเริ่มต้นสำหรับเจ้าของธุรกิจที่อยากใช้ AI และ workflow automation เพื่อลดต้นทุน เพิ่มยอดขาย และทำให้ทีมทำงานเป็นระบบขึ้น</p>
         </header>
+
+        <section class="section">
+            <h2>ดาวน์โหลดฟรี: AI Automation Checklist สำหรับ SME ไทย</h2>
+            <p>Checklist 1 หน้า สรุป 5 Automation ที่ ROI สูงสุด, tools ที่ควรใช้ และ case study ย่อจาก BMW / Origin</p>
+            <form id="lead-magnet-blog-sme" class="lead-magnet-form" action="https://formsubmit.co/sirawith.keawsee@gmail.com" method="POST" onsubmit="return trackLeadMagnetDownload(event);">
+                <input type="hidden" name="_subject" value="[LeadFlow TH] Lead magnet download from Blog SME">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/assets/lead-magnets/ai-automation-checklist-sme-th.pdf">
+                <input type="email" name="email" placeholder="กรอกอีเมลเพื่อดาวน์โหลดฟรี" required>
+                <button type="submit" class="btn-primary">ดาวน์โหลดฟรี</button>
+            </form>
+        </section>
 
         <section class="section">
             <h2>Benefits</h2>
@@ -66,6 +83,23 @@
             <h2>Case Example</h2>
             <p>ตัวอย่างที่เห็นผลเร็วคือการเชื่อม LINE OA เข้ากับ Google Sheets และ CRM workflow เพื่อให้ Lead ถูกบันทึกทันที แจ้งเตือนทีมทันที และติดตามสถานะได้จาก dashboard เดียว</p>
             <p>อ่านตัวอย่างเพิ่มเติมได้จาก <a href="case-study-1.html">Case Study ลดงานซ้ำซ้อน 50%</a> และ <a href="case-study-2.html">Case Study เพิ่มยอดขาย 30%</a></p>
+            <div class="links">
+                <a href="blog-ai-marketing.html">AI Marketing Automation</a>
+                <a href="blog-ai-crm.html">AI CRM Automation</a>
+                <a href="blog-ai-workflow.html">Workflow Automation</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>รับคู่มือ AI Automation สำหรับ SME</h2>
+            <p>สมัครรับบทความสั้น ๆ เรื่อง LeadFlow, CRM automation และ workflow ที่ช่วยให้ทีมขายติดตามลูกค้าได้เป็นระบบขึ้น</p>
+            <form id="newsletter-blog-sme" class="newsletter-form" action="https://formsubmit.co/sirawith.keawsee@gmail.com" method="POST" onsubmit="return trackNewsletterSignup(event);">
+                <input type="hidden" name="_subject" value="[LeadFlow TH] Newsletter signup from Blog SME">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/blog-ai-sme.html?newsletter=1">
+                <input type="email" name="email" placeholder="กรอกอีเมลของคุณ" required>
+                <button type="submit" class="btn-primary">สมัครรับข่าวสาร</button>
+            </form>
         </section>
 
         <section class="section">

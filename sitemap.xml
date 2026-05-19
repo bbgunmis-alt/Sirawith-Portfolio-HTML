@@ -1,39 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bbgunmis-alt.github.io/my-portfolio-2/</loc>
-    <lastmod>2026-05-16</lastmod>
+    <loc>https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bbgunmis-alt.github.io/my-portfolio-2/about.html</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bbgunmis-alt.github.io/my-portfolio-2/contact.html</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/portfolio.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://bbgunmis-alt.github.io/my-portfolio-2/experience.html</loc>
-    <lastmod>2026-05-16</lastmod>
+    <loc>https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/LeadFlow%20Thailand.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/blog-ai-sme.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bbgunmis-alt.github.io/my-portfolio-2/projects.html</loc>
-    <lastmod>2026-05-16</lastmod>
+    <loc>https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/blog-ai-marketing.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bbgunmis-alt.github.io/my-portfolio-2/solutions.html</loc>
-    <lastmod>2026-05-16</lastmod>
+    <loc>https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/blog-ai-crm.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/blog-ai-workflow.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/case-study-1.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/case-study-2.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

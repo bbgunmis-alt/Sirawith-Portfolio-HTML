@@ -6,6 +6,7 @@
     <meta name="description" content="LeadFlow Thailand landing page สำหรับ AI Automation, LINE OA, n8n, Make.com, CRM dashboard และ workflow ลดงานซ้ำซ้อนให้ SME ไทย">
     <meta name="keywords" content="lead automation, SME automation, lead flow, thai automation, sales automation">
     <title>LeadFlow Thailand | AI Automation Landing Page</title>
+    <script src="assets/js/conversion-tracking.js" defer></script>
     
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -422,6 +423,48 @@
         .footer-cta:hover {
             background: var(--primary-blue-dark);
         }
+
+        .newsletter-section {
+            padding: 80px 0;
+            background: var(--light-grey);
+        }
+
+        .newsletter-box {
+            max-width: 760px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .newsletter-form, .lead-magnet-form {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .newsletter-form input, .lead-magnet-form input {
+            flex: 1 1 280px;
+            min-height: 50px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 0 14px;
+            font: inherit;
+        }
+
+        .newsletter-form .btn-primary, .lead-magnet-form .btn-primary {
+            min-height: 50px;
+            border: 0;
+            border-radius: 8px;
+            padding: 0 24px;
+            background: var(--primary-blue);
+            color: var(--white);
+            font-weight: 700;
+            cursor: pointer;
+        }
         
         .copyright {
             text-align: center;
@@ -553,6 +596,14 @@
                 flex-direction: column;
                 gap: 15px;
             }
+
+            .newsletter-box {
+                padding: 28px 20px;
+            }
+
+            .newsletter-form .btn-primary, .lead-magnet-form .btn-primary {
+                width: 100%;
+            }
         }
         
         /* Google Fonts */
@@ -593,6 +644,23 @@
                         <small>Real-time sales automation analytics</small>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet Download -->
+    <section class="newsletter-section" id="lead-magnet">
+        <div class="container">
+            <div class="newsletter-box">
+                <h2 class="section-title">ดาวน์โหลดฟรี: AI Automation Checklist สำหรับ SME ไทย</h2>
+                <p class="section-subtitle">Checklist 1 หน้า สรุป 5 Automation ที่ ROI สูงสุด, tools แนะนำ และ case study ย่อจาก BMW / Origin เพื่อช่วยเลือก workflow ที่ควรเริ่มก่อน</p>
+                <form id="lead-magnet-leadflow" class="lead-magnet-form" action="https://formsubmit.co/sirawith.keawsee@gmail.com" method="POST" onsubmit="return trackLeadMagnetDownload(event);">
+                    <input type="hidden" name="_subject" value="[LeadFlow TH] Lead magnet download from LeadFlow Landing">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/assets/lead-magnets/ai-automation-checklist-sme-th.pdf">
+                    <input type="email" name="email" placeholder="กรอกอีเมลเพื่อดาวน์โหลดฟรี" required>
+                    <button type="submit" class="btn-primary">ดาวน์โหลดฟรี</button>
+                </form>
             </div>
         </div>
     </section>
@@ -702,6 +770,23 @@
             </div>
         </div>
     </section>
+
+    <!-- Newsletter Capture -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="container">
+            <div class="newsletter-box">
+                <h2 class="section-title">รับ Automation Playbook สำหรับ SME ไทย</h2>
+                <p class="section-subtitle">อัปเดต case study, workflow template และวิธีลดงานซ้ำด้วย LINE OA, CRM และ n8n แบบสั้น อ่านจบไว ใช้กับทีมขายได้จริง</p>
+                <form id="newsletter-leadflow" class="newsletter-form" action="https://formsubmit.co/sirawith.keawsee@gmail.com" method="POST" onsubmit="return trackNewsletterSignup(event);">
+                    <input type="hidden" name="_subject" value="[LeadFlow TH] Newsletter signup from LeadFlow Landing">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/LeadFlow%20Thailand.html?newsletter=1#newsletter">
+                    <input type="email" name="email" placeholder="กรอกอีเมลของคุณ" required>
+                    <button type="submit" class="btn-primary">สมัครรับข่าวสาร</button>
+                </form>
+            </div>
+        </div>
+    </section>
     
     <!-- Footer -->
     <footer class="footer">
@@ -727,6 +812,9 @@
                     </ul>
                     <p><a href="portfolio.html#case-studies" style="color: #ffffff; text-decoration: underline;">ดู Portfolio และ Case Studies</a></p>
                     <p><a href="blog-ai-sme.html" style="color: #ffffff; text-decoration: underline;">อ่าน Blog: AI Automation สำหรับ SME ไทย</a></p>
+                    <p><a href="blog-ai-marketing.html" style="color: #ffffff; text-decoration: underline;">อ่าน Blog: AI Marketing Automation</a></p>
+                    <p><a href="blog-ai-crm.html" style="color: #ffffff; text-decoration: underline;">อ่าน Blog: AI CRM Automation</a></p>
+                    <p><a href="blog-ai-workflow.html" style="color: #ffffff; text-decoration: underline;">อ่าน Blog: Workflow Automation</a></p>
                 </div>
                 
                 <div class="footer-section">
