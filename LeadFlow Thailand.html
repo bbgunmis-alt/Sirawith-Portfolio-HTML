@@ -85,6 +85,29 @@
             margin-bottom: 30px;
             opacity: 0.95;
         }
+
+        .hero-bullets {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+            margin: 0 0 30px;
+        }
+
+        .hero-bullets li {
+            position: relative;
+            padding-left: 28px;
+            font-size: 1.05rem;
+            opacity: 0.96;
+        }
+
+        .hero-bullets li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--success-green);
+            font-weight: 700;
+        }
         
         .hero-cta {
             display: inline-block;
@@ -126,6 +149,37 @@
         .hero-cta:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--success-green);
+            color: var(--white);
+            padding: 18px 34px;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-secondary {
+            color: var(--white);
+            padding: 16px 30px;
+            border: 2px solid rgba(255, 255, 255, 0.65);
+            background: transparent;
+        }
+
+        .btn-link {
+            color: var(--primary-blue);
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 4px;
         }
         
         .trust-signals {
@@ -221,6 +275,102 @@
         .process-step:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .demo-flow,
+        .results,
+        .case-teasers {
+            padding: 90px 0;
+        }
+
+        .demo-flow {
+            background: var(--white);
+        }
+
+        .demo-flow .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .demo-flow h2,
+        .results h2,
+        .case-teasers h2 {
+            font-size: 2.3rem;
+            color: var(--primary-blue);
+            margin-bottom: 18px;
+            line-height: 1.25;
+        }
+
+        .demo-flow p {
+            color: var(--secondary-grey);
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        .demo-flow ul {
+            display: grid;
+            gap: 12px;
+            padding-left: 20px;
+            color: var(--dark-text);
+        }
+
+        .demo-flow-visual img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+        }
+
+        .results {
+            background: var(--light-grey);
+            text-align: center;
+        }
+
+        .results-grid,
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px;
+            margin: 40px 0 24px;
+        }
+
+        .result-item,
+        .case-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+            text-align: left;
+        }
+
+        .result-item h3,
+        .case-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .result-item p,
+        .case-card p {
+            color: var(--secondary-grey);
+            margin-bottom: 14px;
+        }
+
+        .results-note {
+            max-width: 760px;
+            margin: 0 auto 18px;
+            color: var(--secondary-grey);
+            font-size: 0.95rem;
+        }
+
+        .case-teasers {
+            background: var(--white);
+        }
+
+        .case-teasers h2 {
+            text-align: center;
         }
         
         .step-number {
@@ -563,6 +713,36 @@
         .form-submit:hover {
             background: #059669;
         }
+
+        .thank-you-message {
+            display: none;
+            margin-top: 24px;
+            padding: 24px;
+            border-radius: 12px;
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            color: var(--dark-text);
+        }
+
+        .thank-you-message.active {
+            display: block;
+        }
+
+        .thank-you-message h2 {
+            color: #047857;
+            margin-bottom: 12px;
+        }
+
+        .thank-you-message ul {
+            padding-left: 20px;
+            margin: 12px 0;
+        }
+
+        .thank-you-message .btn-secondary {
+            color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            margin-top: 10px;
+        }
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
@@ -588,7 +768,11 @@
                 font-size: 2rem;
             }
             
-            .process-grid, .template-grid, .stats-grid {
+            .process-grid, .template-grid, .stats-grid, .results-grid, .case-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .demo-flow .container {
                 grid-template-columns: 1fr;
             }
             
@@ -612,15 +796,20 @@
 </head>
 <body>
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>AI Automation ที่ช่วย SME ไทยโตเร็วขึ้น</h1>
-                    <p class="subtext">ลดงานซ้ำซ้อน เพิ่มยอดขาย ด้วย Workflow อัตโนมัติ</p>
+                    <h1>AI Automation สำหรับ SME ไทย</h1>
+                    <p class="subtext">ลดงานซ้ำซ้อน 60–80% และเพิ่มการติดต่อกลับลูกค้า 2–3 เท่า ด้วย workflow ที่เชื่อม LINE OA, Facebook, Google Sheets และ CRM ของคุณเข้าด้วยกัน</p>
+                    <ul class="hero-bullets">
+                        <li>รวบรวม lead จากโฆษณา แชท และฟอร์มออนไลน์เข้าระบบเดียว</li>
+                        <li>แจ้งเตือนทีมขายอัตโนมัติภายในไม่กี่นาทีเมื่อมี lead ใหม่</li>
+                        <li>เห็นสถานะ lead ทุกตัวแบบ real-time ไม่ต้องไล่เช็คหลายที่</li>
+                    </ul>
                     <div class="hero-actions">
-                        <a href="#form" class="hero-cta">ขอปรึกษาฟรี</a>
-                        <a href="#system-examples" class="hero-cta-secondary">ดูตัวอย่างระบบ</a>
+                        <a href="#form" class="btn btn-primary hero-cta">รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)</a>
+                        <a href="#system-examples" class="btn btn-secondary hero-cta-secondary">ดูตัวอย่าง Workflow และ Dashboard</a>
                     </div>
                     
                     <div class="trust-signals">
@@ -644,6 +833,26 @@
                         <small>Real-time sales automation analytics</small>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Flow Section -->
+    <section id="demo-flow" class="demo-flow">
+        <div class="container">
+            <div class="demo-flow-content">
+                <h2>เห็นภาพ Workflow ใน 10 วินาที</h2>
+                <p>จากลูกค้าทัก → ระบบสร้าง lead → แจ้งเตือนทีมขาย → สร้าง task follow-up → อัปเดตสถานะใน dashboard ทั้งหมดเกิดขึ้นแบบอัตโนมัติ</p>
+                <ul>
+                    <li>ลูกค้าทักผ่าน LINE OA / กรอกฟอร์ม / กดโฆษณา</li>
+                    <li>ระบบเก็บข้อมูล lead เข้าฐานเดียว</li>
+                    <li>แจ้งเตือนทีมขายทันทีทาง LINE / Email</li>
+                    <li>สร้างงาน follow-up และเปลี่ยนสถานะ lead อัตโนมัติ</li>
+                    <li>ผู้จัดการดูภาพรวมได้จาก dashboard แบบ real-time</li>
+                </ul>
+            </div>
+            <div class="demo-flow-visual">
+                <img src="assets/demo-flow-placeholder.png" alt="ตัวอย่าง Workflow Automation ของ LeadFlow" loading="lazy">
             </div>
         </div>
     </section>
@@ -745,27 +954,27 @@
             
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-number">3x</div>
-                    <div class="stat-label">เร็ว民间กว่าเดิม</div>
-                    <div class="stat-description"> launching Lead Automation ในไม่กี่วัน แทนที่จะใช้เวลาหลายสัปดาห์</div>
+                    <div class="stat-number">60–80%</div>
+                    <div class="stat-label">ลดงานซ้ำซ้อน</div>
+                    <div class="stat-description">ลดงาน manual ในการรวบรวม lead, แจ้งเตือนทีมขาย และอัปเดตสถานะลูกค้า</div>
                 </div>
                 
                 <div class="stat-card">
-                    <div class="stat-number">99%</div>
-                    <div class="stat-label">Uptime</div>
-                    <div class="stat-description">ระบบเสถียร รองรับการเติบโตของธุรกิจ SME และ Enterprise</div>
+                    <div class="stat-number">2–3x</div>
+                    <div class="stat-label">ติดต่อกลับลูกค้าได้มากขึ้น</div>
+                    <div class="stat-description">ทีมขายเห็น lead ใหม่เร็วขึ้นและ follow-up ได้เป็นระบบ ไม่ต้องไล่เช็คหลายช่องทาง</div>
                 </div>
                 
                 <div class="stat-card">
-                    <div class="stat-number">0</div>
-                    <div class="stat-label">No-Code Tweaks</div>
-                    <div class="stat-description">ปรับแต่ง Workflow ได้เอง ไม่ต้องเขียนโค้ด เปลี่ยนตามความต้องการ business</div>
+                    <div class="stat-number">&lt;5</div>
+                    <div class="stat-label">นาทีต่อ lead</div>
+                    <div class="stat-description">เคสตัวอย่างลดเวลาตอบกลับจากประมาณ 20 นาที เหลือไม่ถึง 5 นาที</div>
                 </div>
 
                 <div class="stat-card">
-                    <div class="stat-number">3x</div>
-                    <div class="stat-label">ลูกค้าจริง</div>
-                    <div class="stat-description">จากเซลล์ขายได้ 10 ล./เดือน →après automation ขายได้ 30 ล./เดือน - สมชาย,odynam Developer</div>
+                    <div class="stat-number">10→30M</div>
+                    <div class="stat-label">ยอดขายรายเดือนในเคสตัวอย่าง</div>
+                    <div class="stat-description">บางโปรเจกต์เพิ่มยอดขายจาก 10 ล้านเป็น 30 ล้านบาทต่อเดือน หลังวางระบบทั้งทีมขาย</div>
                 </div>
             </div>
         </div>
@@ -784,6 +993,56 @@
                     <input type="email" name="email" placeholder="กรอกอีเมลของคุณ" required>
                     <button type="submit" class="btn-primary">สมัครรับข่าวสาร</button>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Proof Block -->
+    <section id="results" class="results">
+        <div class="container">
+            <h2>ผลลัพธ์ที่เกิดขึ้นจริงกับธุรกิจไทย</h2>
+            <div class="results-grid">
+                <div class="result-item">
+                    <h3>100+ ธุรกิจในไทย</h3>
+                    <p>ใช้ workflow automation ในการจัดการ lead และงานขาย ด้วยเครื่องมือที่ทีมคุ้นเคยอยู่แล้ว</p>
+                </div>
+                <div class="result-item">
+                    <h3>50+ โปรเจกต์ที่ส่งมอบ</h3>
+                    <p>ตั้งแต่ระบบ lead สำหรับอสังหาฯ รถยุโรป อีเวนต์ ไปจนถึงร้านค้าออนไลน์และธุรกิจบริการ</p>
+                </div>
+                <div class="result-item">
+                    <h3>ตอบ lead ได้เร็วขึ้นหลายเท่า</h3>
+                    <p>เคสตัวอย่างลดเวลาตอบกลับจากหลักสิบนาที เหลือไม่ถึง 5 นาที ด้วยการแจ้งเตือนและ assign อัตโนมัติ</p>
+                </div>
+                <div class="result-item">
+                    <h3>ยอดขายเติบโตแบบมีที่มา</h3>
+                    <p>บางโปรเจกต์เพิ่มยอดขายจาก 10 ล้านเป็น 30 ล้านบาทต่อเดือน ภายในไม่กี่เดือนหลังวางระบบทั้งทีมขาย*</p>
+                </div>
+            </div>
+            <p class="results-note">*ตัวเลขมาจากเคสตัวอย่างใน Portfolio ซึ่งอธิบายบริบทและวิธีวัดผลไว้อย่างชัดเจน</p>
+            <a href="portfolio.html#case-studies" class="btn-link">ดู Portfolio และ Case Studies แบบเต็ม</a>
+        </div>
+    </section>
+
+    <!-- Case Teasers -->
+    <section id="case-teasers" class="case-teasers">
+        <div class="container">
+            <h2>ตัวอย่างเคสที่เราช่วยธุรกิจไทย</h2>
+            <div class="case-grid">
+                <article class="case-card">
+                    <h3>อสังหาฯ: ระบบจัดการ Lead โครงการ</h3>
+                    <p><strong>ปัญหา:</strong> ลูกค้าทักมาจากโฆษณาและแชทจำนวนมาก แต่ทีมตอบช้าและตามไม่ครบ ทำให้ lead หลุดไปโครงการอื่น</p>
+                    <p><strong>วิธีแก้:</strong> เชื่อม Facebook Lead Ads และ LINE OA เข้ากับ Google Sheets และแจ้งเตือนเซลส์อัตโนมัติ พร้อม workflow สำหรับ follow-up 3 ขั้นตอน</p>
+                    <p><strong>ผลลัพธ์:</strong> ลดเวลาตอบกลับจาก ~20 นาที เหลือไม่ถึง 5 นาที และทีมขายติดตาม lead ได้แทบ 100%</p>
+                    <a href="portfolio.html#case-studies" class="btn-link">อ่านเคสเต็มใน Portfolio</a>
+                </article>
+                <article class="case-card">
+                    <h3>รถยุโรป: Lead รถใหม่และรถมือสอง</h3>
+                    <p><strong>ปัญหา:</strong> lead กระจายหลายช่องทาง นัดทดลองขับไม่เป็นระบบ และทีมขายต้องตามข้อมูลด้วยตัวเอง</p>
+                    <p><strong>วิธีแก้:</strong> สร้าง workflow รวบรวม lead, นัดทดลองขับ, แจ้งเตือนทีมขาย และอัปเดตสถานะอัตโนมัติใน dashboard</p>
+                    <p><strong>ผลลัพธ์:</strong> มีภาพรวม lead ชัดเจน นัดทดลองขับแม่นยำขึ้น และ conversion ดีขึ้นอย่างต่อเนื่อง</p>
+                    <a href="portfolio.html#case-studies" class="btn-link">อ่านเคสเต็มใน Portfolio</a>
+                </article>
             </div>
         </div>
     </section>
@@ -824,7 +1083,7 @@
                     <p>Email: Sirawith.keawsee@Gmail.com</p>
                     <p>Facebook: LeadFlow TH AI Aotomation</p>
                     <div class="proof-item">LINE OA QR code placeholder</div>
-                    <a href="#form" class="footer-cta">ขอปรึกษาฟรี</a>
+                    <a href="#form" class="footer-cta">รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)</a>
                 </div>
             </div>
             
@@ -838,7 +1097,7 @@
     <div class="modal" id="formModal">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal()">&times;</span>
-            <h2 class="form-title">ขอปรึกษาฟรี</h2>
+            <h2 class="form-title">รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)</h2>
             <p class="form-subtitle">ฝากข้อมูล 3 ช่อง แล้วทีม LeadFlow จะช่วยประเมิน Workflow ที่ควรเริ่มก่อน</p>
             
             <form id="lead-form" class="lead-form" onsubmit="submitForm(event)">
@@ -857,8 +1116,20 @@
                     <textarea id="problem" name="problem" rows="4" placeholder="ปัญหาที่อยากแก้" required></textarea>
                 </div>
                 
-                <button type="submit" class="form-submit">ส่งข้อมูล</button>
+                <button type="submit" class="form-submit">ส่งข้อมูลเพื่อรับแผน Automation</button>
             </form>
+
+            <div id="thank-you-message" class="thank-you-message" aria-live="polite">
+                <h2>ขอบคุณสำหรับข้อมูลครับ</h2>
+                <p>เราได้รับรายละเอียดของคุณแล้ว ภายใน 24 ชั่วโมงทำการ เราจะ:</p>
+                <ul>
+                    <li>อ่านโจทย์และปัญหาที่คุณเล่าไว้อย่างละเอียด</li>
+                    <li>ร่างแนวทาง workflow หรือระบบที่เหมาะกับธุรกิจของคุณ</li>
+                    <li>ติดต่อกลับผ่าน LINE หรือช่องทางที่คุณระบุไว้</li>
+                </ul>
+                <p>ระหว่างรอ คุณสามารถดูตัวอย่างเคสของธุรกิจที่คล้ายกับคุณได้ที่นี่:</p>
+                <a href="portfolio.html#case-studies" class="btn btn-secondary">ดู Portfolio และ Case Studies</a>
+            </div>
         </div>
     </div>
     
@@ -867,6 +1138,8 @@
         function openModal() {
             document.getElementById('formModal').classList.add('active');
             document.body.style.overflow = 'hidden';
+            document.getElementById('lead-form').style.display = 'block';
+            document.getElementById('thank-you-message').classList.remove('active');
         }
         
         function closeModal() {
@@ -903,9 +1176,8 @@
             // In production, this would send to your backend
             console.log('Form submitted:', data);
             
-            // Show success message
-            alert('ขอบคุณสำหรับการลงทะเบียน! เราจะติดต่อคุณภายใน 24 ชั่วโมง');
-            closeModal();
+            event.target.style.display = 'none';
+            document.getElementById('thank-you-message').classList.add('active');
             event.target.reset();
         }
         
@@ -932,7 +1204,7 @@
             });
         }, { threshold: 0.1 });
         
-        document.querySelectorAll('.process-step, .template-card, .stat-card').forEach(el => {
+        document.querySelectorAll('.process-step, .template-card, .stat-card, .result-item, .case-card, .demo-flow-visual').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'all 0.6s ease';

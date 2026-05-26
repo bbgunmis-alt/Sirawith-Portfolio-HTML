@@ -250,7 +250,7 @@
                     <button type="button" class="lang-btn text-xs font-semibold px-2 py-1 rounded-md text-gray-600" data-lang-val="en" aria-pressed="false">EN</button>
                 </div>
             </div>
-            <a href="#contact" class="hidden md:inline-flex items-center justify-center min-h-[44px] bg-brand-900 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-brand-600 transition shadow-md" data-en="Free Consultation" data-th="รับคำปรึกษาฟรี">รับคำปรึกษาฟรี</a>
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center min-h-[44px] bg-brand-900 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-brand-600 transition shadow-md" data-en="Get an automation plan" data-th="รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)">รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)</a>
             <button type="button" class="md:hidden min-h-[44px] min-w-[44px] p-2 text-gray-600 focus:outline-none" onclick="(function(){var m=document.getElementById('mobile-menu');var b=this;var hidden=m.classList.toggle('hidden');b.setAttribute('aria-expanded',hidden?'false':'true');}).call(this)" aria-label="เปิด/ปิดเมนูมือถือ" aria-expanded="false" aria-controls="mobile-menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
@@ -270,29 +270,43 @@
     </nav>
 
     <!-- 1) Hero Section -->
-    <section id="top" class="hero bg-white py-32 px-8 text-center" data-analytics-section="hero" data-analytics-label="hero-section">
-        <div class="max-w-xs sm:max-w-3xl mx-auto px-8">
-            <div class="mb-12">
-                <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight"
-                    data-en="Reduce repetitive work and improve follow-up with AI Automation for Thai businesses"
-                    data-th="ลดงานซ้ำซ้อน 60–80% พร้อมเพิ่มการติดต่อกลับลูกค้า 2–3 เท่าด้วย AI Automation สำหรับธุรกิจไทย"
-                    data-analytics-label="hero-headline">
-                    ลดงานซ้ำซ้อน 60–80% พร้อมเพิ่มการติดต่อกลับลูกค้า 2–3 เท่าด้วย AI Automation สำหรับธุรกิจไทย
+    <section id="top" class="hero luxury-hero pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-[1.05fr_0.95fr] items-center gap-12">
+            <div class="space-y-7 text-white">
+                <div class="badge inline-block px-4 py-2 bg-white/10 border gold-line text-brand-100 text-base font-semibold rounded-full"
+                     data-en="AI Automation for Thai SME & Enterprise"
+                     data-th="AI Automation สำหรับ SME ไทยและองค์กร">
+                    AI Automation สำหรับ SME ไทยและองค์กร
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight"
+                    data-en="I help Thai SMEs use AI and Automation to reduce repetitive work and let sales teams focus on important deals."
+                    data-th="ผมช่วย SME ไทยใช้ AI และ Automation เพื่อลดงานซ้ำซ้อน และทำให้ทีมขายโฟกัสกับดีลสำคัญ">
+                    ผมช่วย SME ไทยใช้ AI และ Automation เพื่อลดงานซ้ำซ้อน และทำให้ทีมขายโฟกัสกับดีลสำคัญ
                 </h1>
-                <p class="text-base md:text-lg text-gray-700 mb-8 leading-relaxed"
-                   data-en="Reduce repetitive work by 60–80% and triple follow-up conversions with AI Automation for Thai businesses"
-                   data-th="Reduce repetitive work by 60–80% and triple follow-up conversions with AI Automation for Thai businesses"
-                   data-analytics-label="hero-subtext">
-                    Reduce repetitive work by 60–80% and triple follow-up conversions with AI Automation for Thai businesses
+                <p class="subtext text-lg md:text-xl text-gray-200 leading-relaxed max-w-2xl"
+                   data-en="Over the years, I have designed and built systems that reduce repetitive work by 60-80% and increase customer follow-up by 2-3x by connecting AI, CRM, and workflow automation with tools teams already use."
+                   data-th="ตลอดหลายปีที่ผ่านมา ผมออกแบบและลงมือทำระบบที่ช่วยลดงานซ้ำซ้อน 60–80% และเพิ่มการติดต่อกลับลูกค้า 2–3 เท่า ด้วยการเชื่อม AI, CRM และ workflow automation เข้ากับเครื่องมือที่ธุรกิจใช้อยู่แล้ว เช่น LINE OA, Facebook Ads, Google Sheets และแพลตฟอร์มอื่นๆ">
+                    ตลอดหลายปีที่ผ่านมา ผมออกแบบและลงมือทำระบบที่ช่วยลดงานซ้ำซ้อน 60–80% และเพิ่มการติดต่อกลับลูกค้า 2–3 เท่า ด้วยการเชื่อม AI, CRM และ workflow automation เข้ากับเครื่องมือที่ธุรกิจใช้อยู่แล้ว เช่น LINE OA, Facebook Ads, Google Sheets และแพลตฟอร์มอื่นๆ
                 </p>
+                <!-- High-Impact / Low-Effort: Put the primary conversion actions directly inside the hero. -->
+                <div class="cta-row cta-buttons pt-2 flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="text-center min-h-[44px] inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-brand-900 px-8 py-4 rounded-xl font-bold transition shadow-lg text-lg" data-en="Get an automation plan for your business (free)" data-th="รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)">รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)</a>
+                    <a href="LeadFlow%20Thailand.html" class="text-center min-h-[44px] inline-flex items-center justify-center bg-white/10 border border-white/25 hover:bg-white/15 text-white px-8 py-4 rounded-xl font-semibold transition text-lg" data-en="View LeadFlow TH" data-th="ดู LeadFlow TH – ระบบ Automation สำหรับทีมขายของคุณ">ดู LeadFlow TH – ระบบ Automation สำหรับทีมขายของคุณ</a>
+                </div>
+                <!-- High-Impact / Low-Effort: Brand proof sits under the CTA, where buyer doubt is highest. -->
+                <div class="pt-6 border-t gold-line">
+                    <p class="text-xs uppercase tracking-[0.28em] text-gray-400 mb-4" data-en="Experience with premium brands" data-th="ประสบการณ์กับแบรนด์ชั้นนำ">ประสบการณ์กับแบรนด์ชั้นนำ</p>
+                    <div class="flex flex-wrap items-center gap-8">
+                        <span class="proof-logo text-xl font-bold">BMW</span>
+                        <span class="proof-logo text-xl font-bold">UNIQLO</span>
+                        <span class="proof-logo text-xl font-bold">ORIGIN</span>
+                    </div>
+                </div>
             </div>
-            <div class="cta-row cta-buttons flex flex-col sm:flex-row justify-center gap-10 mt-6">
-                <a href="#contact" class="cta inline-flex min-w-[240px] items-center justify-center bg-blue-600 text-white px-8 py-5 rounded-lg font-medium hover:bg-blue-700 transition shadow-lg hover:shadow-xl" data-en="Free Consultation Today" data-th="ขอปรึกษาฟรี วันนี้" data-analytics-label="hero-cta-consult-free" data-analytics-action="consultation_request">
-                    ขอปรึกษาฟรี วันนี้
-                </a>
-                <a href="#projects" class="cta inline-flex min-w-[240px] items-center justify-center bg-green-600 text-white px-8 py-5 rounded-lg font-medium hover:bg-green-700 transition shadow-md hover:shadow-lg" data-en="See System Examples" data-th="ดูตัวอย่างระบบ" data-analytics-label="hero-cta-system-examples" data-analytics-action="view_system_examples">
-                    ดูตัวอย่างระบบ
-                </a>
+            <div class="w-full flex justify-center md:justify-end items-end">
+                <div class="visual-card hero-diecut">
+                    <img src="Image/2.png" alt="Sirawith Kaewsee — AI automation consultant" class="hero-diecut-img" width="427" height="649" fetchpriority="high">
+                </div>
             </div>
         </div>
     </section>
@@ -309,18 +323,25 @@
                 <div class="grid sm:grid-cols-3 gap-4">
                     <!-- High-Impact / Low-Effort: Keep career metrics, remove the long timeline copy. -->
                     <div class="value-card rounded-2xl p-6 shadow-sm">
-                        <strong class="block text-3xl font-extrabold text-gray-900 mb-2">5x</strong>
-                        <span class="text-sm text-gray-600" data-en="Faster lead response" data-th="ตอบ Lead เร็วขึ้น">ตอบ Lead เร็วขึ้น</span>
+                        <strong class="block text-3xl font-extrabold text-gray-900 mb-2">60–80%</strong>
+                        <span class="text-sm text-gray-600" data-en="Less repetitive work" data-th="ลดงานซ้ำซ้อน">ลดงานซ้ำซ้อน</span>
                     </div>
                     <div class="value-card rounded-2xl p-6 shadow-sm">
-                        <strong class="block text-3xl font-extrabold text-gray-900 mb-2">25%</strong>
-                        <span class="text-sm text-gray-600" data-en="Conversion lift cases" data-th="เคส Conversion เพิ่ม">เคส Conversion เพิ่ม</span>
+                        <strong class="block text-3xl font-extrabold text-gray-900 mb-2">2–3x</strong>
+                        <span class="text-sm text-gray-600" data-en="More customer follow-up" data-th="ติดต่อกลับลูกค้าได้มากขึ้น">ติดต่อกลับลูกค้าได้มากขึ้น</span>
                     </div>
                     <div class="value-card rounded-2xl p-6 shadow-sm">
                         <strong class="block text-3xl font-extrabold text-gray-900 mb-2">THB 50M</strong>
                         <span class="text-sm text-gray-600" data-en="Sales background" data-th="พื้นฐานงานขายจริง">พื้นฐานงานขายจริง</span>
                     </div>
                 </div>
+            </div>
+            <div class="mt-12 grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-center bg-gray-50 border border-gray-100 rounded-2xl p-6 md:p-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Workflow Map ก่อนเริ่มลงมือจริง</h3>
+                    <p class="text-gray-600 leading-relaxed">ทุกโปรเจกต์ที่ผมทำ จะมีแผนภาพ workflow แบบนี้ก่อนลงมือจริง เพื่อให้ทีมของคุณเห็นตั้งแต่วันแรกว่า lead เดินทางอย่างไร ใครต้องทำอะไร และอะไรจะเกิดขึ้นแบบอัตโนมัติ</p>
+                </div>
+                <img src="assets/demo-flow-placeholder.png" alt="ตัวอย่าง Workflow Automation ของ LeadFlow" class="w-full rounded-xl shadow-sm border border-gray-100" loading="lazy">
             </div>
         </div>
     </section>
@@ -359,7 +380,7 @@
                         </div>
                     </div>
 
-                    <a class="inline-flex items-center justify-center bg-brand-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-brand-900 transition shadow-md" href="#contact" data-en="Talk about your automation system" data-th="คุยเรื่องระบบ Automation ของคุณ">คุยเรื่องระบบ Automation ของคุณ</a>
+                    <a class="inline-flex items-center justify-center bg-brand-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-brand-900 transition shadow-md" href="#contact" data-en="Get an automation plan" data-th="รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)">รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)</a>
                 </div>
             </div>
         </div>
@@ -440,7 +461,7 @@
                             <span class="text-gray-700" data-en="Setup within 3 business days" data-th="Setup เสร็จภายใน 3 วันทำการ">Setup เสร็จภายใน 3 วันทำการ</span>
                         </li>
                     </ul>
-                    <a href="#contact" class="block text-center w-full bg-white border-2 border-brand-600 text-brand-600 py-3 rounded-lg font-semibold hover:bg-brand-50 transition" data-en="Request Quote" data-th="ขอใบเสนอราคา">Request Quote</a>
+                    <a href="#contact" class="block text-center w-full bg-white border-2 border-brand-600 text-brand-600 py-3 rounded-lg font-semibold hover:bg-brand-50 transition" data-en="Get an automation plan" data-th="รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)">รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)</a>
                 </div>
 
                 <!-- Package 2 -->
@@ -462,7 +483,7 @@
                             <span class="text-gray-700" data-en="CRM and Invoicing integration" data-th="เชื่อมต่อระบบ CRM หรือระบบออกใบแจ้งหนี้">เชื่อมต่อระบบ CRM หรือระบบออกใบแจ้งหนี้</span>
                         </li>
                     </ul>
-                    <a href="#contact" class="block text-center w-full bg-brand-600 text-white py-3 rounded-lg font-semibold hover:bg-brand-900 transition shadow-md" data-en="Start Project" data-th="เริ่มต้นสร้างระบบ">Start Project</a>
+                    <a href="#contact" class="block text-center w-full bg-brand-600 text-white py-3 rounded-lg font-semibold hover:bg-brand-900 transition shadow-md" data-en="Get an automation plan" data-th="รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)">รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)</a>
                 </div>
             </div>
         </div>
@@ -649,13 +670,13 @@
             </div>
             <div class="case-grid">
                 <article class="case-card">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">ลดงานซ้ำซ้อน 50% ด้วย Workflow Automation</h3>
-                    <p class="text-gray-600 leading-relaxed">ระบบ Make.com เชื่อม LINE OA และ Google Sheets → ลดเวลาทำงานลงครึ่งหนึ่ง</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">ลดงานซ้ำซ้อน 60–80% ด้วย Workflow Automation</h3>
+                    <p class="text-gray-600 leading-relaxed">ระบบเชื่อม LINE OA, Facebook และ Google Sheets ช่วยให้ทีมลดงาน manual และติดตาม lead ได้เป็นระบบ</p>
                     <a href="case-study-1.html" class="btn-secondary">อ่านเพิ่มเติม</a>
                 </article>
                 <article class="case-card">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">เพิ่มยอดขาย 30% ภายใน 3 เดือน</h3>
-                    <p class="text-gray-600 leading-relaxed">CRM อัตโนมัติช่วยทีมขายติดตามลูกค้าได้แม่นยำขึ้น</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">เพิ่มการติดต่อกลับลูกค้า 2–3 เท่า</h3>
+                    <p class="text-gray-600 leading-relaxed">CRM อัตโนมัติช่วยทีมขายเห็นสถานะ lead และ follow-up ลูกค้าได้เร็วขึ้น</p>
                     <a href="case-study-2.html" class="btn-secondary">อ่านเพิ่มเติม</a>
                 </article>
                 <article class="case-card">
@@ -694,7 +715,7 @@
                     <textarea id="lead-message" name="message" rows="4" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-6 py-4 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition" placeholder="ปัญหาหลัก เช่น Lead ตกหล่น, ตอบช้า, ไม่มี CRM, ทีมติดตามไม่ทัน"></textarea>
                 </div>
                 <button type="submit" class="w-full min-h-[56px] bg-brand-500 hover:bg-brand-600 text-brand-900 font-bold py-5 rounded-lg transition shadow-lg text-lg">
-                    ส่งข้อมูลเพื่อรับคำปรึกษาฟรี
+                    รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)
                 </button>
                 <p class="text-center text-sm text-gray-300 mt-4">
                     หรือติดต่อโดยตรงผ่าน LINE: <a href="https://line.me/ti/p/~Floy.bmw.th" target="_blank" rel="noopener noreferrer" class="text-brand-400 hover:text-brand-300 hover:underline font-semibold" aria-label="ติดต่อผ่าน LINE">Floy.bmw.th</a>
@@ -719,7 +740,7 @@
                 notice.className = 'text-center text-green-300 font-medium mb-6';
                 notice.setAttribute('role', 'status');
                 var lang = localStorage.getItem('lang') || 'th';
-                notice.textContent = lang === 'en' ? 'Message sent. Thank you — I will reply soon.' : 'ส่งข้อมูลสำเร็จแล้ว ขอบคุณครับ จะติดต่อกลับโดยเร็ว';
+                notice.textContent = lang === 'en' ? 'Message sent. Thank you. I will review your workflow and reply within one business day.' : 'ขอบคุณสำหรับข้อมูลครับ ผมจะอ่านโจทย์ของคุณและร่างแนวทาง workflow ที่เหมาะสมให้ภายใน 24 ชั่วโมงทำการ';
                 contactSection.querySelector('form')?.before(notice);
                 contactSection.scrollIntoView({ behavior: 'smooth' });
             }
