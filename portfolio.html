@@ -270,50 +270,35 @@
     </nav>
 
     <!-- 1) Hero Section -->
-    <section id="top" class="hero luxury-hero pt-32 pb-20 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-[1.05fr_0.95fr] items-center gap-12">
-            <div class="space-y-7 text-white">
-                <div class="badge inline-block px-4 py-2 bg-white/10 border gold-line text-brand-100 text-base font-semibold rounded-full"
-                     data-en="AI Automation for Thai SME & Enterprise"
-                     data-th="AI Automation สำหรับ SME ไทยและองค์กร">
-                    AI Automation สำหรับ SME ไทยและองค์กร
-                </div>
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-                    SIRAWITH KAEWSEE<br>
-                    <span class="gradient-text text-3xl md:text-5xl"
-                          data-en="Build a sales system that follows every lead."
-                          data-th="สร้างระบบขายที่ไม่ปล่อยให้ Lead หลุด">สร้างระบบขายที่ไม่ปล่อยให้ Lead หลุด</span>
+    <section id="top" class="hero bg-white py-24 px-8 text-center" data-analytics-section="hero" data-analytics-label="hero-section">
+        <div class="max-w-xs sm:max-w-3xl mx-auto px-8">
+            <div class="mb-12">
+                <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight"
+                    data-en="Reduce repetitive work and improve follow-up with AI Automation for Thai businesses"
+                    data-th="ลดงานซ้ำซ้อน 60–80% พร้อมเพิ่มการติดต่อกลับลูกค้า 2–3 เท่าด้วย AI Automation สำหรับธุรกิจไทย"
+                    data-analytics-label="hero-headline">
+                    ลดงานซ้ำซ้อน 60–80% พร้อมเพิ่มการติดต่อกลับลูกค้า 2–3 เท่าด้วย AI Automation สำหรับธุรกิจไทย
                 </h1>
-                <p class="subtext text-lg md:text-xl text-gray-200 leading-relaxed max-w-2xl"
-                   data-en="I design n8n, LINE OA, CRM, and AI workflows that help teams respond faster, reduce manual work, and see pipeline performance clearly."
-                   data-th="ผมออกแบบระบบ n8n, LINE OA, CRM และ AI Workflow ให้ทีมตอบลูกค้าเร็วขึ้น ลดงาน manual และเห็น pipeline ชัดขึ้นในระบบเดียว">
-                    ผมออกแบบระบบ n8n, LINE OA, CRM และ AI Workflow ให้ทีมตอบลูกค้าเร็วขึ้น ลดงาน manual และเห็น pipeline ชัดขึ้นในระบบเดียว
+                <p class="text-base md:text-lg text-gray-700 mb-8 leading-relaxed"
+                   data-en="Reduce repetitive work by 60–80% and triple follow-up conversions with AI Automation for Thai businesses"
+                   data-th="Reduce repetitive work by 60–80% and triple follow-up conversions with AI Automation for Thai businesses"
+                   data-analytics-label="hero-subtext">
+                    Reduce repetitive work by 60–80% and triple follow-up conversions with AI Automation for Thai businesses
                 </p>
-                <!-- High-Impact / Low-Effort: Put the primary conversion actions directly inside the hero. -->
-                <div class="cta-row cta-buttons pt-2 flex flex-col sm:flex-row gap-4">
-                    <a href="#contact" class="text-center min-h-[44px] inline-flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-brand-900 px-8 py-4 rounded-xl font-bold transition shadow-lg text-lg" data-en="Hire Me" data-th="จ้างออกแบบระบบ">จ้างออกแบบระบบ</a>
-                    <a href="#contact" class="text-center min-h-[44px] inline-flex items-center justify-center bg-white/10 border border-white/25 hover:bg-white/15 text-white px-8 py-4 rounded-xl font-semibold transition text-lg" data-en="Contact Me" data-th="ติดต่อปรึกษา">ติดต่อปรึกษา</a>
-                </div>
-                <!-- High-Impact / Low-Effort: Brand proof sits under the CTA, where buyer doubt is highest. -->
-                <div class="pt-6 border-t gold-line">
-                    <p class="text-xs uppercase tracking-[0.28em] text-gray-400 mb-4" data-en="Experience with premium brands" data-th="ประสบการณ์กับแบรนด์ชั้นนำ">ประสบการณ์กับแบรนด์ชั้นนำ</p>
-                    <div class="flex flex-wrap items-center gap-8">
-                        <span class="proof-logo text-xl font-bold">BMW</span>
-                        <span class="proof-logo text-xl font-bold">UNIQLO</span>
-                        <span class="proof-logo text-xl font-bold">ORIGIN</span>
-                    </div>
-                </div>
             </div>
-            <div class="w-full flex justify-center md:justify-end items-end">
-                <div class="visual-card hero-diecut">
-                    <img src="Image/2.png" alt="Sirawith Kaewsee — AI automation consultant" class="hero-diecut-img" width="427" height="649" fetchpriority="high">
-                </div>
+            <div class="cta-row cta-buttons flex flex-col sm:flex-row justify-center gap-10 mt-6">
+                <a href="#contact" class="cta inline-flex min-w-[240px] items-center justify-center bg-blue-600 text-white px-8 py-5 rounded-lg font-medium hover:bg-blue-700 transition shadow-lg hover:shadow-xl" data-en="Free Consultation Today" data-th="ขอปรึกษาฟรี วันนี้" data-analytics-label="hero-cta-consult-free" data-analytics-action="consultation_request">
+                    ขอปรึกษาฟรี วันนี้
+                </a>
+                <a href="#projects" class="cta inline-flex min-w-[240px] items-center justify-center bg-green-600 text-white px-8 py-5 rounded-lg font-medium hover:bg-green-700 transition shadow-md hover:shadow-lg" data-en="See System Examples" data-th="ดูตัวอย่างระบบ" data-analytics-label="hero-cta-system-examples" data-analytics-action="view_system_examples">
+                    ดูตัวอย่างระบบ
+                </a>
             </div>
         </div>
     </section>
 
     <!-- 1.5) Value + Trust Section -->
-    <section id="value" class="py-16 bg-white">
+    <section id="value" class="py-24 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
                 <div>
@@ -340,7 +325,7 @@
         </div>
     </section>
     <!-- 1.7) About Floy Section -->
-    <section class="section about py-20 bg-gray-50 border-t border-gray-100" id="about">
+    <section class="section about py-24 bg-gray-50 border-t border-gray-100" id="about">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid lg:grid-cols-[0.78fr_1.22fr] gap-10 items-center">
                 <div class="about-diecut mx-auto">
@@ -381,7 +366,7 @@
     </section>
 
     <!-- Core Expertise Section -->
-<section id="expertise" class="py-20 bg-white">
+<section id="expertise" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
         <div class="section-head text-center max-w-3xl mx-auto mb-12">
             <p class="eyebrow font-bold tracking-widest uppercase mb-4 text-sm" data-en="Core Expertise" data-th="ความเชี่ยวชาญหลัก">Core Expertise</p>
@@ -429,7 +414,7 @@
     </div>
 </section>
 <!-- 2) Services Section -->
-    <section id="services" class="py-20 bg-gray-50 templates">
+    <section id="services" class="py-24 bg-gray-50 templates">
         <div class="max-w-6xl mx-auto px-6">
             <div class="templates-head text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-en="LeadFlow TH Packages" data-th="บริการ LeadFlow TH Packages">LeadFlow TH Packages</h2>
@@ -484,7 +469,7 @@
     </section>
 
     <!-- 3) Projects Section -->
-    <section id="projects" class="py-20 bg-white templates">
+    <section id="projects" class="py-24 bg-white templates">
         <div class="max-w-6xl mx-auto px-6">
             <div class="templates-head text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-en="Evidence-Led Results" data-th="ผลงานการวางระบบ Automation">ผลงานการวางระบบ Automation</h2>
@@ -623,29 +608,29 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-gray-50 border-t border-gray-100">
+    <section id="testimonials" class="py-24 bg-gray-50 border-t border-gray-100">
         <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-12">
+            <div class="text-center max-w-2xl mx-auto mb-14">
                 <p class="eyebrow font-bold tracking-widest uppercase mb-4 text-sm text-brand-600" data-en="Testimonials" data-th="เสียงจากลูกค้า">เสียงจากลูกค้า</p>
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-en="Customer Voices" data-th="เสียงจากลูกค้า">เสียงจากลูกค้า / Customer Voices</h2>
             </div>
-            <div class="grid md:grid-cols-2 gap-6">
-                <blockquote class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+            <div class="grid md:grid-cols-2 gap-10">
+                <blockquote class="bg-white border border-gray-100 rounded-2xl p-9 shadow-sm">
                     <p class="text-xl text-gray-800 leading-relaxed mb-6 italic">💬 “ก่อนหน้านี้ผมเสียเวลาไปกับการตอบลูกค้าใน LINE OA เองทุกวัน พอได้ใช้ LeadFlow ระบบช่วยตอบอัตโนมัติ ลูกค้าได้รับคำตอบทันที ไม่ต้องรอ ยอดขายเพิ่มขึ้นชัดเจนครับ”</p>
                     <cite class="not-italic text-sm font-bold text-gray-700">คุณสมชาย – เจ้าของร้านกาแฟย่านลาดพร้าว</cite>
                     <p class="mt-4 text-base text-gray-600 leading-relaxed italic">"Before, I spent hours replying to customers manually on LINE OA. With LeadFlow, replies are instant, customers are happier, and my sales increased significantly."</p>
                 </blockquote>
-                <blockquote class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+                <blockquote class="bg-white border border-gray-100 rounded-2xl p-9 shadow-sm">
                     <p class="text-xl text-gray-800 leading-relaxed mb-6 italic">💬 “ทีมเราเคยต้องรวมข้อมูลลูกค้าจาก Facebook และ LINE ด้วยมือ ใช้เวลาหลายชั่วโมง ตอนนี้ LeadFlow ทำให้ข้อมูลไหลเข้า Google Sheet อัตโนมัติ ทีมขายเห็นข้อมูลแบบ real-time ปิดการขายได้เร็วขึ้นมาก”</p>
                     <cite class="not-italic text-sm font-bold text-gray-700">คุณอรทัย – ผู้จัดการฝ่ายการตลาด บริษัทอสังหาฯ ขนาดกลาง</cite>
                     <p class="mt-4 text-base text-gray-600 leading-relaxed italic">"Our team used to manually merge customer data from Facebook and LINE, which took hours. Now LeadFlow syncs everything into Google Sheets in real-time, helping sales close deals faster."</p>
                 </blockquote>
-                <blockquote class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+                <blockquote class="bg-white border border-gray-100 rounded-2xl p-9 shadow-sm">
                     <p class="text-xl text-gray-800 leading-relaxed mb-6 italic">💬 “ผมไม่ใช่คนเก่งเทคโนโลยี แต่ LeadFlow ตั้งค่าให้ทุกอย่างง่ายมาก ตอนนี้ระบบส่งอีเมลแจ้งเตือนอัตโนมัติทุกครั้งที่มีออเดอร์ใหม่ ลูกค้าประทับใจที่ได้รับการยืนยันทันที และผมมั่นใจว่าไม่มีออเดอร์ไหนตกหล่น”</p>
                     <cite class="not-italic text-sm font-bold text-gray-700">คุณวิทยา – เจ้าของร้านค้าออนไลน์เสื้อผ้าแฟชั่น</cite>
                     <p class="mt-4 text-base text-gray-600 leading-relaxed italic">"I am not tech-savvy, but LeadFlow made setup simple. Now every new order triggers an automatic email confirmation. Customers love the instant response, and I am confident no orders are missed."</p>
                 </blockquote>
-                <blockquote class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+                <blockquote class="bg-white border border-gray-100 rounded-2xl p-9 shadow-sm">
                     <p class="text-xl text-gray-800 leading-relaxed mb-6 italic">💬 “หลังเชื่อม LeadFlow กับแบบฟอร์มและ LINE OA เวลาตอบกลับลูกค้าลดลงจากหลายชั่วโมงเหลือไม่กี่นาที ทีมเซลล์เห็น Lead ใหม่ทันที และ follow-up ได้ครบขึ้นกว่าเดิม”</p>
                     <cite class="not-italic text-sm font-bold text-gray-700">คุณนภัส – เจ้าของธุรกิจบริการดูแลบ้านในกรุงเทพฯ</cite>
                     <p class="mt-4 text-base text-gray-600 leading-relaxed italic">"After connecting LeadFlow with our forms and LINE OA, response time dropped from hours to minutes. Our sales team sees every new lead instantly and follows up more consistently."</p>
@@ -655,7 +640,7 @@
     </section>
 
     <!-- Blog / Case Study Section -->
-    <section id="case-studies" class="py-20 bg-white border-t border-gray-100">
+    <section id="case-studies" class="py-24 bg-white border-t border-gray-100">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <p class="eyebrow font-bold tracking-widest uppercase mb-4 text-sm text-brand-600" data-en="Blog + Case Studies" data-th="บทความและเคสจริง">บทความและเคสจริง</p>
@@ -683,32 +668,32 @@
     </section>
 
     <!-- 5) Contact Section -->
-    <section id="contact" class="py-20 bg-gray-950 text-white">
+    <section id="contact" class="py-24 bg-gray-950 text-white">
         <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-12">
+            <div class="text-center mb-14">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4" data-en="Ready to build your automation system?" data-th="พร้อมวางระบบ Automation ให้ธุรกิจหรือยัง?">พร้อมวางระบบ Automation ให้ธุรกิจหรือยัง?</h2>
                 <p class="text-gray-300 text-base" data-en="Send 3 details. I will review the best starting point for your workflow." data-th="ส่งข้อมูล 3 อย่าง แล้วผมจะประเมินจุดเริ่มต้นที่เหมาะกับระบบของคุณ">ส่งข้อมูล 3 อย่าง แล้วผมจะประเมินจุดเริ่มต้นที่เหมาะกับระบบของคุณ</p>
             </div>
 
             <!-- High-Impact / Low-Effort: Shorten the form to 3 fields to reduce friction. -->
-            <form action="https://formsubmit.co/sirawith.keawsee@gmail.com" method="POST" class="form bg-white/5 border border-white/10 p-8 rounded-2xl shadow-xl space-y-6">
+            <form action="https://formsubmit.co/sirawith.keawsee@gmail.com" method="POST" id="main-contact-form" class="form bg-white/5 border border-white/10 p-12 rounded-3xl shadow-2xl space-y-10 my-8">
                 <input type="hidden" name="_subject" value="[LeadFlow TH] สนใจปรึกษาระบบ Automation">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="https://bbgunmis-alt.github.io/Sirawith-Portfolio-HTML/portfolio.html?sent=1#contact">
                 <input type="hidden" name="_template" value="table">
                 <div>
-                    <label for="lead-name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
-                    <input id="lead-name" type="text" name="name" required autocomplete="name" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition" placeholder="ชื่อของคุณ">
+                    <label for="lead-name" class="block text-sm font-medium text-gray-300 mb-4">Name</label>
+                    <input id="lead-name" type="text" name="name" required autocomplete="name" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-6 py-4 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition" placeholder="ชื่อของคุณ">
                 </div>
                 <div>
-                    <label for="lead-contact" class="block text-sm font-medium text-gray-300 mb-2">LINE ID</label>
-                    <input id="lead-contact" type="text" name="contact" required autocomplete="tel" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition" placeholder="เช่น Floy.bmw.th">
+                    <label for="lead-contact" class="block text-sm font-medium text-gray-300 mb-4">LINE ID</label>
+                    <input id="lead-contact" type="text" name="contact" required autocomplete="tel" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-6 py-4 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition" placeholder="เช่น Floy.bmw.th">
                 </div>
                 <div>
-                    <label for="lead-message" class="block text-sm font-medium text-gray-300 mb-2">Problem</label>
-                    <textarea id="lead-message" name="message" rows="4" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition" placeholder="ปัญหาหลัก เช่น Lead ตกหล่น, ตอบช้า, ไม่มี CRM, ทีมติดตามไม่ทัน"></textarea>
+                    <label for="lead-message" class="block text-sm font-medium text-gray-300 mb-4">Problem</label>
+                    <textarea id="lead-message" name="message" rows="4" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-6 py-4 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition" placeholder="ปัญหาหลัก เช่น Lead ตกหล่น, ตอบช้า, ไม่มี CRM, ทีมติดตามไม่ทัน"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-brand-900 font-bold py-4 rounded-lg transition shadow-lg text-lg">
+                <button type="submit" class="w-full min-h-[56px] bg-brand-500 hover:bg-brand-600 text-brand-900 font-bold py-5 rounded-lg transition shadow-lg text-lg">
                     ส่งข้อมูลเพื่อรับคำปรึกษาฟรี
                 </button>
                 <p class="text-center text-sm text-gray-300 mt-4">

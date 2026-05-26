@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var trackedEvents = ["cta_click", "form_submit", "internal_link", "newsletter_signup", "lead_magnet_download"];
+  var trackedEvents = ["cta_click", "form_submit", "internal_link", "newsletter_signup", "lead_magnet_download", "scroll_duration", "hero_click"];
 
   function pageGroup() {
     var path = window.location.pathname.toLowerCase();
@@ -104,6 +104,18 @@
   document.addEventListener(
     "click",
     function (event) {
+      var analyticsSection = event.target.closest && event.target.closest("[data-analytics-section]");
+      var analyticsTarget = event.target.closest && event.target.closest("[data-analytics-label]");
+
+      if (analyticsSection) {
+        track("hero_click", {
+          hero_section: analyticsSection.getAttribute("data-analytics-section") || "",
+          hero_element: analyticsTarget ? analyticsTarget.getAttribute("data-analytics-label") || "" : analyticsSection.getAttribute("data-analytics-label") || "",
+          hero_action: analyticsTarget ? analyticsTarget.getAttribute("data-analytics-action") || "" : "",
+          hero_text: cleanText(analyticsTarget ? analyticsTarget.innerText || analyticsTarget.textContent : analyticsSection.innerText || analyticsSection.textContent)
+        });
+      }
+
       var link = event.target.closest && event.target.closest("a[href], button");
 
       if (!link) {
@@ -119,7 +131,9 @@
       if (isCta) {
         track("cta_click", {
           cta_text: label || "CTA",
-          cta_href: href || "button"
+          cta_href: href || "button",
+          cta_action: link.getAttribute("data-analytics-action") || "",
+          cta_section: link.closest("[data-analytics-section]")?.getAttribute("data-analytics-section") || ""
         });
       }
 
@@ -150,4 +164,23 @@
     },
     true
   );
+
+  var startTime = Date.now();
+  var maxScroll = 0;
+  var scrollTracked = false;
+
+  window.addEventListener("scroll", function() {
+    var scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+    if (scrollPercent > maxScroll) maxScroll = scrollPercent;
+  }, { passive: true });
+
+  window.addEventListener("beforeunload", function() {
+    if (scrollTracked) return;
+    scrollTracked = true;
+    var duration = Math.round((Date.now() - startTime) / 1000);
+    track("scroll_duration", {
+      max_scroll_depth_percent: maxScroll,
+      duration_seconds: duration
+    });
+  });
 })();
