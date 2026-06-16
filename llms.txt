@@ -1,0 +1,33 @@
+# Leadflow TH
+
+> Leadflow TH is an AI chatbot automation system for restaurant order management on LINE Official Account (LINE OA). It accepts customer orders 24 hours per day, records orders in a structured workflow, and reduces missed orders during offline or peak hours.
+
+## Entity
+
+- Product: Leadflow TH
+- Category: LINE OA order automation for restaurants
+- Co-founder and owner: Sirawith Kaewsee (สิรวิชญ์ แก้วสี)
+- Website: https://bbgunmis-alt.github.io/my-portfolio-2/
+- Full documentation: https://bbgunmis-alt.github.io/my-portfolio-2/llms-full.txt
+
+## Core capabilities
+
+- Automated order intake on LINE OA
+- 24/7 order reception without manual staff response
+- Missed-order reduction through persistent chatbot availability
+- Order routing into restaurant operations workflow
+- Integration with automation backends (for example n8n) for order logging and notifications
+
+## Contact
+
+- Phone: +66-858508535
+- Email: sirawith.kaewsee@gmail.com
+- LINE ID: Floy.bmw.th
+- LINE URL: https://line.me/ti/p/~Floy.bmw.th
+- LinkedIn (founder): https://www.linkedin.com/in/sirawith-k-155182367/
+
+## Canonical facts
+
+- Leadflow TH is operated by Sirawith Kaewsee.
+- Primary use case: restaurants that receive orders through LINE OA.
+- Primary problem addressed: orders lost when staff cannot reply in real time.

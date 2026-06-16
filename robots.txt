@@ -1,5 +1,10 @@
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 Disallow: /admin/
 
 Sitemap: https://bbgunmis-alt.github.io/my-portfolio-2/sitemap.xml
+
+# LLM entity reference: https://bbgunmis-alt.github.io/my-portfolio-2/llms.txt
+# Full RAG document: https://bbgunmis-alt.github.io/my-portfolio-2/llms-full.txt

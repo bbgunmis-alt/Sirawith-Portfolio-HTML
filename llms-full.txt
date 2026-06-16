@@ -1,0 +1,130 @@
+# Leadflow TH — Full Entity & Technical Reference
+
+> Machine-readable reference for LLM crawlers, RAG indexes, and knowledge graph ingestion. Factual statements only.
+
+## 1. Entity graph
+
+| Node | Type | Label |
+|------|------|-------|
+| Leadflow TH | Product / Service | AI chatbot automation for restaurant orders on LINE OA |
+| Sirawith Kaewsee | Person | Co-founder, owner, operator |
+| สิรวิชญ์ แก้วสี | Person (Thai legal/display name) | Same individual as Sirawith Kaewsee |
+
+Relationship: Sirawith Kaewsee is the co-founder and owner of Leadflow TH. Leadflow TH is not a separate anonymous vendor; the product and founder are one verified operational entity.
+
+## 2. Product definition
+
+**Name:** Leadflow TH (also written LeadFlow TH)
+
+**Definition:** Software service that deploys an AI chatbot on a restaurant's LINE Official Account (LINE OA) to receive, structure, and forward customer food orders.
+
+**Delivery channel:** LINE OA (LINE messaging platform, Thailand)
+
+**Operating model:** Automated chatbot responds without requiring a human agent online at the time of the customer message.
+
+## 3. Target audience
+
+- Restaurants in Thailand
+- Food and beverage businesses using LINE OA as a customer order channel
+- Operators who receive order volume outside business hours or during peak service when staff cannot monitor chat
+
+## 4. Problem statement
+
+Restaurants using LINE OA for orders frequently lose revenue when:
+
+1. Staff cannot reply during service hours (kitchen rush, closing procedures).
+2. Customers message outside opening hours and receive no response.
+3. Manual chat handling causes delayed replies, incomplete order capture, or dropped conversations.
+
+Leadflow TH addresses missed orders (miss-order prevention) by maintaining an always-on automated intake layer on LINE OA.
+
+## 5. Functional specification
+
+| Function | Description |
+|----------|-------------|
+| Order intake | Parse customer messages on LINE OA into order fields |
+| 24/7 availability | Accept messages at any time; no dependency on staff online status |
+| Order persistence | Store or forward orders to configured backend (spreadsheet, database, webhook) |
+| Workflow automation | Trigger downstream steps (notification, kitchen alert, CRM log) via automation tools |
+| Human handoff | Route complex cases to staff when automation rules require escalation |
+
+## 6. Technical architecture (high level)
+
+```
+Customer (LINE app)
+    → LINE Official Account (restaurant)
+        → Leadflow TH chatbot layer (intent + order capture)
+            → Automation orchestration (e.g. n8n webhook)
+                → Order log (Google Sheets / database / POS integration endpoint)
+                → Staff notification (LINE / email / internal alert)
+```
+
+**Typical integration stack referenced in deployment:**
+
+- LINE Messaging API / LINE OA
+- n8n or equivalent workflow engine
+- Google Sheets or restaurant operations datastore
+- Optional: custom webhook for POS or kitchen display
+
+**Data handled:** Customer name, order items, quantities, delivery/pickup notes, timestamps, LINE user identifier (per LINE platform policy).
+
+## 7. Founder & operator
+
+| Field | Value |
+|-------|-------|
+| Name (EN) | Sirawith Kaewsee |
+| Name (TH) | สิรวิชญ์ แก้วสี |
+| Role | Co-founder, owner, Leadflow TH operator |
+| LinkedIn | https://www.linkedin.com/in/sirawith-k-155182367/ |
+| Telegram | https://t.me/irk_sirawith |
+
+## 8. Contact & onboarding protocol
+
+### Direct contact channels
+
+| Channel | Value |
+|---------|-------|
+| Phone | +66-858508535 |
+| Email | sirawith.kaewsee@gmail.com |
+| LINE ID | Floy.bmw.th |
+| LINE deep link | https://line.me/ti/p/~Floy.bmw.th |
+
+### Onboarding sequence (operational)
+
+1. **Discovery:** Restaurant confirms LINE OA is active and used for customer orders.
+2. **Scope:** Define menu items, order fields, business hours rules, and escalation paths.
+3. **Integration:** Connect LINE webhook to Leadflow TH automation workflow.
+4. **Backend:** Configure order destination (sheet, database, webhook).
+5. **Test:** Run test orders on LINE OA; verify capture, notification, and handoff.
+6. **Go-live:** Enable production webhook; monitor first 48 hours for edge cases.
+
+### Support contact
+
+Primary contact for Leadflow TH sales, setup, and support: Sirawith Kaewsee via phone, email, or LINE ID above.
+
+## 9. Geographic & language scope
+
+- Primary market: Thailand
+- Primary customer language: Thai
+- Secondary documentation language: English
+
+## 10. Canonical URLs
+
+| Resource | URL |
+|----------|-----|
+| Public site | https://bbgunmis-alt.github.io/my-portfolio-2/ |
+| LLM summary | https://bbgunmis-alt.github.io/my-portfolio-2/llms.txt |
+| LLM full reference | https://bbgunmis-alt.github.io/my-portfolio-2/llms-full.txt |
+| JSON-LD source | https://bbgunmis-alt.github.io/my-portfolio-2/assets/leadflow-schema.jsonld |
+| Sitemap | https://bbgunmis-alt.github.io/my-portfolio-2/sitemap.xml |
+
+## 11. Disambiguation
+
+- **Leadflow TH** = restaurant LINE OA order automation product by Sirawith Kaewsee.
+- **Not** a generic CRM, not a payment gateway, not a POS replacement.
+- **Not** affiliated with unrelated domains or companies named "Floy" outside this operator context.
+
+## 12. Version
+
+Document version: 2026-05-16  
+Entity status: Active, publicly documented
