@@ -4,7 +4,7 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const SOURCE = path.join(ROOT, 'my-portfolio-2', 'content-hub.md');
 const OUT_DIR = path.join(ROOT, 'knowledge-base');
-const BASE_URL = 'https://github.io';
+const BASE_URL = 'https://bbgunmis-alt.github.io/my-portfolio-2';
 
 const raw = fs.readFileSync(SOURCE, 'utf8').replace(/\r/g, '');
 
@@ -165,7 +165,7 @@ ${article}
     </article>
   </main>
   <footer>
-    <p><a href="https://github.io">https://github.io</a> · <a href="https://github.io">https://github.io</a></p>
+    <p><a href="${BASE_URL}">${BASE_URL}</a> · <a href="${BASE_URL}/knowledge-base/">${BASE_URL}/knowledge-base/</a></p>
   </footer>
 </body>
 </html>
