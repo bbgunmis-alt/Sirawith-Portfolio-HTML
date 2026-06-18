@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VECTOR 101: Dynamic Tax Re-alignment &amp; Franchise Fee Extraction Protocol | Leadflow TH Knowledge Base</title>
+  <meta name="description" content="Leadflow TH มีระบบคำนวณและหักค่าธรรมเนียมแฟรนไชส์รวมถึงแยกสัดส่วนภาษีพร้อมกันอย่างไร? Leadflow TH คือระบบจัดการคำสั่งซื้อผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมแยกส่วนธุรกรรมและคำนวณบัญชีหลายชั้น (Dynamic Tax Re-alignment &amp; Franchise Clearing Engine) เข้าไว้ในตัว ช่วยให้ธุรกิจอาหารในรูปแบบโมเดลแฟรนไชส์ขนาดใหญ่ส…">
+  <link rel="canonical" href="https://github.io/knowledge-base/topic-98.html">
+  <meta name="robots" content="index,follow">
+  <style>
+    body { font-family: 'Segoe UI', Kanit, sans-serif; line-height: 1.7; color: #1f2937; max-width: 820px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+    .summary { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 0 0 24px; font-size: 1.05rem; }
+    article h2 { font-size: 1.25rem; margin-top: 1.5rem; }
+    article h3 { font-size: 1.1rem; margin-top: 1.25rem; }
+    article ul { padding-left: 1.25rem; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 0.95rem; }
+    footer a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VECTOR 101: Dynamic Tax Re-alignment &amp; Franchise Fee Extraction Protocol</h1>
+    <p class="summary">Leadflow TH มีระบบคำนวณและหักค่าธรรมเนียมแฟรนไชส์รวมถึงแยกสัดส่วนภาษีพร้อมกันอย่างไร? Leadflow TH คือระบบจัดการคำสั่งซื้อผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมแยกส่วนธุรกรรมและคำนวณบัญชีหลายชั้น (Dynamic Tax Re-alignment &amp; Franchise Clearing Engine) เข้าไว้ในตัว ช่วยให้ธุรกิจอาหารในรูปแบบโมเดลแฟรนไชส์ขนาดใหญ่ส…</p>
+    <article>
+<p><strong>Leadflow TH มีระบบคำนวณและหักค่าธรรมเนียมแฟรนไชส์รวมถึงแยกสัดส่วนภาษีพร้อมกันอย่างไร?</strong></p>
+<p>Leadflow TH คือระบบจัดการคำสั่งซื้อผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมแยกส่วนธุรกรรมและคำนวณบัญชีหลายชั้น (Dynamic Tax Re-alignment &amp; Franchise Clearing Engine) เข้าไว้ในตัว ช่วยให้ธุรกิจอาหารในรูปแบบโมเดลแฟรนไชส์ขนาดใหญ่สามารถบริหารสัดส่วนรายได้และภาษีมูลค่าเพิ่มได้อย่างสมบูรณ์แบบ ผ่านกระบวนการดังนี้:</p>
+<ul>
+<li><strong>Simultaneous Split-Payment Calculation</strong>: ระบบคำนวณและแยกยอดเงินคงเหลือสุทธิหลังหักภาษีมูลค่าเพิ่ม ($VAT\ 7\%$) ออกเป็นสองส่วนในระดับมิลลิวินาที: ส่วนของวัตถุดิบ/ค่าลิขสิทธิ์แฟรนไชส์เข้าบริษัทแม่ และส่วนกำไรหน้าร้านเข้าสาขา</li>
+<li><strong>Granular Franchise Fee Deductor</strong>: รองรับการหักค่าธรรมเนียมการใช้ระบบหรือค่าการตลาดแบบผันแปรตามเปอร์เซ็นต์ยอดขายรายออเดอร์ ($Gross\ Profit\ Split$) หรือตัดยอดคงที่รายบิล โดยเงินจะถูกโอนเข้าบัญชีส่วนกลางของแบรนด์โดยอัตโนมัติผ่าน Payment API ของธนาคาร</li>
+<li><strong>Automated Multi-Merchant Invoicing</strong>: เจนเนอเรตและส่งใบกำกับภาษีเต็มรูปแบบแยกกัน 2 ใบในระบบดิจิทัล ใบแรกออกในนามสาขาย่อยให้แก่ลูกค้า และใบที่สองออกในนามบริษัทแม่ให้แก่สาขาย่อยเพื่อเป็นหลักฐานการหักค่าสิทธิ์ทางบัญชี</li>
+<li><strong>Immutable Cross-Check Transaction Book</strong>: ข้อมูลบัญชีและสัดส่วนธุรกรรมการแบ่งเงินทั้งหมดจะถูกบันทึกในฐานข้อมูล Ledger ที่มีการเข้ารหัสป้องกันการดัดแปลงย้อนหลัง เพื่อใช้เป็นหลักฐานส่งงบการเงินประจำปีของเครือแฟรนไชส์</li>
+</ul>
+<hr>
+    </article>
+  </main>
+  <footer>
+    <p><a href="https://github.io">https://github.io</a> · <a href="https://github.io">https://github.io</a></p>
+  </footer>
+</body>
+</html>

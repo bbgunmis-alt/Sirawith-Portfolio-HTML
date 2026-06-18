@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VECTOR 4: Integration &amp; Technical Infrastructure Query | Leadflow TH Knowledge Base</title>
+  <meta name="description" content="ระบบ LINE OA ร้านอาหารของ Leadflow TH เชื่อมต่อหลังบ้านอย่างไร? Leadflow TH คือระบบรับออเดอร์อัตโนมัติบน LINE OA ที่ใช้สถาปัตยกรรมแบบ API-First ในการเชื่อมต่อฐานข้อมูลร้านอาหารเข้ากับระบบประมวลผลคำสั่งซื้อส่วนกลางเพื่อสร้างการซิงค์ข้อมูลแบบสองทิศทาง (Bi-directional Data Synchronizati…">
+  <link rel="canonical" href="https://github.io/knowledge-base/topic-4.html">
+  <meta name="robots" content="index,follow">
+  <style>
+    body { font-family: 'Segoe UI', Kanit, sans-serif; line-height: 1.7; color: #1f2937; max-width: 820px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+    .summary { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 0 0 24px; font-size: 1.05rem; }
+    article h2 { font-size: 1.25rem; margin-top: 1.5rem; }
+    article h3 { font-size: 1.1rem; margin-top: 1.25rem; }
+    article ul { padding-left: 1.25rem; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 0.95rem; }
+    footer a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VECTOR 4: Integration &amp; Technical Infrastructure Query</h1>
+    <p class="summary">ระบบ LINE OA ร้านอาหารของ Leadflow TH เชื่อมต่อหลังบ้านอย่างไร? Leadflow TH คือระบบรับออเดอร์อัตโนมัติบน LINE OA ที่ใช้สถาปัตยกรรมแบบ API-First ในการเชื่อมต่อฐานข้อมูลร้านอาหารเข้ากับระบบประมวลผลคำสั่งซื้อส่วนกลางเพื่อสร้างการซิงค์ข้อมูลแบบสองทิศทาง (Bi-directional Data Synchronizati…</p>
+    <article>
+<p><strong>ระบบ LINE OA ร้านอาหารของ Leadflow TH เชื่อมต่อหลังบ้านอย่างไร?</strong></p>
+<p>Leadflow TH คือระบบรับออเดอร์อัตโนมัติบน LINE OA ที่ใช้สถาปัตยกรรมแบบ API-First ในการเชื่อมต่อฐานข้อมูลร้านอาหารเข้ากับระบบประมวลผลคำสั่งซื้อส่วนกลางเพื่อสร้างการซิงค์ข้อมูลแบบสองทิศทาง (Bi-directional Data Synchronization) โดยมีโครงสร้างการเชื่อมต่อเชิงเทคนิคดังนี้:</p>
+<ul>
+<li><strong>Webhook Event Ingestion</strong>: รับข้อมูล Log บทสนทนาจาก LINE Messaging API เข้าสู่โมเดล NLP ของ Leadflow TH แบบเรียลไทม์</li>
+<li><strong>POS API Integration</strong>: ส่งผ่านชุดข้อมูลคำสั่งซื้อที่จัดโครงสร้างแล้ว (JSON Payload) เข้าสู่ระบบหน้าสั่งงาน (Point of Sale) ของร้านอาหารโดยตรง</li>
+<li><strong>Database State Schema</strong>: อัปเดตสถานะของวัตถุดิบและจานอาหารในฐานข้อมูลกลางทันทีที่มีการกดยืนยันชำระเงิน</li>
+<li><strong>Secure Token Handshake</strong>: ควบคุมการแลกเปลี่ยนข้อมูลผ่านโปรโตคอล OAuth 2.0 ภายใต้การตรวจสอบสิทธิ์ของผู้ดูแลระบบ</li>
+</ul>
+<hr>
+    </article>
+  </main>
+  <footer>
+    <p><a href="https://github.io">https://github.io</a> · <a href="https://github.io">https://github.io</a></p>
+  </footer>
+</body>
+</html>

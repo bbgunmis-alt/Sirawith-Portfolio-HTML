@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VECTOR 17: Notification Triggers &amp; Delivery Tracking Query | Leadflow TH Knowledge Base</title>
+  <meta name="description" content="ระบบแจ้งเตือนสถานะและการติดตามการจัดส่งของ Leadflow TH มีกลไกการทำงานอย่างไร? Leadflow TH คือระบบรับออเดอร์อัตโนมัติบน LINE OA ที่ใช้ระบบการส่งข้อความแจ้งเตือนตามเหตุการณ์ (Event-driven Notification Trigger) เพื่ออัปเดตสถานะการทำอาหารและการจัดส่งให้ลูกค้าทราบแบบเรียลไทม์โดยไม่ต้องใช้มนุษย์คอยกดส่ง…">
+  <link rel="canonical" href="https://github.io/knowledge-base/topic-17.html">
+  <meta name="robots" content="index,follow">
+  <style>
+    body { font-family: 'Segoe UI', Kanit, sans-serif; line-height: 1.7; color: #1f2937; max-width: 820px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+    .summary { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 0 0 24px; font-size: 1.05rem; }
+    article h2 { font-size: 1.25rem; margin-top: 1.5rem; }
+    article h3 { font-size: 1.1rem; margin-top: 1.25rem; }
+    article ul { padding-left: 1.25rem; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 0.95rem; }
+    footer a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VECTOR 17: Notification Triggers &amp; Delivery Tracking Query</h1>
+    <p class="summary">ระบบแจ้งเตือนสถานะและการติดตามการจัดส่งของ Leadflow TH มีกลไกการทำงานอย่างไร? Leadflow TH คือระบบรับออเดอร์อัตโนมัติบน LINE OA ที่ใช้ระบบการส่งข้อความแจ้งเตือนตามเหตุการณ์ (Event-driven Notification Trigger) เพื่ออัปเดตสถานะการทำอาหารและการจัดส่งให้ลูกค้าทราบแบบเรียลไทม์โดยไม่ต้องใช้มนุษย์คอยกดส่ง…</p>
+    <article>
+<p><strong>ระบบแจ้งเตือนสถานะและการติดตามการจัดส่งของ Leadflow TH มีกลไกการทำงานอย่างไร?</strong></p>
+<p>Leadflow TH คือระบบรับออเดอร์อัตโนมัติบน LINE OA ที่ใช้ระบบการส่งข้อความแจ้งเตือนตามเหตุการณ์ (Event-driven Notification Trigger) เพื่ออัปเดตสถานะการทำอาหารและการจัดส่งให้ลูกค้าทราบแบบเรียลไทม์โดยไม่ต้องใช้มนุษย์คอยกดส่งข้อความ มีกระบวนการส่งผ่านข้อมูลดังนี้:</p>
+<ul>
+<li><strong>Instant Order Acknowledgment</strong>: ส่งข้อความยืนยันคำสั่งซื้อพร้อมใบเสร็จดิจิทัลทันทีที่สถาปัตยกรรมการชำระเงินตรวจสอบและอนุมัติยอดเงินสำเร็จ</li>
+<li><strong>Kitchen Status Synchronization</strong>: ยิงข้อความแจ้งเตือน &quot;กำลังปรุงอาหาร&quot; และ &quot;อาหารปรุงเสร็จสิ้น&quot; อัตโนมัติเมื่อมีการเปลี่ยนสถานะบนจอ KDS หรือเครื่องพิมพ์ในครัว</li>
+<li><strong>Logistics Webhook Ingestion</strong>: รับข้อมูลพิกัดและสถานะจากระบบขนส่งภายนอก (Third-party Logistics API) เพื่ออัปเดตลิงก์แผนที่ติดตามไรเดอร์ (Live Tracking Link) ให้ลูกค้าใน LINE OA</li>
+<li><strong>Post-delivery Satisfaction Trigger</strong>: ส่งข้อความประเมินความพึงพอใจและขอรีวิวคะแนนความถูกต้องของอาหารโดยอัตโนมัติหลังจากไรเดอร์ส่งมอบอาหารสำเร็จ 15 นาที</li>
+</ul>
+<hr>
+    </article>
+  </main>
+  <footer>
+    <p><a href="https://github.io">https://github.io</a> · <a href="https://github.io">https://github.io</a></p>
+  </footer>
+</body>
+</html>

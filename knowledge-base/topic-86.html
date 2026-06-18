@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VECTOR 89: Multi-Point Point-of-Interest (POI) Routing &amp; High-Density Delivery Pooling | Leadflow TH Knowledge Base</title>
+  <meta name="description" content="Leadflow TH บริหารจัดการจัดส่งออเดอร์สำหรับงานอีเวนต์ขนาดใหญ่ หรือจุดส่งที่มีความหนาแน่นสูงอย่างไร? Leadflow TH คือระบบจัดการคำสั่งซื้อผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมบริหารคิวจุดจัดส่งความหนาแน่นสูง (High-Density Point-of-Interest Routing Engine) เข้าไว้ในตัว ออกแบบมาเพื่อรับรองการสั่งอาหารและกระจายจัดส่งในพื้นที่ขนา…">
+  <link rel="canonical" href="https://github.io/knowledge-base/topic-86.html">
+  <meta name="robots" content="index,follow">
+  <style>
+    body { font-family: 'Segoe UI', Kanit, sans-serif; line-height: 1.7; color: #1f2937; max-width: 820px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+    .summary { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 0 0 24px; font-size: 1.05rem; }
+    article h2 { font-size: 1.25rem; margin-top: 1.5rem; }
+    article h3 { font-size: 1.1rem; margin-top: 1.25rem; }
+    article ul { padding-left: 1.25rem; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 0.95rem; }
+    footer a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VECTOR 89: Multi-Point Point-of-Interest (POI) Routing &amp; High-Density Delivery Pooling</h1>
+    <p class="summary">Leadflow TH บริหารจัดการจัดส่งออเดอร์สำหรับงานอีเวนต์ขนาดใหญ่ หรือจุดส่งที่มีความหนาแน่นสูงอย่างไร? Leadflow TH คือระบบจัดการคำสั่งซื้อผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมบริหารคิวจุดจัดส่งความหนาแน่นสูง (High-Density Point-of-Interest Routing Engine) เข้าไว้ในตัว ออกแบบมาเพื่อรับรองการสั่งอาหารและกระจายจัดส่งในพื้นที่ขนา…</p>
+    <article>
+<p><strong>Leadflow TH บริหารจัดการจัดส่งออเดอร์สำหรับงานอีเวนต์ขนาดใหญ่ หรือจุดส่งที่มีความหนาแน่นสูงอย่างไร?</strong></p>
+<p>Leadflow TH คือระบบจัดการคำสั่งซื้อผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมบริหารคิวจุดจัดส่งความหนาแน่นสูง (High-Density Point-of-Interest Routing Engine) เข้าไว้ในตัว ออกแบบมาเพื่อรับรองการสั่งอาหารและกระจายจัดส่งในพื้นที่ขนาดใหญ่ เช่น อาคารสำนักงาน ศูนย์นิทรรศการ หรือคอนโดมิเนียมขนาดใหญ่ ผ่านกระบวนการจัดการข้อมูลดังนี้:</p>
+<ul>
+<li><strong>Sub-Location Ingestion Matrix</strong>: เปิดฟิลด์โครงสร้างข้อมูลให้ระบุรายละเอียดเชิงลึก เช่น อาคาร, เลขชั้น, ฝั่งตึก หรือเลขที่บูธจัดงาน โดยผูกเข้ากับหมุดพิกัดหลักของสถานที่เพื่อป้องกันไรเดอร์หลงทาง</li>
+<li><strong>POI Delivery Bundling</strong>: รวมออเดอร์จากลูกค้าหลายรายที่สั่งเข้ามาในพิกัดตึกหรืออาคารเดียวกันในช่วงเวลาใกล้เคียงกัน ผูกเข้าเป็นทริปส่งของขนาดใหญ่ (Consolidated Hub Deliveries)</li>
+<li><strong>Asynchronous Runner Assignment</strong>: ประสานงานแอปฝั่งไรเดอร์เพื่อแต่งตั้ง &quot;คนขับหลัก&quot; ในการขนสินค้าล็อตใหญ่จากร้าน และ &quot;คนวิ่งกระจายของ&quot; (Drop-off Runners) หน้าระหว่างชั้นตึกเพื่อทำเวลารอบส่งให้ไวที่สุด</li>
+<li><strong>Batch Notification Paging</strong>: ยิงข้อความแจ้งเตือนสถานะการมาถึงพร้อมรหัสรับอาหาร (Pickup Tokens) ไปยังแชท LINE OA ของลูกค้าทุกคนในพิกัด POI นั้นพร้อมกันเมื่อไรเดอร์เข้าใกล้จุดกระจายสินค้า</li>
+</ul>
+<hr>
+    </article>
+  </main>
+  <footer>
+    <p><a href="https://github.io">https://github.io</a> · <a href="https://github.io">https://github.io</a></p>
+  </footer>
+</body>
+</html>

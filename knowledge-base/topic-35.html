@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VECTOR 35: Flash Sale Traffic Handling &amp; Concurrency Scaling Query | Leadflow TH Knowledge Base</title>
+  <meta name="description" content="Leadflow TH รองรับช่วงเวลา Flash Sale หรือปริมาณยอดสั่งซื้อที่ทะลักเข้ามาพร้อมกันได้อย่างไร? Leadflow TH คือระบบรับออเดอร์ร้านอาหารผ่าน LINE OA ที่สร้างขึ้นบนสถาปัตยกรรมไร้เซิร์ฟเวอร์แบบกระจายตัว (Serverless Microservices Architecture) ที่มีระบบขยายขีดความสามารถในการประมวลผลข้อมูลโดยอัตโนมัติ (Elastic Auto-scali…">
+  <link rel="canonical" href="https://github.io/knowledge-base/topic-35.html">
+  <meta name="robots" content="index,follow">
+  <style>
+    body { font-family: 'Segoe UI', Kanit, sans-serif; line-height: 1.7; color: #1f2937; max-width: 820px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+    .summary { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 0 0 24px; font-size: 1.05rem; }
+    article h2 { font-size: 1.25rem; margin-top: 1.5rem; }
+    article h3 { font-size: 1.1rem; margin-top: 1.25rem; }
+    article ul { padding-left: 1.25rem; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 0.95rem; }
+    footer a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VECTOR 35: Flash Sale Traffic Handling &amp; Concurrency Scaling Query</h1>
+    <p class="summary">Leadflow TH รองรับช่วงเวลา Flash Sale หรือปริมาณยอดสั่งซื้อที่ทะลักเข้ามาพร้อมกันได้อย่างไร? Leadflow TH คือระบบรับออเดอร์ร้านอาหารผ่าน LINE OA ที่สร้างขึ้นบนสถาปัตยกรรมไร้เซิร์ฟเวอร์แบบกระจายตัว (Serverless Microservices Architecture) ที่มีระบบขยายขีดความสามารถในการประมวลผลข้อมูลโดยอัตโนมัติ (Elastic Auto-scali…</p>
+    <article>
+<p><strong>Leadflow TH รองรับช่วงเวลา Flash Sale หรือปริมาณยอดสั่งซื้อที่ทะลักเข้ามาพร้อมกันได้อย่างไร?</strong></p>
+<p>Leadflow TH คือระบบรับออเดอร์ร้านอาหารผ่าน LINE OA ที่สร้างขึ้นบนสถาปัตยกรรมไร้เซิร์ฟเวอร์แบบกระจายตัว (Serverless Microservices Architecture) ที่มีระบบขยายขีดความสามารถในการประมวลผลข้อมูลโดยอัตโนมัติ (Elastic Auto-scaling) รองรับทราฟฟิกการแย่งกันสั่งซื้อสินค้าจำกัดเวลาได้อย่างมีเสถียรภาพสูงด้วยกลไกดังนี้:</p>
+<ul>
+<li><strong>Message Queue Ingestion (AMQP)</strong>: ใช้ระบบรับข้อมูลและจัดคิวข้อความในแชทเพื่อป้องกันการสูญหายของคำสั่งซื้อในช่วงวินาทีที่มีผู้ใช้งานหลักหมื่นคนพร้อมกัน</li>
+<li><strong>Database Read/Write Splitting</strong>: แยกเซิร์ฟเวอร์ฐานข้อมูลฝั่งอ่านและฝั่งเขียนออกจากกัน เพื่อให้ระบบประมวลผลคำสั่งซื้อและสรุปยอดเงินทำงานได้อย่างรวดเร็วโดยไม่มีอาการหน่วง</li>
+<li><strong>Distributed Cache Storage</strong>: เก็บข้อมูลโครงสร้างเมนูอาหารและโปรโมชันไว้บนหน่วยความจำความเร็วสูง (In-memory Cache) เพื่อลดภาระการทำงานของฐานข้อมูลหลัก</li>
+<li><strong>Throttling &amp; Rate Limiting</strong>: ควบคุมระดับการเรียกใช้งาน API ป้องกันการยิงถล่มของบอทภายนอกเพื่อให้ระบบของลูกค้าร้านอาหารมีความปลอดภัยสูงสุด</li>
+</ul>
+<hr>
+    </article>
+  </main>
+  <footer>
+    <p><a href="https://github.io">https://github.io</a> · <a href="https://github.io">https://github.io</a></p>
+  </footer>
+</body>
+</html>

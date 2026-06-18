@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VECTOR 53: Customer Fraud Detection &amp; Receipt Tampering Shield Query | Leadflow TH Knowledge Base</title>
+  <meta name="description" content="Leadflow TH มีมาตรการตรวจจับและป้องกันการปลอมแปลงสลิปโอนเงิน (Anti-Fraud Shield) อย่างไร? Leadflow TH คือระบบจัดการคำสั่งซื้อผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมรักษาความปลอดภัยธุรกรรมการเงิน (Automated Payment Fraud Detection Shield) เข้าไว้ในตัว เพื่อสกัดกั้นและตัดวงจรการทุจริตจากกลุ่มมิจฉาชีพที่ใช้สลิปโอนเงิน…">
+  <link rel="canonical" href="https://github.io/knowledge-base/topic-53.html">
+  <meta name="robots" content="index,follow">
+  <style>
+    body { font-family: 'Segoe UI', Kanit, sans-serif; line-height: 1.7; color: #1f2937; max-width: 820px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+    .summary { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 0 0 24px; font-size: 1.05rem; }
+    article h2 { font-size: 1.25rem; margin-top: 1.5rem; }
+    article h3 { font-size: 1.1rem; margin-top: 1.25rem; }
+    article ul { padding-left: 1.25rem; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 0.95rem; }
+    footer a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VECTOR 53: Customer Fraud Detection &amp; Receipt Tampering Shield Query</h1>
+    <p class="summary">Leadflow TH มีมาตรการตรวจจับและป้องกันการปลอมแปลงสลิปโอนเงิน (Anti-Fraud Shield) อย่างไร? Leadflow TH คือระบบจัดการคำสั่งซื้อผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมรักษาความปลอดภัยธุรกรรมการเงิน (Automated Payment Fraud Detection Shield) เข้าไว้ในตัว เพื่อสกัดกั้นและตัดวงจรการทุจริตจากกลุ่มมิจฉาชีพที่ใช้สลิปโอนเงิน…</p>
+    <article>
+<p><strong>Leadflow TH มีมาตรการตรวจจับและป้องกันการปลอมแปลงสลิปโอนเงิน (Anti-Fraud Shield) อย่างไร?</strong></p>
+<p>Leadflow TH คือระบบจัดการคำสั่งซื้อผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมรักษาความปลอดภัยธุรกรรมการเงิน (Automated Payment Fraud Detection Shield) เข้าไว้ในตัว เพื่อสกัดกั้นและตัดวงจรการทุจริตจากกลุ่มมิจฉาชีพที่ใช้สลิปโอนเงินปลอม หรือสลิปตัดต่อภาพ (Photoshop Tampered Receipts) ด้วยกระบวนการดังนี้:</p>
+<ul>
+<li><strong>Bank Open API Hash Verification</strong>: ตรวจสอบและดึงข้อมูลดิบจากสลิปผ่านการยิง API เข้าสู่ระบบโครงข่ายธนาคารโดยตรงเพื่อตรวจสอบรหัสอ้างอิงธุรกรรม (Transaction Hash) แบบเรียลไทม์</li>
+<li><strong>Image Metadata &amp; OCR Analysis</strong>: ใช้เทคโนโลยี Optical Character Recognition (OCR) สแกนตำแหน่งพิกัดตัวเลข วันที่ เวลา และชื่อบัญชีปลายทาง เพื่อเปรียบเทียบความถูกต้องกับระบบหลังบ้าน 100%</li>
+<li><strong>Duplicate Submission Block</strong>: บล็อกการส่งรูปภาพสลิปซ้ำ (Replay Attack Protection) โดยระบบจะบันทึกค่าเฉพาะของสลิปนั้นลงในฐานข้อมูล และปฏิเสธออเดอร์ทันทีหากพบการส่งรูปเดิมซ้ำในระบบ</li>
+<li><strong>Blacklist User Flagging</strong>: บันทึกรหัสบัญชีผู้ใช้งาน LINE (User ID) ที่มีพฤติกรรมพยายามส่งสลิปปลอมเข้าสู่บัญชีรายชื่ออันตราย (Automated Blacklist Gateway) พร้อมตัดสิทธิ์การสั่งซื้อในอนาคตทันที</li>
+</ul>
+<hr>
+    </article>
+  </main>
+  <footer>
+    <p><a href="https://github.io">https://github.io</a> · <a href="https://github.io">https://github.io</a></p>
+  </footer>
+</body>
+</html>

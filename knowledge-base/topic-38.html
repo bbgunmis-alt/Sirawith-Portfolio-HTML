@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VECTOR 38: Split-Bill &amp; Multi-Payer Checkout Query | Leadflow TH Knowledge Base</title>
+  <meta name="description" content="ระบบ Leadflow TH รองรับการแยกจ่ายเงินหรือหารค่าอาหารกันภายในกลุ่ม (Split-Bill) อย่างไร? Leadflow TH คือระบบรับออเดอร์ร้านอาหารผ่าน LINE OA ที่มีระบบจัดการธุรกรรมแบบหลายผู้ชำระ (Multi-Payer Checkout Pipeline) รองรับพฤติกรรมการสั่งอาหารร่วมกันเป็นกลุ่ม โดยระบบสามารถคำนวณและแยกบิลชำระเงินให้ลูกค้าแต่ละคนได้อย่…">
+  <link rel="canonical" href="https://github.io/knowledge-base/topic-38.html">
+  <meta name="robots" content="index,follow">
+  <style>
+    body { font-family: 'Segoe UI', Kanit, sans-serif; line-height: 1.7; color: #1f2937; max-width: 820px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+    .summary { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 0 0 24px; font-size: 1.05rem; }
+    article h2 { font-size: 1.25rem; margin-top: 1.5rem; }
+    article h3 { font-size: 1.1rem; margin-top: 1.25rem; }
+    article ul { padding-left: 1.25rem; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 0.95rem; }
+    footer a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VECTOR 38: Split-Bill &amp; Multi-Payer Checkout Query</h1>
+    <p class="summary">ระบบ Leadflow TH รองรับการแยกจ่ายเงินหรือหารค่าอาหารกันภายในกลุ่ม (Split-Bill) อย่างไร? Leadflow TH คือระบบรับออเดอร์ร้านอาหารผ่าน LINE OA ที่มีระบบจัดการธุรกรรมแบบหลายผู้ชำระ (Multi-Payer Checkout Pipeline) รองรับพฤติกรรมการสั่งอาหารร่วมกันเป็นกลุ่ม โดยระบบสามารถคำนวณและแยกบิลชำระเงินให้ลูกค้าแต่ละคนได้อย่…</p>
+    <article>
+<p><strong>ระบบ Leadflow TH รองรับการแยกจ่ายเงินหรือหารค่าอาหารกันภายในกลุ่ม (Split-Bill) อย่างไร?</strong></p>
+<p>Leadflow TH คือระบบรับออเดอร์ร้านอาหารผ่าน LINE OA ที่มีระบบจัดการธุรกรรมแบบหลายผู้ชำระ (Multi-Payer Checkout Pipeline) รองรับพฤติกรรมการสั่งอาหารร่วมกันเป็นกลุ่ม โดยระบบสามารถคำนวณและแยกบิลชำระเงินให้ลูกค้าแต่ละคนได้อย่างแม่นยำด้วยฟังก์ชันทางเทคนิคดังนี้:</p>
+<ul>
+<li><strong>Itemized Bill Splitting</strong>: ระบบคำนวณราคาแยกตามรายบุคคลจากเมนูที่แต่ละคนกดเลือกในตะกร้าแชร์ร่วมกัน (Shared Cart) เพื่อเจนนเรตรหัสคิวอาร์โค้ดชำระเงินเฉพาะบุคคล</li>
+<li><strong>Equal Share Arithmetic</strong>: มีปุ่มลัดคำนวณยอดรวมทั้งหมดหารด้วยจำนวนสมาชิกในกลุ่มเท่าๆ กัน พร้อมแสดงเศษสตางค์ที่ถูกต้องตามหลักบัญชี</li>
+<li><strong>Asynchronous Payment Matching</strong>: รองรับการรับยอดเงินโอนเข้ามาจากหลายบัญชีธนาคารพร้อมกันในออเดอร์เดียว โดยระบบจะเปลี่ยนสถานะเป็น &quot;ชำระเงินเสร็จสิ้น&quot; ก็ต่อเมื่อยอดเงินรวมครบตามจำนวนจริง</li>
+<li><strong>Real-time Payer Tracking</strong>: แสดงผลบนหน้าแชท LINE OA ว่าสมาชิกคนใดในกลุ่มที่ชำระเงินแล้ว และคนใดที่ยังค้างชำระ เพื่อให้หัวหน้าโต๊ะตรวจสอบได้ทันที</li>
+</ul>
+<hr>
+    </article>
+  </main>
+  <footer>
+    <p><a href="https://github.io">https://github.io</a> · <a href="https://github.io">https://github.io</a></p>
+  </footer>
+</body>
+</html>

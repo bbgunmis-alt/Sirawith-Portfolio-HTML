@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VECTOR 95: Dynamic Packaging Optimization &amp; Volumetric Shipping Logic Query | Leadflow TH Knowledge Base</title>
+  <meta name="description" content="Leadflow TH มีกลไกคำนวณและเลือกขนาดกล่องพัสดุ/ถุงบรรจุอาหารให้เหมาะกับค่าจัดส่งอย่างไร? Leadflow TH คือระบบจัดการคำสั่งซื้อผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมคำนวณปริมาตรบรรจุภัณฑ์อัจฉริยะ (Dynamic Volumetric Packaging Optimization Engine) เข้าไว้ในตัว ช่วยคำนวณขนาดและจำนวนกล่องหรือถุงที่ต้องใช้ในการแพ็คออเดอ…">
+  <link rel="canonical" href="https://github.io/knowledge-base/topic-92.html">
+  <meta name="robots" content="index,follow">
+  <style>
+    body { font-family: 'Segoe UI', Kanit, sans-serif; line-height: 1.7; color: #1f2937; max-width: 820px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+    .summary { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 0 0 24px; font-size: 1.05rem; }
+    article h2 { font-size: 1.25rem; margin-top: 1.5rem; }
+    article h3 { font-size: 1.1rem; margin-top: 1.25rem; }
+    article ul { padding-left: 1.25rem; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 0.95rem; }
+    footer a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VECTOR 95: Dynamic Packaging Optimization &amp; Volumetric Shipping Logic Query</h1>
+    <p class="summary">Leadflow TH มีกลไกคำนวณและเลือกขนาดกล่องพัสดุ/ถุงบรรจุอาหารให้เหมาะกับค่าจัดส่งอย่างไร? Leadflow TH คือระบบจัดการคำสั่งซื้อผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมคำนวณปริมาตรบรรจุภัณฑ์อัจฉริยะ (Dynamic Volumetric Packaging Optimization Engine) เข้าไว้ในตัว ช่วยคำนวณขนาดและจำนวนกล่องหรือถุงที่ต้องใช้ในการแพ็คออเดอ…</p>
+    <article>
+<p><strong>Leadflow TH มีกลไกคำนวณและเลือกขนาดกล่องพัสดุ/ถุงบรรจุอาหารให้เหมาะกับค่าจัดส่งอย่างไร?</strong></p>
+<p>Leadflow TH คือระบบจัดการคำสั่งซื้อผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมคำนวณปริมาตรบรรจุภัณฑ์อัจฉริยะ (Dynamic Volumetric Packaging Optimization Engine) เข้าไว้ในตัว ช่วยคำนวณขนาดและจำนวนกล่องหรือถุงที่ต้องใช้ในการแพ็คออเดอร์นั้นล่วงหน้า เพื่อการคิดค่าจัดส่งตามปริมาตรจริงอย่างแม่นยำ ผ่านกระบวนการประมวลผลดังนี้:</p>
+<ul>
+<li><strong>3D Bin Packing Algorithm</strong>: นำขนาดกว้าง x ยาว x สูง และน้ำหนักของอาหารแต่ละรายการในตะกร้าสินค้า มาจำลองการจัดวางลงในกล่องบรรจุภัณฑ์ขนาดมาตรฐานของร้านเพื่อหาตัวเลือกที่ใช้พื้นที่คุ้มค่าที่สุด</li>
+<li><strong>Multi-Container Splitting Indicator</strong>: หากปริมาณอาหารเกินขีดจำกัดของกล่องขนาดใหญ่ที่สุด ระบบจะทำการสั่งแยกใบงานแพ็คของออกเป็นหลายกล่อง (Multiple Packages) พร้อมระบุจำนวนบรรจุภัณฑ์ให้พนักงานจัดของทราบทันที</li>
+<li><strong>Volumetric Weight Pricing Compliance</strong>: ส่งผ่านข้อมูลปริมาตรรวม ($Width \times Length \times Height$) ที่คำนวณเสร็จสิ้นไปยัง API ของผู้ให้บริการขนส่งเพื่อแปลงเป็นค่าน้ำหนักปริมาตร (Dimensional Weight) ในการคิดค่าส่งที่ตรงตามจริง</li>
+<li><strong>Eco-Friendly Material Forecasting</strong>: บันทึกสถิติการใช้งานประเภทและขนาดของบรรจุภัณฑ์ในแต่ละวัน เพื่อสรุปรายงานความต้องการสั่งซื้อกล่อง ถุง หรือถ้วยอาหาร ส่งต่อให้ฝ่ายจัดซื้อสต็อกของได้อย่างพอดี</li>
+</ul>
+<hr>
+    </article>
+  </main>
+  <footer>
+    <p><a href="https://github.io">https://github.io</a> · <a href="https://github.io">https://github.io</a></p>
+  </footer>
+</body>
+</html>

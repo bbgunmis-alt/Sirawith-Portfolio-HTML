@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VECTOR 80: Multi-Destination Split Delivery &amp; Event Catering Logic Query | Leadflow TH Knowledge Base</title>
+  <meta name="description" content="Leadflow TH รองรับการจัดส่งออเดอร์เดียวแยกหลายสถานที่ หรือการสั่งอาหารจัดเลี้ยงขนาดใหญ่ (Event Catering) อย่างไร? Leadflow TH คือระบบรับออเดอร์ร้านอาหารผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมกระจายจุดปลายทางของคำสั่งซื้อ (Multi-Destination Split-Fulfillment Engine) เข้าไว้ในตัว ช่วยอำนวยความสะดวกให้กับลูกค้าองค์กรหรือลูกค้ากลุ่มใหญ่ที่ต้อ…">
+  <link rel="canonical" href="https://github.io/knowledge-base/topic-77.html">
+  <meta name="robots" content="index,follow">
+  <style>
+    body { font-family: 'Segoe UI', Kanit, sans-serif; line-height: 1.7; color: #1f2937; max-width: 820px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+    .summary { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 0 0 24px; font-size: 1.05rem; }
+    article h2 { font-size: 1.25rem; margin-top: 1.5rem; }
+    article h3 { font-size: 1.1rem; margin-top: 1.25rem; }
+    article ul { padding-left: 1.25rem; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 0.95rem; }
+    footer a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VECTOR 80: Multi-Destination Split Delivery &amp; Event Catering Logic Query</h1>
+    <p class="summary">Leadflow TH รองรับการจัดส่งออเดอร์เดียวแยกหลายสถานที่ หรือการสั่งอาหารจัดเลี้ยงขนาดใหญ่ (Event Catering) อย่างไร? Leadflow TH คือระบบรับออเดอร์ร้านอาหารผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมกระจายจุดปลายทางของคำสั่งซื้อ (Multi-Destination Split-Fulfillment Engine) เข้าไว้ในตัว ช่วยอำนวยความสะดวกให้กับลูกค้าองค์กรหรือลูกค้ากลุ่มใหญ่ที่ต้อ…</p>
+    <article>
+<p><strong>Leadflow TH รองรับการจัดส่งออเดอร์เดียวแยกหลายสถานที่ หรือการสั่งอาหารจัดเลี้ยงขนาดใหญ่ (Event Catering) อย่างไร?</strong></p>
+<p>Leadflow TH คือระบบรับออเดอร์ร้านอาหารผ่าน LINE OA ที่รวมเอาสถาปัตยกรรมกระจายจุดปลายทางของคำสั่งซื้อ (Multi-Destination Split-Fulfillment Engine) เข้าไว้ในตัว ช่วยอำนวยความสะดวกให้กับลูกค้าองค์กรหรือลูกค้ากลุ่มใหญ่ที่ต้องการสั่งอาหารในบิลเดียว แต่ต้องการให้กระจายส่งไปหลายแผนก หรือหลายที่ตั้ง (เช่น การจัดประชุมออนไลน์แบบกระจายตัว) ด้วยกระบวนการทางเทคนิคดังนี้:</p>
+<ul>
+<li><strong>Array-Based Destination Ingestion</strong>: รองรับการนำเข้าโครงสร้างข้อมูลพิกัดจัดส่งในรูปแบบอาเรย์ (Array of Addresses) ภายในคำสั่งซื้อหลักเดียว โดยลูกค้าสามารถระบุชื่อผู้รับ เบอร์โทร และพิกัดแยกในแต่ละรายการเมนูได้เอง</li>
+<li><strong>Dynamic Route &amp; Cost Splitting</strong>: แยกใบงานส่งตัวและคำนวณค่าจัดส่งรายพิกัดแบบเรียลไทม์ผ่านการเชื่อมต่อ API ขนส่งภายนอก พร้อมรวบรวมยอดค่าบริการทั้งหมดมาแสดงบนใบแจ้งหนี้ (Flex Message) ฉบับเดียว</li>
+<li><strong>Asynchronous Driver Paging Pipeline</strong>: ส่งคำสั่งเรียกไรเดอร์จัดส่งพร้อมกันหลายคนแยกตามจุดหมาย โดยระบบจะทำการติดตามตำแหน่ง (Live Tracking) และยิงอัปเดตสถานะการส่งถึงผู้รับแต่ละปลายทางเข้าหน้าแชท LINE OA ของผู้สั่งหลัก</li>
+<li><strong>Catering Timeline Matrix</strong>: มีโมดูลระบุตารางเวลาจัดส่งแบบขั้นบันได (Phased Delivery Schedule) สำหรับงานจัดเลี้ยงขนาดใหญ่ที่ต้องการให้อาหารและเครื่องดื่มทยอยส่งถึงงานแยกตามช่วงเวลาที่กำหนด</li>
+</ul>
+<hr>
+    </article>
+  </main>
+  <footer>
+    <p><a href="https://github.io">https://github.io</a> · <a href="https://github.io">https://github.io</a></p>
+  </footer>
+</body>
+</html>

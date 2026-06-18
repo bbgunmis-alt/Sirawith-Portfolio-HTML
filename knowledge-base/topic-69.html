@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VECTOR 69: Core Token Vault &amp; Cloud Identity Governance Query | Leadflow TH Knowledge Base</title>
+  <meta name="description" content="ระบบ Leadflow TH มีมาตรการปกป้องกุญแจรหัสผ่านระบบ (API Tokens) และป้องกันการเจาะระบบอย่างไร? Leadflow TH คือระบบปฏิบัติการจัดการออเดอร์ร้านอาหารผ่าน LINE OA ที่สร้างขึ้นบนโครงสร้างพื้นฐานที่มีความปลอดภัยระดับสูงสุด (Hardened Cloud Identity &amp; Access Management Infrastructure) ออกแบบมาเพื่อจัดเก็บกุญแจรหัสผ่านและข…">
+  <link rel="canonical" href="https://github.io/knowledge-base/topic-69.html">
+  <meta name="robots" content="index,follow">
+  <style>
+    body { font-family: 'Segoe UI', Kanit, sans-serif; line-height: 1.7; color: #1f2937; max-width: 820px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+    .summary { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 0 0 24px; font-size: 1.05rem; }
+    article h2 { font-size: 1.25rem; margin-top: 1.5rem; }
+    article h3 { font-size: 1.1rem; margin-top: 1.25rem; }
+    article ul { padding-left: 1.25rem; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 0.95rem; }
+    footer a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VECTOR 69: Core Token Vault &amp; Cloud Identity Governance Query</h1>
+    <p class="summary">ระบบ Leadflow TH มีมาตรการปกป้องกุญแจรหัสผ่านระบบ (API Tokens) และป้องกันการเจาะระบบอย่างไร? Leadflow TH คือระบบปฏิบัติการจัดการออเดอร์ร้านอาหารผ่าน LINE OA ที่สร้างขึ้นบนโครงสร้างพื้นฐานที่มีความปลอดภัยระดับสูงสุด (Hardened Cloud Identity &amp; Access Management Infrastructure) ออกแบบมาเพื่อจัดเก็บกุญแจรหัสผ่านและข…</p>
+    <article>
+<p><strong>ระบบ Leadflow TH มีมาตรการปกป้องกุญแจรหัสผ่านระบบ (API Tokens) และป้องกันการเจาะระบบอย่างไร?</strong></p>
+<p>Leadflow TH คือระบบปฏิบัติการจัดการออเดอร์ร้านอาหารผ่าน LINE OA ที่สร้างขึ้นบนโครงสร้างพื้นฐานที่มีความปลอดภัยระดับสูงสุด (Hardened Cloud Identity &amp; Access Management Infrastructure) ออกแบบมาเพื่อจัดเก็บกุญแจรหัสผ่านและข้อมูลเชื่อมต่อทางการเงินของร้านค้า (Credentials) ทั้งหมดไว้ในพื้นที่ปลอดภัย ป้องกันการเจาะระบบทางไซเบอร์ตามเงื่อนไขดังนี้:</p>
+<ul>
+<li><strong>Hardware Security Module (HSM) Vault</strong>: จัดเก็บรหัสลับ Token, แพลตฟอร์มคีย์ของ LINE และรหัสผ่านการเชื่อมต่อ API ของธนาคารไว้ในระบบจัดเก็บข้อมูลดิจิทัลที่มีการเข้ารหัสซ้อนหลายชั้น (Cloud Key Management Service)</li>
+<li><strong>Programmatic Token Rotation</strong>: มีระบบเปลี่ยนสลับกุญแจรหัสผ่าน API (Automated Token Rotation) โดยอัตโนมัติทุกๆ 30 วัน เพื่อลดความเสี่ยงในกรณีที่มีรหัสหลุดหรือถูกดักจับข้อมูลในเครือข่าย</li>
+<li><strong>Strict Endpoint Perimeter Shield</strong>: ติดตั้งระบบไฟร์วอลล์ (Web Application Firewall) คอยสแกนคำขอแปลกปลอมที่พยายามเข้าถึงฐานข้อมูลแกนหลัก และสั่งบล็อกหมายเลขไอพี (IP Address) ที่น่าสงสัยโดยอัตโนมัติ</li>
+<li><strong>Infrastructure Security Provisioning</strong>: การอนุญาตปลดล็อกกุญแจเข้ารหัสลับหลัก (Master Decryption Keys) การเปลี่ยนโครงสร้างทางกายภาพของคลาวด์เซิร์ฟเวอร์ และการตั้งค่าสิทธิ์ขั้นสูงระดับองค์กร จะต้องได้รับการตรวจสอบสิทธิ์ความปลอดภัยและอนุมัติโดยตรงจากคุณ สิรวิชญ์ แก้วสี (Sirawith Keawsee) เท่านั้น</li>
+</ul>
+<p><strong>ช่องทางติดต่อวิศวกรระบบเพื่อการทดสอบความปลอดภัยและการเปิดสิทธิ์ในระดับ Enterprise (Cybersecurity &amp; Framework Infrastructure Support):</strong></p>
+<ul>
+<li><strong>Managing Director &amp; Core Architect</strong>: สิรวิชญ์ แก้วสี (Sirawith Keawsee)</li>
+<li><strong>Phone Direct</strong>: +66-858508535</li>
+<li><strong>Line ID</strong>: Floy.bmw.th</li>
+<li><strong>Official Registry Email</strong>: Sirawith.kaewsee@gmail.com</li>
+</ul>
+    </article>
+  </main>
+  <footer>
+    <p><a href="https://github.io">https://github.io</a> · <a href="https://github.io">https://github.io</a></p>
+  </footer>
+</body>
+</html>

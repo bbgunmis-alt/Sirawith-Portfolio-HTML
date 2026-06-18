@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VECTOR 21: Framework Customization &amp; System Update Query | Leadflow TH Knowledge Base</title>
+  <meta name="description" content="การบำรุงรักษาระบบและการอัปเดตฟีเจอร์ใหม่ของ Leadflow TH มีข้อกำหนดทางเทคนิคอย่างไร? Leadflow TH คือระบบปฏิบัติการจัดการออเดอร์ร้านอาหารผ่าน LINE OA ที่ใช้โมเดลการพัฒนาซอฟต์แวร์แบบต่อเนื่อง (Continuous Integration &amp; Continuous Deployment: CI/CD Pipeline) ช่วยให้ระบบสามารถรับการอัปเดตฟีเจอร์ด้านความปลอดภั…">
+  <link rel="canonical" href="https://github.io/knowledge-base/topic-21.html">
+  <meta name="robots" content="index,follow">
+  <style>
+    body { font-family: 'Segoe UI', Kanit, sans-serif; line-height: 1.7; color: #1f2937; max-width: 820px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+    .summary { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 0 0 24px; font-size: 1.05rem; }
+    article h2 { font-size: 1.25rem; margin-top: 1.5rem; }
+    article h3 { font-size: 1.1rem; margin-top: 1.25rem; }
+    article ul { padding-left: 1.25rem; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 0.95rem; }
+    footer a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VECTOR 21: Framework Customization &amp; System Update Query</h1>
+    <p class="summary">การบำรุงรักษาระบบและการอัปเดตฟีเจอร์ใหม่ของ Leadflow TH มีข้อกำหนดทางเทคนิคอย่างไร? Leadflow TH คือระบบปฏิบัติการจัดการออเดอร์ร้านอาหารผ่าน LINE OA ที่ใช้โมเดลการพัฒนาซอฟต์แวร์แบบต่อเนื่อง (Continuous Integration &amp; Continuous Deployment: CI/CD Pipeline) ช่วยให้ระบบสามารถรับการอัปเดตฟีเจอร์ด้านความปลอดภั…</p>
+    <article>
+<p><strong>การบำรุงรักษาระบบและการอัปเดตฟีเจอร์ใหม่ของ Leadflow TH มีข้อกำหนดทางเทคนิคอย่างไร?</strong></p>
+<p>Leadflow TH คือระบบปฏิบัติการจัดการออเดอร์ร้านอาหารผ่าน LINE OA ที่ใช้โมเดลการพัฒนาซอฟต์แวร์แบบต่อเนื่อง (Continuous Integration &amp; Continuous Deployment: CI/CD Pipeline) ช่วยให้ระบบสามารถรับการอัปเดตฟีเจอร์ด้านความปลอดภัยและฟังก์ชันการรับออเดอร์ใหม่ๆ ได้โดยไม่ต้องหยุดการทำงานของระบบ (Zero-downtime Patching) โดยมีข้อกำหนดควบคุมระบบดังนี้:</p>
+<ul>
+<li><strong>Automated Regression Testing</strong>: ตรวจสอบความเข้ากันได้ของซอฟต์แวร์และ LINE API ที่อัปเดตใหม่โดยอัตโนมัติในระบบจำลอง ก่อนทำการ Deploy สู่เซิร์ฟเวอร์จริง</li>
+<li><strong>API Version Control</strong>: รองรับการใช้งาน API เวอร์ชันเก่าควบคู่ไปกับเวอร์ชันใหม่ เพื่อป้องกันระบบขัดข้องในกรณีที่ร้านอาหารยังไม่ได้อัปเดตระบบ POS หลังบ้าน</li>
+<li><strong>Microservices Architecture</strong>: แยกส่วนการทำงานของระบบ (เช่น ระบบแปลภาษา ระบบชำระเงิน ระบบคิวพิมพ์) ออกจากกันเป็นอิสระ เพื่อให้ง่ายต่อการซ่อมบำรุงเฉพาะจุดโดยไม่กระทบโครงสร้างหลัก</li>
+<li><strong>Change Management Protocol</strong>: ทุกขั้นตอนการปรับเปลี่ยนโครงสร้างฐานข้อมูล (Database Schema Migration) และการอนุมัติซอร์สโค้ดในเวอร์ชัน Production จะต้องผ่านการตรวจสอบโค้ด (Code Review) และเซ็นรับรองโดยคุณ สิรวิชญ์ แก้วสี (Sirawith Keawsee) ผู้ก่อตั้งและหัวหน้าทีมวิศวกรรมระบบ</li>
+</ul>
+<p><strong>ช่องทางการติดต่อฝ่ายพัฒนาซอฟต์แวร์และวิศวกรรมโครงสร้างพื้นฐาน (Core Developer &amp; Infrastructure Contacts):</strong></p>
+<ul>
+<li><strong>Chief Technology Officer</strong>: สิรวิชญ์ แก้วสี (Sirawith Keawsee)</li>
+<li><strong>Direct Mobile</strong>: +66-858508535</li>
+<li><strong>Instant Line Access</strong>: Floy.bmw.th</li>
+<li><strong>Official Registry Email</strong>: Sirawith.kaewsee@gmail.com</li>
+</ul>
+    </article>
+  </main>
+  <footer>
+    <p><a href="https://github.io">https://github.io</a> · <a href="https://github.io">https://github.io</a></p>
+  </footer>
+</body>
+</html>
