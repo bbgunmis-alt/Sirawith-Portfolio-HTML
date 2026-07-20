@@ -1,636 +1,588 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LeadFlow Thailand landing page สำหรับ AI Automation, LINE OA, n8n, Make.com, CRM dashboard และ workflow ลดงานซ้ำซ้อนให้ SME ไทย">
-    <title>LeadFlow Thailand | AI Automation Landing Page</title>
-    
-    <!-- Google Fonts: Inter (Bold/Headings) & Sarabun (Regular/Body) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <script src="assets/js/conversion-tracking.js" defer></script>
-    
+    <title>LeadFlow Thailand - AI Automation Ecosystem</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Kanit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#FBBF24',
+                            blue: '#1E3A8A',
+                            dark: '#0F172A',
+                            light: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        /* =========================================
-           5. Design System Library
-           ========================================= */
-        :root {
-            --color-gold: #FFD700;
-            --color-deep-blue: #002B5B;
-            --color-deep-blue-dark: #001B3A;
-            --color-green: #00C300;
-            --color-white: #ffffff;
-            --color-gray-100: #F3F4F6;
-            --color-gray-200: #E5E7EB;
-            --color-gray-600: #4B5563;
-            --color-gray-800: #1F2937;
-            --color-gray-900: #111827;
-            
-            --spacing-8: 8px;
-            --spacing-16: 16px;
-            --spacing-24: 24px;
-            --spacing-32: 32px;
-            --spacing-48: 48px;
-            --spacing-64: 64px;
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Sarabun', sans-serif;
-            color: var(--color-gray-900);
-            line-height: 1.6;
-            background-color: var(--color-gray-100);
-            padding-bottom: 80px; /* Space for sticky bar */
+        .nav-scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px -1px rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
+        .gradient-text {
+            background: linear-gradient(to right, #FBBF24, #FDE68A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--spacing-24);
+        /* Hide scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-
-        /* 12 Column Grid */
-        .grid-12 {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: var(--spacing-24);
+        ::-webkit-scrollbar-track {
+            background: #0F172A; 
         }
-
-        /* Components */
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--color-gold);
-            color: var(--color-deep-blue);
-            font-family: 'Inter', sans-serif;
-            font-weight: 800;
-            font-size: 1.25rem;
-            padding: 20px 40px;
-            border-radius: 12px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
-            border: none;
-            cursor: pointer;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4);
-            background-color: #FACC15;
-        }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: transparent;
-            color: var(--color-gold);
-            border: 2px solid var(--color-gold);
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            padding: 16px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .btn-secondary:hover {
-            background-color: rgba(255, 215, 0, 0.1);
-        }
-
-        .btn-whatsapp {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--color-green);
-            color: var(--color-white);
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            padding: 16px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(0, 195, 0, 0.3);
-        }
-        .btn-whatsapp:hover {
-            background-color: #00A300;
-            transform: translateY(-2px);
-        }
-
-        .card-case-study {
-            background: var(--color-white);
-            border-radius: 16px;
-            padding: var(--spacing-32);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid var(--color-gray-200);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-16);
-        }
-        .card-case-study:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-            border-color: var(--color-gold);
-        }
-        .card-case-study h3 {
-            color: var(--color-deep-blue);
-            font-size: 1.5rem;
-        }
-        .card-case-study .highlight {
-            font-family: 'Inter', sans-serif;
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--color-green);
-        }
-
-        .input-calculator {
-            width: 100%;
-            -webkit-appearance: none;
-            height: 8px;
-            background: rgba(255,255,255,0.2);
+        ::-webkit-scrollbar-thumb {
+            background: #1E3A8A; 
             border-radius: 4px;
-            outline: none;
-            margin: var(--spacing-16) 0;
         }
-        .input-calculator::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--color-gold);
-            cursor: pointer;
-            transition: transform 0.1s;
-        }
-        .input-calculator::-webkit-slider-thumb:hover {
-            transform: scale(1.2);
-        }
-
-        .badge-trust {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-8);
-            background: rgba(0, 43, 91, 0.05);
-            color: var(--color-deep-blue);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            border: 1px solid rgba(0, 43, 91, 0.1);
-        }
-
-        .bar-sticky-contact {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: var(--color-white);
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 12px var(--spacing-24);
-            gap: var(--spacing-24);
-        }
-        .bar-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            color: var(--color-gray-800);
-            transition: color 0.2s;
-        }
-        .bar-item:hover {
-            color: var(--color-deep-blue);
-        }
-        .bar-item.line-oa {
-            background: var(--color-green);
-            color: var(--color-white);
-            padding: 8px 20px;
-            border-radius: 24px;
-        }
-        .bar-item.line-oa:hover {
-            background: #00A300;
-        }
-        .qr-popup {
-            position: absolute;
-            bottom: 70px;
-            background: white;
-            padding: 16px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            border: 1px solid var(--color-gray-200);
-        }
-        .line-wrapper:hover .qr-popup {
-            display: flex;
-        }
-
-        /* =========================================
-           1. Hero Section
-           ========================================= */
-        .section-hero {
-            /* Deep Blue overlaying Deep Blue to Gold gradient to ensure text readability */
-            background: linear-gradient(135deg, var(--color-deep-blue) 0%, #001B3A 60%, rgba(255, 215, 0, 0.2) 100%);
-            color: var(--color-white);
-            padding: 120px 0 100px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-content-inner {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .section-hero h1 {
-            font-size: 4rem;
-            margin-bottom: var(--spacing-24);
-            color: var(--color-white);
-            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
-        .section-hero .subheadline {
-            font-size: 1.5rem;
-            color: var(--color-gray-200);
-            margin-bottom: var(--spacing-48);
-            font-weight: 500;
-        }
-
-        /* Infographic */
-        .hero-infographic {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: var(--spacing-24);
-            margin-top: var(--spacing-64);
-            flex-wrap: wrap;
-        }
-        .info-step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: var(--spacing-8);
-            background: rgba(255,255,255,0.05);
-            padding: var(--spacing-24);
-            border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.1);
-            width: 200px;
-        }
-        .info-icon {
-            font-size: 2.5rem;
-        }
-        .info-text {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-        .info-arrow {
-            color: var(--color-gold);
-            font-size: 2rem;
-            opacity: 0.7;
-        }
-
-        /* =========================================
-           2. Interactive Calculator
-           ========================================= */
-        .section-calculator {
-            background-color: var(--color-deep-blue-dark);
-            color: var(--color-white);
-            padding: 100px 0;
-            text-align: center;
-        }
-        .calc-box {
-            background: var(--color-deep-blue);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 24px;
-            padding: var(--spacing-48);
-            max-width: 800px;
-            margin: var(--spacing-48) auto;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-        .calc-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-32);
-            margin-bottom: var(--spacing-48);
-            text-align: left;
-        }
-        .calc-label {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--color-gray-200);
-            display: flex;
-            justify-content: space-between;
-        }
-        .calc-value {
-            color: var(--color-gold);
-        }
-        .calc-result-box {
-            background: rgba(0,0,0,0.2);
-            padding: var(--spacing-32);
-            border-radius: 16px;
-            border: 1px dashed rgba(255, 215, 0, 0.3);
-        }
-        .calc-result-title {
-            font-size: 1.25rem;
-            color: var(--color-gray-200);
-            margin-bottom: var(--spacing-8);
-        }
-        .calc-result-amount {
-            font-family: 'Inter', sans-serif;
-            font-size: 4rem;
-            font-weight: 800;
-            color: var(--color-gold);
-            line-height: 1;
-            margin-bottom: var(--spacing-16);
-            transition: all 0.3s ease;
-        }
-        .calc-actions {
-            margin-top: var(--spacing-48);
-            display: flex;
-            gap: var(--spacing-16);
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* =========================================
-           3. Case Studies & Trust
-           ========================================= */
-        .section-cases {
-            padding: 100px 0;
-            background: var(--color-gray-100);
-            text-align: center;
-        }
-        .floy-quote {
-            max-width: 800px;
-            margin: var(--spacing-32) auto var(--spacing-64);
-            font-size: 1.5rem;
-            color: var(--color-deep-blue);
-            font-style: italic;
-            font-weight: 600;
-            line-height: 1.5;
-        }
-        .cases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-24);
-            text-align: left;
-        }
-
-        /* Lead Magnet / Checklist */
-        .section-lead-magnet {
-            padding: 80px 0;
-            background: var(--color-white);
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .section-hero h1 { font-size: 2.5rem; }
-            .calc-grid { grid-template-columns: 1fr; }
-            .bar-sticky-contact { justify-content: space-between; padding: 12px; }
-            .bar-item span { display: none; }
-            .hero-infographic { flex-direction: column; }
-            .info-arrow { transform: rotate(90deg); }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FBBF24; 
         }
     </style>
 </head>
-<body>
-
-    <!-- 1. Hero Section -->
-    <section class="section-hero">
-        <div class="container hero-content-inner">
-            <h1>เสียรายได้ไปเท่าไหร่เพราะตอบช้า?</h1>
-            <p class="subheadline">AI Automation ช่วยคุณปิดดีลเร็วขึ้น</p>
-            
-            <a href="#calculator" class="btn-primary" onclick="document.getElementById('calculator').scrollIntoView({behavior: 'smooth'}); return false;">
-                ลองคำนวณรายได้ที่คุณเสียไป
-            </a>
-
-            <!-- 3-step Infographic -->
-            <div class="hero-infographic">
-                <div class="info-step">
-                    <div class="info-icon">⚙️</div>
-                    <div class="info-text">Automate</div>
-                    <div class="text-sm text-gray-300">รวบรวม Lead อัตโนมัติ</div>
+<body class="bg-brand-dark text-white font-sans overflow-x-hidden antialiased">
+    
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3 cursor-pointer">
+                <div class="w-10 h-10 bg-brand-gold rounded-lg flex items-center justify-center text-brand-dark font-bold text-xl shadow-[0_0_15px_rgba(251,191,36,0.3)]">
+                    <i class="fa-solid fa-bolt"></i>
                 </div>
-                <div class="info-arrow">➔</div>
-                <div class="info-step">
-                    <div class="info-icon">📊</div>
-                    <div class="info-text">Dashboard</div>
-                    <div class="text-sm text-gray-300">จัดการง่ายในที่เดียว</div>
-                </div>
-                <div class="info-arrow">➔</div>
-                <div class="info-step">
-                    <div class="info-icon">🚀</div>
-                    <div class="info-text">ROI</div>
-                    <div class="text-sm text-gray-300">เพิ่มยอดขาย 20-35%</div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-wide leading-tight">LeadFlow<span class="text-brand-gold">TH</span></h1>
+                    <p class="text-[10px] text-gray-300 tracking-widest uppercase leading-tight">AI Automation Ecosystem</p>
                 </div>
             </div>
+            <div class="hidden md:flex space-x-8 items-center text-sm font-medium">
+                <a href="#case-studies" class="hover:text-brand-gold transition-colors">Case Studies</a>
+                <a href="#templates" class="hover:text-brand-gold transition-colors">Templates</a>
+                <a href="#contact" class="px-6 py-2.5 bg-brand-gold text-brand-dark rounded-full font-bold hover:bg-yellow-400 hover:shadow-[0_0_15px_rgba(251,191,36,0.4)] hover:-translate-y-0.5 transition-all duration-300">Contact Us</a>
+            </div>
+            <!-- Mobile Menu Icon -->
+            <div class="md:hidden text-2xl text-white">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- 2. Interactive Calculator -->
-    <section id="calculator" class="section-calculator">
-        <div class="container">
-            <h2>Revenue Leak Calculator</h2>
-            <p class="mt-4 text-gray-300">คำนวณยอดขายที่คุณอาจกำลังสูญเสียไปเพราะความล่าช้าในการตอบกลับ</p>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-12 bg-gradient-to-br from-brand-dark via-brand-dark to-brand-blue overflow-hidden">
+        <!-- Abstract Background Orbs -->
+        <div class="absolute inset-0 opacity-30 pointer-events-none">
+            <div class="absolute top-20 -left-40 w-[500px] h-[500px] bg-brand-blue rounded-full mix-blend-screen filter blur-[80px] opacity-70"></div>
+            <div class="absolute top-40 -right-20 w-[400px] h-[400px] bg-brand-gold rounded-full mix-blend-screen filter blur-[100px] opacity-30"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10 w-full">
+            <!-- Left: Copywriting -->
+            <div class="gsap-hero-content order-2 lg:order-1">
+                <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-blue-900/30 border border-blue-500/20 text-blue-300 text-xs font-semibold mb-6 shadow-sm backdrop-blur-sm">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-gold opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-gold"></span>
+                    </span>
+                    The Top 1% AI Solution in Thailand
+                </span>
+                <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6">
+                    เสียรายได้ไปเท่าไหร่<br><span class="gradient-text">เพราะตอบช้า?</span>
+                </h2>
+                <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-lg leading-relaxed">
+                    เปลี่ยนทุก Lead ให้เป็นยอดขายด้วยระบบ <strong class="text-white">AI Automation Ecosystem</strong> ที่ทำงานและปิดการขายแทนคุณตลอด 24 ชั่วโมง
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#calculator" class="px-8 py-4 bg-brand-gold text-brand-dark font-bold rounded-xl text-center shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.6)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group">
+                        ลองคำนวณรายได้ที่คุณเสียไป
+                        <i class="fa-solid fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
             
-            <div class="calc-box">
-                <div class="calc-grid">
-                    <div>
-                        <div class="calc-label">
-                            จำนวนลีดต่อเดือน
-                            <span id="leadsVal" class="calc-value">300</span>
+            <!-- Right: Infographic -->
+            <div class="relative gsap-hero-img perspective-[2000px] order-1 lg:order-2">
+                <div class="glass p-8 rounded-3xl transform lg:rotate-y-[-15deg] lg:rotate-x-[5deg] hover:rotate-0 transition-transform duration-700 shadow-2xl border-white/10">
+                    <div class="flex items-center justify-between mb-8 border-b border-white/5 pb-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center text-brand-gold shadow-inner border border-brand-gold/20">
+                                <i class="fa-solid fa-robot text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase tracking-wide">Automate</p>
+                                <p class="font-bold text-lg">Lead Capture</p>
+                            </div>
                         </div>
-                        <input type="range" id="inputLeads" min="50" max="2000" step="50" value="300" class="input-calculator">
-                        
-                        <div class="calc-label" style="margin-top: 32px;">
-                            Average Deal Value (THB)
-                            <span id="dealVal" class="calc-value">50,000</span>
+                        <i class="fa-solid fa-arrow-right-long text-gray-600"></i>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 shadow-inner border border-blue-500/20">
+                                <i class="fa-solid fa-chart-pie text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase tracking-wide">Dashboard</p>
+                                <p class="font-bold text-lg">Real-time ROI</p>
+                            </div>
                         </div>
-                        <input type="range" id="inputDeal" min="10000" max="500000" step="10000" value="50000" class="input-calculator">
                     </div>
                     
-                    <div>
-                        <div class="calc-label">
-                            เวลาตอบลูกค้าโดยเฉลี่ย (นาที)
-                            <span id="timeVal" class="calc-value">30 นาที</span>
+                    <div class="space-y-4">
+                        <div class="bg-black/40 p-4 rounded-2xl flex items-center justify-between border border-white/5 hover:border-white/10 transition-colors">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-gold/50">
+                                    <img src="https://ui-avatars.com/api/?name=Somchai&background=2563eb&color=fff" alt="User">
+                                </div>
+                                <div>
+                                    <p class="font-medium">ลูกค้าทักแชทตอนเที่ยงคืน</p>
+                                    <p class="text-xs text-gray-400"><i class="fa-brands fa-facebook-messenger mr-1"></i> FB Messenger</p>
+                                </div>
+                            </div>
+                            <span class="text-green-400 text-xs font-bold px-3 py-1.5 bg-green-400/10 rounded-lg flex items-center gap-1 border border-green-400/20">
+                                <i class="fa-solid fa-check"></i> ปิดด่วน 2 นาที
+                            </span>
                         </div>
-                        <input type="range" id="inputTime" min="5" max="120" step="5" value="30" class="input-calculator">
-                        <p class="text-sm text-gray-400 mt-2">* ยิ่งตอบช้า โอกาสปิดการขายยิ่งลดลงแบบทวีคูณ</p>
+                        <div class="bg-black/40 p-4 rounded-2xl flex items-center justify-between border border-white/5 hover:border-white/10 transition-colors">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-500/50">
+                                    <img src="https://ui-avatars.com/api/?name=Wipa&background=059669&color=fff" alt="User">
+                                </div>
+                                <div>
+                                    <p class="font-medium">ส่งมอบบริการอัตโนมัติ</p>
+                                    <p class="text-xs text-gray-400"><i class="fa-brands fa-line text-green-500 mr-1"></i> LINE OA</p>
+                                </div>
+                            </div>
+                            <span class="text-blue-400 text-xs font-bold px-3 py-1.5 bg-blue-400/10 rounded-lg flex items-center gap-1 border border-blue-400/20">
+                                <i class="fa-solid fa-bell"></i> แจ้งเตือนแอดมิน
+                            </span>
+                        </div>
                     </div>
                 </div>
+                
+                <!-- Floating Elements -->
+                <div class="absolute -bottom-6 -right-6 bg-brand-gold text-brand-dark p-4 rounded-2xl font-bold shadow-xl flex items-center gap-3 gsap-float">
+                    <i class="fa-solid fa-arrow-trend-up text-2xl"></i>
+                    <div>
+                        <p class="text-sm opacity-80 leading-tight">Conversion Rate</p>
+                        <p class="text-2xl leading-tight">+35%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="calc-result-box">
-                    <div class="calc-result-title">Estimated Monthly Lost Revenue:</div>
-                    <div id="lostRevenueResult" class="calc-result-amount">฿0</div>
+    <!-- Interactive Calculator Section -->
+    <section id="calculator" class="py-24 px-6 md:px-12 bg-[#080d1a] relative border-y border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 gsap-fade-up">
+                <h3 class="text-3xl md:text-5xl font-bold mb-4">หยุดทิ้งเงินลงถังขยะ!</h3>
+                <p class="text-gray-400 text-lg">จำลองสถานการณ์: เพียงตอบช้าลงนิดเดียว คุณอาจพลาดโอกาสก้อนใหญ่</p>
+            </div>
+            
+            <div class="glass p-8 md:p-12 rounded-[2rem] grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 gsap-fade-up border-white/10 shadow-2xl relative overflow-hidden">
+                <!-- Background glow in calc -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-blue/10 rounded-full blur-[100px] pointer-events-none"></div>
+                
+                <div class="space-y-8 relative z-10">
+                    <div class="bg-black/20 p-6 rounded-2xl border border-white/5">
+                        <div class="flex justify-between items-end mb-4">
+                            <label class="block text-sm font-medium text-gray-300">จำนวน Lead ต่อเดือน (คน)</label>
+                            <div class="text-2xl font-bold text-brand-gold" id="leads-val">1,000</div>
+                        </div>
+                        <input type="range" id="leads" min="100" max="10000" step="100" value="1000" class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-brand-gold">
+                    </div>
+                    
+                    <div class="bg-black/20 p-6 rounded-2xl border border-white/5">
+                        <div class="flex justify-between items-end mb-4">
+                            <label class="block text-sm font-medium text-gray-300">เวลาเฉลี่ยในการตอบกลับ (นาที)</label>
+                            <div class="text-2xl font-bold text-brand-gold" id="response-val">30</div>
+                        </div>
+                        <input type="range" id="response" min="1" max="120" step="1" value="30" class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-brand-gold">
+                    </div>
+                    
+                    <p class="text-xs text-gray-500 bg-white/5 p-4 rounded-xl border border-white/5">
+                        <i class="fa-solid fa-circle-info mr-1"></i> อ้างอิง: อัตราการปิดการขายลดลง 10% ทุกๆ 5 นาทีที่ตอบช้า (สมมติมูลค่าเฉลี่ยต่อหัว 1,000 บาท)
+                    </p>
                 </div>
                 
-                <div class="calc-actions">
-                    <a id="whatsappCta" href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-                        💬 ปรึกษาผู้เชี่ยวชาญผ่าน WhatsApp
-                    </a>
-                    <a href="#lead-magnet" class="btn-secondary" onclick="document.getElementById('lead-magnet').scrollIntoView({behavior: 'smooth'}); return false;">
-                        รับ Checklist ฟรี
+                <div class="flex flex-col justify-center items-center bg-black/40 rounded-3xl p-8 border border-red-500/20 relative z-10 shadow-inner">
+                    <div class="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 mb-6">
+                        <i class="fa-solid fa-sack-xmark text-2xl"></i>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-2 font-medium">รายได้ที่คุณอาจเสียไปต่อเดือน</p>
+                    <div class="text-5xl lg:text-7xl font-bold text-red-500 mb-2 font-mono drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]">
+                        ฿<span id="lost-revenue">0</span>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-10">มูลค่าความเสียหายโดยประมาณ</p>
+                    <a href="#contact" class="w-full py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white hover:text-brand-dark transition-all duration-300 text-center flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-file-pdf"></i> รับ Checklist ฟรี
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. Case Studies -->
-    <section class="section-cases">
-        <div class="container">
-            <div class="badge-trust">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                100+ ธุรกิจไทยใช้แล้ว
+    <!-- Trust Layer / Case Studies -->
+    <section id="case-studies" class="py-24 px-6 md:px-12 bg-brand-dark relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16 gsap-fade-up">
+                <h3 class="text-3xl md:text-5xl font-bold mb-4">ผลลัพธ์ที่พิสูจน์แล้ว</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">เราช่วยสเกลยอดขายด้วย AI และ Automation ให้ระบบทำงานเต็มที่ แอดมินโฟกัสแค่ลูกค้า High-Value</p>
             </div>
             
-            <div class="floy-quote">
-                “จากประสบการณ์ฝ่ายขาย สู่ Automation Designer<br>ผมรู้วิธีเปลี่ยนระบบที่ซับซ้อนให้เร่งยอดขายให้ธุรกิจคุณโตไวขึ้น!”
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 gsap-stagger-card group border-white/5 hover:border-brand-gold/30 hover:shadow-[0_10px_40px_rgba(251,191,36,0.1)]">
+                    <div class="w-14 h-14 bg-brand-gold/10 rounded-2xl flex items-center justify-center text-brand-gold mb-6 border border-brand-gold/20">
+                        <i class="fa-solid fa-building text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-white">Real Estate Corp</h4>
+                    <p class="text-gray-400 text-sm mb-8 leading-relaxed">ระบบคัดกรอง Lead อัตโนมัติและจองคิวชมโครงการ 24 ชม. ผ่าน LINE OA</p>
+                    <div class="grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
+                        <div>
+                            <p class="text-3xl font-bold text-green-400 font-mono">+150%</p>
+                            <p class="text-xs text-gray-500 font-medium mt-1 uppercase">ยอดนัดหมาย</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-green-400 font-mono">-90%</p>
+                            <p class="text-xs text-gray-500 font-medium mt-1 uppercase">เวลาตอบกลับ</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 gsap-stagger-card group border-white/5 hover:border-blue-500/30 hover:shadow-[0_10px_40px_rgba(59,130,246,0.1)]">
+                    <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 mb-6 border border-blue-500/20">
+                        <i class="fa-solid fa-cart-shopping text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-white">E-Commerce Plus</h4>
+                    <p class="text-gray-400 text-sm mb-8 leading-relaxed">บอทแจ้งสถานะพัสดุ และรันแคมเปญ Upsell สินค้าตามพฤติกรรมลูกค้าอัตโนมัติ</p>
+                    <div class="grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
+                        <div>
+                            <p class="text-3xl font-bold text-green-400 font-mono">+32%</p>
+                            <p class="text-xs text-gray-500 font-medium mt-1 uppercase">ยอดซื้อซ้ำ</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-green-400 font-mono">0</p>
+                            <p class="text-xs text-gray-500 font-medium mt-1 uppercase">แอดมินล่วงเวลา</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 gsap-stagger-card group border-white/5 hover:border-purple-500/30 hover:shadow-[0_10px_40px_rgba(168,85,247,0.1)]">
+                    <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-400 mb-6 border border-purple-500/20">
+                        <i class="fa-solid fa-heart-pulse text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-white">Wellness Clinic</h4>
+                    <p class="text-gray-400 text-sm mb-8 leading-relaxed">แจ้งเตือนคิวแพทย์อัตโนมัติ ส่ง Follow-up อาการเพื่อเพิ่มความประทับใจ</p>
+                    <div class="grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
+                        <div>
+                            <p class="text-3xl font-bold text-green-400 font-mono">-40%</p>
+                            <p class="text-xs text-gray-500 font-medium mt-1 uppercase">No-show rate</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-green-400 font-mono">5X</p>
+                            <p class="text-xs text-gray-500 font-medium mt-1 uppercase">ROI ระบบ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial -->
+            <div class="mt-16 glass p-8 md:p-10 rounded-3xl max-w-4xl mx-auto text-center border border-white/10 relative gsap-fade-up">
+                <i class="fa-solid fa-quote-left text-4xl text-white/10 absolute top-6 left-8"></i>
+                <p class="text-xl md:text-2xl font-medium text-white mb-6 relative z-10 leading-relaxed">
+                    "ตั้งแต่ใช้ระบบของ LeadFlow ทีมแอดมินเราทำงานสบายขึ้นมาก ยอดขายเพิ่มขึ้น 30% ในเดือนแรก เพราะไม่พลาดการตอบกลับลูกค้าแม้แต่คนเดียว!"
+                </p>
+                <div class="flex items-center justify-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-gray-600 overflow-hidden">
+                        <img src="https://ui-avatars.com/api/?name=Prit&background=random" alt="CEO">
+                    </div>
+                    <div class="text-left">
+                        <p class="font-bold text-white">คุณพฤทธิ์</p>
+                        <p class="text-sm text-gray-400">CEO, TechStore Thailand</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="cases-grid">
-                <!-- Card 1 -->
-                <div class="card-case-study">
-                    <div class="text-sm font-bold text-gray-500 uppercase">Real Estate</div>
-                    <h3>ระบบกระจาย Lead อัตโนมัติ</h3>
-                    <p class="text-gray-600 flex-grow">Lead ไหลเข้า CRM และแจ้งเตือนเซลล์ทันทีผ่าน LINE</p>
-                    <div class="highlight">+28% Conversion</div>
-                </div>
-                <!-- Card 2 -->
-                <div class="card-case-study">
-                    <div class="text-sm font-bold text-gray-500 uppercase">Automotive</div>
-                    <h3>Test Drive Booking Flow</h3>
-                    <p class="text-gray-600 flex-grow">คัดกรองและนัดหมายลูกค้า VIP ให้อัตโนมัติ</p>
-                    <div class="highlight">-15 นาที Response Time</div>
-                </div>
-                <!-- Card 3 -->
-                <div class="card-case-study">
-                    <div class="text-sm font-bold text-gray-500 uppercase">Events & Retail</div>
-                    <h3>Automated Follow-up</h3>
-                    <p class="text-gray-600 flex-grow">ส่งข้อความติดตามลูกค้าเก่า ไม่ให้พลาดทุกแคมเปญ</p>
-                    <div class="highlight">+40% Engagement</div>
+            <!-- Partners Marquee -->
+            <div class="mt-24 border-t border-white/5 pt-12">
+                <p class="text-center text-xs text-gray-500 mb-8 uppercase tracking-widest font-bold">Integrated With Your Favorite Tools</p>
+                <div class="flex gap-10 md:gap-16 items-center justify-center opacity-60 flex-wrap grayscale hover:grayscale-0 transition-all duration-700">
+                    <i class="fa-brands fa-line text-5xl hover:text-green-500 hover:scale-110 transition-all cursor-pointer"></i>
+                    <i class="fa-brands fa-hubspot text-5xl hover:text-orange-500 hover:scale-110 transition-all cursor-pointer"></i>
+                    <!-- Zapier icon placeholder using an SVG/FontAwesome -->
+                    <div class="text-4xl font-bold flex items-center gap-1 hover:text-[#FF4A00] hover:scale-110 transition-all cursor-pointer">
+                        <i class="fa-solid fa-asterisk"></i> Zapier
+                    </div>
+                    <i class="fa-brands fa-meta text-5xl hover:text-blue-500 hover:scale-110 transition-all cursor-pointer"></i>
+                    <i class="fa-brands fa-wordpress text-5xl hover:text-blue-400 hover:scale-110 transition-all cursor-pointer"></i>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- 4. Lead Magnet -->
-    <section id="lead-magnet" class="section-lead-magnet">
-        <div class="container" style="max-width: 600px;">
-            <h2 class="text-3xl text-deep-blue mb-4">ดาวน์โหลดฟรี: AI Automation Checklist</h2>
-            <p class="text-gray-600 mb-8">สรุป 5 Automation ที่ ROI สูงสุด พร้อม Tools แนะนำ เพื่อเริ่มทำระบบทันที</p>
-            <form action="https://formsubmit.co/sirawith.keawsee@gmail.com" method="POST" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
-                <input type="hidden" name="_subject" value="[LeadFlow TH] Checklist Download">
-                <input type="email" name="email" placeholder="กรอกอีเมลของคุณ" required style="padding: 16px; border-radius: 8px; border: 1px solid var(--color-gray-200); width: 100%; max-width: 300px; font-family: 'Sarabun';">
-                <button type="submit" class="btn-primary" style="padding: 16px 32px; font-size: 1rem;">ส่ง Checklist ให้ฉัน</button>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-24 px-6 md:px-12 bg-gradient-to-b from-brand-dark to-[#03050a] relative border-t border-white/5">
+        <div class="absolute top-0 right-0 w-full h-px bg-gradient-to-r from-transparent via-brand-gold/30 to-transparent"></div>
+        
+        <div class="max-w-4xl mx-auto glass p-8 md:p-14 rounded-[2rem] relative z-10 gsap-fade-up border-white/10 shadow-2xl">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">พร้อมเปลี่ยนระบบขายของคุณหรือยัง?</h3>
+                <p class="text-gray-400 text-lg">กรอกข้อมูลเพื่อให้ทีมงานผู้เชี่ยวชาญของเราติดต่อกลับ พร้อม Audit แผนงาน <span class="text-brand-gold font-bold border-b border-brand-gold">ฟรี!</span></p>
+            </div>
+            
+            <form action="https://formsubmit.co/hello@leadflowth.com" method="POST" class="space-y-6">
+                <!-- Disable Captcha for testing -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="LeadFlow TH: New Consultation Request!">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-gray-300 ml-1">ชื่อ - นามสกุล <span class="text-red-500">*</span></label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-500">
+                                <i class="fa-regular fa-user"></i>
+                            </div>
+                            <input type="text" name="name" required class="w-full bg-black/40 border border-white/10 rounded-xl pl-11 pr-4 py-3.5 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all" placeholder="คุณสมชาย ใจดี">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-gray-300 ml-1">เบอร์โทรศัพท์ <span class="text-red-500">*</span></label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-500">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <input type="tel" name="phone" required class="w-full bg-black/40 border border-white/10 rounded-xl pl-11 pr-4 py-3.5 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all" placeholder="08x-xxx-xxxx">
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="block text-sm font-medium text-gray-300 ml-1">LINE ID (ตัวเลือก)</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-500">
+                            <i class="fa-brands fa-line"></i>
+                        </div>
+                        <input type="text" name="line_id" class="w-full bg-black/40 border border-white/10 rounded-xl pl-11 pr-4 py-3.5 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all" placeholder="@yourlineid">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="block text-sm font-medium text-gray-300 ml-1">ความท้าทายที่คุณเจอตอนนี้</label>
+                    <textarea name="message" rows="4" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all resize-none" placeholder="เช่น ตอบแชทไม่ทัน, แอดมินลาออกบ่อย, ต้องการลดต้นทุน..."></textarea>
+                </div>
+                
+                <div class="pt-4">
+                    <button type="submit" class="w-full py-4 bg-brand-gold text-brand-dark font-bold rounded-xl text-lg hover:bg-yellow-400 hover:shadow-[0_0_25px_rgba(251,191,36,0.5)] transition-all duration-300 group flex justify-center items-center gap-2">
+                        รับคำปรึกษาฟรี <i class="fa-solid fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                    </button>
+                    <p class="text-center text-xs text-gray-500 mt-4"><i class="fa-solid fa-lock mr-1"></i> ข้อมูลของคุณจะถูกเก็บเป็นความลับ</p>
+                </div>
             </form>
         </div>
+        
+        <!-- Glow effect behind form -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[500px] bg-brand-blue rounded-full mix-blend-screen filter blur-[120px] opacity-20 pointer-events-none"></div>
     </section>
 
-    <!-- 5. Sticky Contact Bar -->
-    <div class="bar-sticky-contact">
-        <div class="line-wrapper" style="position: relative;">
-            <a href="https://line.me/ti/p/~Floy.bmw.th" target="_blank" class="bar-item line-oa">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 3.55 8.845 8.365 9.585.326.069.769.212.88.524.1.282.032.721-.013 1.011-.059.39-2.031 3.197-2.031 3.197s-.19.349.083.504c.273.155 1.488.083 1.488.083 4.801-1.464 9.171-4.887 11.455-8.448C22.753 14.542 24 12.535 24 10.304z"/></svg>
-                <span>Add LINE OA</span>
-            </a>
-            <div class="qr-popup">
-                <p class="text-sm font-bold mb-2 text-gray-800">Scan to Add LINE</p>
-                <!-- Placeholder for real QR code image -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" alt="LINE QR Code" width="120" height="120">
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-[#03050a] pt-16 pb-8 px-6 md:px-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-8 h-8 bg-brand-gold rounded flex items-center justify-center text-brand-dark font-bold text-sm">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h2 class="text-xl font-bold tracking-wide">LeadFlow<span class="text-brand-gold">TH</span></h2>
+                </div>
+                <p class="text-gray-400 text-sm max-w-sm leading-relaxed mb-6">
+                    แพลตฟอร์ม AI Automation ที่ออกแบบมาเพื่อธุรกิจไทยโดยเฉพาะ ยกระดับการขาย ลดภาระแอดมิน และเพิ่มกำไรสูงสุด
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-white/10 hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-white/10 hover:text-white transition-all"><i class="fa-brands fa-line"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-white/10 hover:text-white transition-all"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold text-white mb-6">Solutions</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-brand-gold transition-colors">Line OA Automation</a></li>
+                    <li><a href="#" class="hover:text-brand-gold transition-colors">Facebook Chatbot</a></li>
+                    <li><a href="#" class="hover:text-brand-gold transition-colors">CRM Integration</a></li>
+                    <li><a href="#" class="hover:text-brand-gold transition-colors">AI Sales Assistant</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-bold text-white mb-6">Company</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-brand-gold transition-colors">About Us</a></li>
+                    <li><a href="#case-studies" class="hover:text-brand-gold transition-colors">Case Studies</a></li>
+                    <li><a href="#" class="hover:text-brand-gold transition-colors">Pricing</a></li>
+                    <li><a href="#contact" class="hover:text-brand-gold transition-colors">Contact</a></li>
+                </ul>
             </div>
         </div>
         
-        <a href="tel:0858508535" class="bar-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></path></svg>
-            <span>085-850-8535</span>
-        </a>
-        
-        <a href="mailto:sirawith.keawsee@gmail.com" class="bar-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></path></svg>
-            <span>Email Us</span>
-        </a>
-    </div>
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+            <p>&copy; 2026 LeadFlow Thailand. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
 
+    <!-- GSAP & Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
-        // LEADFLOW WHATSAPP CONFIGURATION
-        const LEADFLOW_WHATSAPP_NUMBER = "66858508535";
+        // Register ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
 
-        const leadsInput = document.getElementById('inputLeads');
-        const dealInput = document.getElementById('inputDeal');
-        const timeInput = document.getElementById('inputTime');
-        
-        const leadsVal = document.getElementById('leadsVal');
-        const dealVal = document.getElementById('dealVal');
-        const timeVal = document.getElementById('timeVal');
-        
-        const resultDisplay = document.getElementById('lostRevenueResult');
-        const whatsappCta = document.getElementById('whatsappCta');
+        // Navbar Sticky Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
 
-        function calculateAndBuildLink() {
-            const leads = parseFloat(leadsInput.value);
-            const deal = parseFloat(dealInput.value);
-            const time = parseFloat(timeInput.value);
+        // Initial Load Animations
+        const tl = gsap.timeline();
+        
+        tl.from("nav", {
+            y: -20,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out"
+        })
+        .from(".gsap-hero-content", {
+            y: 40,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        }, "-=0.4")
+        .from(".gsap-hero-img", {
+            x: 40,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        }, "-=0.6");
+
+        // Subtle floating animation for infographic badge
+        gsap.to(".gsap-float", {
+            y: -15,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        // Scroll Animations
+        gsap.utils.toArray('.gsap-fade-up').forEach(element => {
+            gsap.from(element, {
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 85%",
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power3.out"
+            });
+        });
+
+        gsap.from(".gsap-stagger-card", {
+            scrollTrigger: {
+                trigger: "#case-studies",
+                start: "top 75%",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: "power3.out"
+        });
+
+        // Calculator Logic
+        const leadsInput = document.getElementById('leads');
+        const responseInput = document.getElementById('response');
+        const leadsVal = document.getElementById('leads-val');
+        const responseVal = document.getElementById('response-val');
+        const lostRevenueEl = document.getElementById('lost-revenue');
+        
+        let counterTween;
+
+        function updateCalculator() {
+            const leads = parseInt(leadsInput.value);
+            const time = parseInt(responseInput.value);
             
             leadsVal.innerText = leads.toLocaleString();
-            dealVal.innerText = '฿' + deal.toLocaleString();
-            timeVal.innerText = time + ' นาที';
+            responseVal.innerText = time;
             
-            // Formula: Base 5% loss + Exponential penalty for time > 15 mins
-            let penaltyRate = 0.05; 
-            if (time > 15) {
-                // Every 15 mins adds an accelerating penalty
-                penaltyRate += ((time - 15) / 15) * 0.03; 
-            }
-            // Cap penalty at 40%
-            penaltyRate = Math.min(penaltyRate, 0.40);
-
-            const lostRevenue = Math.round(leads * penaltyRate * deal);
+            // Formula Logic (Enhanced for impact)
+            // Avg Lead Value = 1,000 THB
+            // Base Conversion = 20%
+            // Drop Rate = 10% relative loss for every 5 mins of delay
+            // E.g. 5 mins -> 18% conv, 30 mins -> ~10% conv
             
-            // Format with animation feel (simply updating text here, but it feels dynamic with slider)
-            resultDisplay.innerText = '฿' + lostRevenue.toLocaleString();
+            const valuePerLead = 1000;
+            const maxRevenue = leads * valuePerLead * 0.20; // Best case 20% conversion
             
-            if(penaltyRate > 0.15) {
-                resultDisplay.style.color = '#ef4444'; // Red if high loss
-            } else {
-                resultDisplay.style.color = 'var(--color-gold)';
-            }
-
-            // Construct Context-Rich WhatsApp Pre-filled Message
-            const rawMessage = `สวัสดีครับ LeadFlow Team,\n\nผมได้ลองคำนวณ Revenue Leakage บนหน้าเว็บ:\n- Inbound Leads: ${leads.toLocaleString()} ลีด/เดือน\n- Average Deal Value: ฿${deal.toLocaleString()}\n- Response Time: ${time} นาที\n- ประเมินยอดขายที่สูญเสีย: ฿${lostRevenue.toLocaleString()}/เดือน\n\nสนใจขอรับ AI Sales Infrastructure Audit 15 นาที เพื่อแก้ไขระบบครับ`;
-
-            // Encode URL and assign to button
-            const encodedMessage = encodeURIComponent(rawMessage);
-            whatsappCta.href = `https://wa.me/${LEADFLOW_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+            // Calculate penalty multiplier (max 90% loss of potential revenue)
+            const timePenaltySegments = Math.floor(time / 5);
+            let penaltyMultiplier = timePenaltySegments * 0.10;
+            if(penaltyMultiplier > 0.9) penaltyMultiplier = 0.9;
+            if(time <= 1) penaltyMultiplier = 0; // Ideal response time
+            
+            const lostRevenue = Math.floor(maxRevenue * penaltyMultiplier);
+            
+            // Animate number
+            const obj = { val: parseInt(lostRevenueEl.innerText.replace(/,/g, '')) || 0 };
+            
+            if (counterTween) counterTween.kill();
+            
+            counterTween = gsap.to(obj, {
+                val: lostRevenue,
+                duration: 1.2,
+                ease: "power3.out",
+                onUpdate: () => {
+                    lostRevenueEl.innerText = Math.floor(obj.val).toLocaleString();
+                }
+            });
         }
 
-        leadsInput.addEventListener('input', calculateAndBuildLink);
-        dealInput.addEventListener('input', calculateAndBuildLink);
-        timeInput.addEventListener('input', calculateAndBuildLink);
+        leadsInput.addEventListener('input', updateCalculator);
+        responseInput.addEventListener('input', updateCalculator);
         
-        // Initialize calculation on page load
-        calculateAndBuildLink();
+        // Init calculator
+        updateCalculator();
     </script>
 </body>
 </html>
