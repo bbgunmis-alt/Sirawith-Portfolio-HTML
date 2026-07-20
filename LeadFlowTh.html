@@ -45,6 +45,7 @@
         .gradient-text {
             background: linear-gradient(to right, #FBBF24, #FDE68A);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         /* Hide scrollbar for cleaner look */
@@ -358,6 +359,8 @@
                 <!-- Disable Captcha for testing -->
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_subject" value="LeadFlow TH: New Consultation Request!">
+                <!-- Redirect to LINE OA after submission -->
+                <input type="hidden" name="_next" value="https://line.me/ti/p/mzkkxFefnQ">
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="space-y-2">
@@ -421,7 +424,7 @@
                 </p>
                 <div class="flex gap-4">
                     <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-white/10 hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-white/10 hover:text-white transition-all"><i class="fa-brands fa-line"></i></a>
+                    <a href="https://line.me/ti/p/mzkkxFefnQ" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-white/10 hover:text-white transition-all"><i class="fa-brands fa-line"></i></a>
                     <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-white/10 hover:text-white transition-all"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
@@ -448,6 +451,8 @@
                 <form action="https://formsubmit.co/hello@leadflowth.com" method="POST" class="flex flex-col gap-3">
                     <input type="hidden" name="_subject" value="New Newsletter Subscriber!">
                     <input type="hidden" name="_captcha" value="false">
+                    <!-- Redirect to LINE OA after submission -->
+                    <input type="hidden" name="_next" value="https://line.me/ti/p/mzkkxFefnQ">
                     <input type="email" name="email" required placeholder="อีเมลของคุณ" class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold transition-all">
                     <button type="submit" class="w-full py-2.5 bg-brand-gold/10 border border-brand-gold/50 text-brand-gold font-bold rounded-lg text-sm hover:bg-brand-gold hover:text-brand-dark transition-all flex items-center justify-center gap-2"><i class="fa-solid fa-paper-plane"></i> ติดตามข่าวสาร</button>
                 </form>
