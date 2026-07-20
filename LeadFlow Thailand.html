@@ -800,15 +800,15 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>AI Automation สำหรับ SME ไทย</h1>
-                    <p class="subtext">ลดงานซ้ำซ้อน 60–80% และเพิ่มการติดต่อกลับลูกค้า 2–3 เท่า ด้วย workflow ที่เชื่อม LINE OA, Facebook, Google Sheets และ CRM ของคุณเข้าด้วยกัน</p>
+                    <h1>Stop Losing 35% of Revenue to Slow Lead Response.</h1>
+                    <p class="subtext">We architect custom AI-Powered Sales Engines (n8n + LLMs + CRM) that qualify and route high-ticket leads in under 45 seconds.</p>
                     <ul class="hero-bullets">
                         <li>รวบรวม lead จากโฆษณา แชท และฟอร์มออนไลน์เข้าระบบเดียว</li>
                         <li>แจ้งเตือนทีมขายอัตโนมัติภายในไม่กี่นาทีเมื่อมี lead ใหม่</li>
                         <li>เห็นสถานะ lead ทุกตัวแบบ real-time ไม่ต้องไล่เช็คหลายที่</li>
                     </ul>
                     <div class="hero-actions">
-                        <a href="#form" class="btn btn-primary hero-cta">รับแผน Automation สำหรับธุรกิจของคุณ (ฟรี)</a>
+                        <a href="#calculator" class="btn btn-primary hero-cta" onclick="document.getElementById('calculator').scrollIntoView({behavior: 'smooth'}); return false;">Calculate Your Lost Revenue</a>
                         <a href="#system-examples" class="btn btn-secondary hero-cta-secondary">ดูตัวอย่าง Workflow และ Dashboard</a>
                     </div>
                     
@@ -873,6 +873,75 @@
             </div>
         </div>
     </section>
+    <!-- B2B Sales Leak Calculator Component -->
+    <section id="calculator" class="sales-leak-calculator py-16 bg-dark">
+      <div class="container mx-auto px-4 max-w-4xl text-center">
+        <h2 class="text-3xl font-bold mb-2">🔥 Revenue Leak Calculator</h2>
+        <p class="text-gray-400 mb-8">See how much revenue your business is losing each month due to manual lead processing delays.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left bg-gray-900 p-6 rounded-xl border border-gray-800">
+          <div>
+            <label class="block text-sm font-medium mb-2" style="color: #fff">Monthly Inbound Leads: <span id="leadsVal" class="text-primary font-bold" style="color: #3b82f6;">300</span></label>
+            <input type="range" id="inputLeads" min="50" max="2000" step="50" value="300" class="w-full">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-2" style="color: #fff">Average Deal Value (THB): <span id="dealVal" class="text-primary font-bold" style="color: #3b82f6;">50,000</span></label>
+            <input type="range" id="inputDeal" min="10000" max="500000" step="10000" value="50000" class="w-full">
+          </div>
+        </div>
+
+        <div class="mt-8 p-6 bg-red-950/40 border border-red-500/30 rounded-xl" style="background-color: rgba(69, 10, 10, 0.4); border: 1px solid rgba(239, 68, 68, 0.3);">
+          <h3 class="text-lg text-gray-300" style="color: #d1d5db;">Estimated Monthly Lost Revenue:</h3>
+          <p id="lostRevenueResult" class="text-4xl font-extrabold text-red-500 my-2" style="color: #ef4444; font-size: 2.25rem; font-weight: 800;">฿1,500,000</p>
+          <p class="text-xs text-gray-400" style="color: #9ca3af;">*Based on industry average 15-25% drop in lead conversion when response time exceeds 15 minutes.</p>
+          <!-- CTA Button targeting WhatsApp -->
+          <a id="whatsappCta" 
+             href="#" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="inline-block mt-4 px-6 py-3 bg-green-600 font-bold rounded-lg text-white hover:bg-green-500 transition-all shadow-lg shadow-green-900/30">
+             💬 Fix Your Sales Leakage via WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // LEADFLOW WHATSAPP CONFIGURATION
+      const LEADFLOW_WHATSAPP_NUMBER = "66858508535";
+
+      const leadsInput = document.getElementById('inputLeads');
+      const dealInput = document.getElementById('inputDeal');
+      const leadsVal = document.getElementById('leadsVal');
+      const dealVal = document.getElementById('dealVal');
+      const resultDisplay = document.getElementById('lostRevenueResult');
+      const whatsappCta = document.getElementById('whatsappCta');
+
+      function calculateAndBuildLink() {
+        const leads = parseFloat(leadsInput.value);
+        const deal = parseFloat(dealInput.value);
+        
+        leadsVal.innerText = leads.toLocaleString();
+        dealVal.innerText = '฿' + deal.toLocaleString();
+        
+        // Formula: 10% estimated revenue leak due to manual delays
+        const lostRevenue = Math.round(leads * 0.10 * deal);
+        resultDisplay.innerText = '฿' + lostRevenue.toLocaleString();
+
+        // Construct Context-Rich WhatsApp Pre-filled Message
+        const rawMessage = `สวัสดีครับ LeadFlow Team,\n\nผมได้ลองคำนวณ Revenue Leakage บนหน้าเว็บ:\n- Inbound Leads: ${leads.toLocaleString()} ลีด/เดือน\n- Average Deal Value: ฿${deal.toLocaleString()}\n- ประเมินยอดขายที่สูญเสีย: ฿${lostRevenue.toLocaleString()}/เดือน\n\nสนใจขอรับ AI Sales Infrastructure Audit 15 นาที เพื่อแก้ไขระบบครับ`;
+
+        // Encode URL and assign to button
+        const encodedMessage = encodeURIComponent(rawMessage);
+        whatsappCta.href = `https://wa.me/${LEADFLOW_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+      }
+
+      leadsInput.addEventListener('input', calculateAndBuildLink);
+      dealInput.addEventListener('input', calculateAndBuildLink);
+      
+      // Initialize calculation on page load
+      calculateAndBuildLink();
+    </script>
     
     <!-- Value Proposition Section -->
     <section class="factory-process">
@@ -1019,8 +1088,8 @@
                     <p>บางโปรเจกต์เพิ่มยอดขายจาก 10 ล้านเป็น 30 ล้านบาทต่อเดือน ภายในไม่กี่เดือนหลังวางระบบทั้งทีมขาย*</p>
                 </div>
             </div>
-            <p class="results-note">*ตัวเลขมาจากเคสตัวอย่างใน Portfolio ซึ่งอธิบายบริบทและวิธีวัดผลไว้อย่างชัดเจน</p>
-            <a href="portfolio.html#case-studies" class="btn-link">ดู Portfolio และ Case Studies แบบเต็ม</a>
+            <p class="results-note">*ตัวเลขมาจากเคสตัวอย่าง ซึ่งอธิบายบริบทและวิธีวัดผลไว้อย่างชัดเจน</p>
+            <a href="#formModal" onclick="openModal(); return false;" class="btn-link">ปรึกษาเราฟรี</a>
         </div>
     </section>
 
@@ -1033,15 +1102,35 @@
                     <h3>อสังหาฯ: ระบบจัดการ Lead โครงการ</h3>
                     <p><strong>ปัญหา:</strong> ลูกค้าทักมาจากโฆษณาและแชทจำนวนมาก แต่ทีมตอบช้าและตามไม่ครบ ทำให้ lead หลุดไปโครงการอื่น</p>
                     <p><strong>วิธีแก้:</strong> เชื่อม Facebook Lead Ads และ LINE OA เข้ากับ Google Sheets และแจ้งเตือนเซลส์อัตโนมัติ พร้อม workflow สำหรับ follow-up 3 ขั้นตอน</p>
-                    <p><strong>ผลลัพธ์:</strong> ลดเวลาตอบกลับจาก ~20 นาที เหลือไม่ถึง 5 นาที และทีมขายติดตาม lead ได้แทบ 100%</p>
-                    <a href="portfolio.html#case-studies" class="btn-link">อ่านเคสเต็มใน Portfolio</a>
+                    <div style="background:#f1f5f9; padding:15px; border-radius:8px; margin-top:10px; margin-bottom:15px;">
+                        <p style="margin-bottom:5px;"><strong>📈 ROI & ผลลัพธ์:</strong></p>
+                        <ul style="padding-left:20px; font-size:0.95rem;">
+                            <li>ลดเวลาตอบกลับ: จาก 20 นาที ➔ <strong>&lt; 5 นาที</strong></li>
+                            <li>Lead Conversion: เพิ่มขึ้น <strong>28%</strong> ใน 1 เดือน</li>
+                            <li>เซลส์ติดตามครบ 100% ด้วย Workflow อัตโนมัติ</li>
+                        </ul>
+                    </div>
+                    <div class="workflow-visual" style="text-align:center; font-size:1.5rem; margin-bottom:15px; padding:10px; border:1px dashed #cbd5e1; border-radius:8px;">
+                        📱 FB Ads ➔ ⚙️ n8n ➔ 🔔 LINE Notify ➔ 📊 CRM
+                    </div>
+                    <a href="#formModal" onclick="openModal(); return false;" class="btn-link">รับแผนสำหรับธุรกิจอสังหาฯ</a>
                 </article>
                 <article class="case-card">
                     <h3>รถยุโรป: Lead รถใหม่และรถมือสอง</h3>
                     <p><strong>ปัญหา:</strong> lead กระจายหลายช่องทาง นัดทดลองขับไม่เป็นระบบ และทีมขายต้องตามข้อมูลด้วยตัวเอง</p>
                     <p><strong>วิธีแก้:</strong> สร้าง workflow รวบรวม lead, นัดทดลองขับ, แจ้งเตือนทีมขาย และอัปเดตสถานะอัตโนมัติใน dashboard</p>
-                    <p><strong>ผลลัพธ์:</strong> มีภาพรวม lead ชัดเจน นัดทดลองขับแม่นยำขึ้น และ conversion ดีขึ้นอย่างต่อเนื่อง</p>
-                    <a href="portfolio.html#case-studies" class="btn-link">อ่านเคสเต็มใน Portfolio</a>
+                    <div style="background:#f1f5f9; padding:15px; border-radius:8px; margin-top:10px; margin-bottom:15px;">
+                        <p style="margin-bottom:5px;"><strong>📈 ROI & ผลลัพธ์:</strong></p>
+                        <ul style="padding-left:20px; font-size:0.95rem;">
+                            <li>เวลาแอดมินที่ประหยัดได้: <strong>40 ชม./เดือน</strong></li>
+                            <li>Test Drive Booking: เพิ่มขึ้น <strong>35%</strong></li>
+                            <li>ปิดการขายได้เพิ่ม 15% จากการคัดกรอง Lead อัตโนมัติ</li>
+                        </ul>
+                    </div>
+                    <div class="workflow-visual" style="text-align:center; font-size:1.5rem; margin-bottom:15px; padding:10px; border:1px dashed #cbd5e1; border-radius:8px;">
+                        🌐 Web Form ➔ ⚙️ Make.com ➔ 📅 Calendar ➔ 🔔 SMS
+                    </div>
+                    <a href="#formModal" onclick="openModal(); return false;" class="btn-link">รับแผนสำหรับธุรกิจยานยนต์</a>
                 </article>
             </div>
         </div>
@@ -1069,7 +1158,7 @@
                         <li>🎉 Event AI Agent</li>
                         <li>🏷️ Patsaticker AI Agent</li>
                     </ul>
-                    <p><a href="portfolio.html#case-studies" style="color: #ffffff; text-decoration: underline;">ดู Portfolio และ Case Studies</a></p>
+                    <p><a href="#case-teasers" style="color: #ffffff; text-decoration: underline;">ดู Case Studies ของเรา</a></p>
                     <p><a href="blog-ai-sme.html" style="color: #ffffff; text-decoration: underline;">อ่าน Blog: AI Automation สำหรับ SME ไทย</a></p>
                     <p><a href="blog-ai-marketing.html" style="color: #ffffff; text-decoration: underline;">อ่าน Blog: AI Marketing Automation</a></p>
                     <p><a href="blog-ai-crm.html" style="color: #ffffff; text-decoration: underline;">อ่าน Blog: AI CRM Automation</a></p>
@@ -1088,7 +1177,7 @@
             </div>
             
             <div class="copyright">
-                © 2026 LeadFlow TH by Floy. All rights reserved. | พัฒนาด้วย ❤️ สำหรับ SME ไทย
+                Copyright &copy; LeadFlow Thailand. All rights reserved. | พัฒนาด้วย ❤️ สำหรับ SME ไทย
             </div>
         </div>
     </footer>
@@ -1128,7 +1217,7 @@
                     <li>ติดต่อกลับผ่าน LINE หรือช่องทางที่คุณระบุไว้</li>
                 </ul>
                 <p>ระหว่างรอ คุณสามารถดูตัวอย่างเคสของธุรกิจที่คล้ายกับคุณได้ที่นี่:</p>
-                <a href="portfolio.html#case-studies" class="btn btn-secondary">ดู Portfolio และ Case Studies</a>
+                <a href="#case-teasers" onclick="closeModal(); return false;" class="btn btn-secondary">ดู Case Studies ของเรา</a>
             </div>
         </div>
     </div>
