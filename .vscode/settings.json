@@ -1,12 +1,4 @@
 {
-<<<<<<< HEAD
-  // จัดโค้ดอัตโนมัติทุกครั้งที่ Save
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  // ใช้ Prettier เป็น formatter หลัก
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  // ตั้งค่า Prettier ให้เหมาะกับ CSS/JS
-=======
   "accessibility.signalOptions.debouncePositionChanges": true,
   "github.copilot.chat.agent.autoFix": true,
   "github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
@@ -16,23 +8,15 @@
   // Editor & Formatter
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
 
   // Prettier
->>>>>>> 7f08e1182aa93edc84eb8a3ecab5118458fcfbd8
   "prettier.singleQuote": true,
   "prettier.semi": true,
   "prettier.trailingComma": "es5",
   "prettier.tabWidth": 2,
-<<<<<<< HEAD
-  // เปิด ESLint และ Stylelint เพื่อเช็ค error
-  "eslint.validate": ["javascript", "javascriptreact"],
-  "stylelint.validate": ["css", "scss"]
-}
-=======
 
   // ESLint & Stylelint
   "eslint.validate": ["javascript", "javascriptreact"],
   "stylelint.validate": ["css", "scss"]
 }
->>>>>>> 7f08e1182aa93edc84eb8a3ecab5118458fcfbd8
